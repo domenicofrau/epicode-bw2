@@ -28,4 +28,41 @@ a {
 #profilo_chip h5, #profilo_chip i {
   font-size: 0.7rem;
   color: white;
+}
+
+#right #amico_head {
+  padding: 0 1rem;
+}
+#right h3 {
+  font-size: 0.8rem;
+  color: white;
+}
+#right i {
+  color: grey;
+}
+#right .amico {
+  margin: 25px 0;
+  color: grey;
+}
+#right .amico .amico_nome {
+  font-size: 0.7rem;
+}
+#right .amico .amico_titolo {
+  font-size: 0.5rem;
+}
+#right .amico .amico_album {
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+#right .amico .amico_img {
+  margin-right: 10px;
+  height: 30px;
+}
+#right .amico .amico_tempo {
+  font-size: 0.5rem;
+  margin-left: 10px;
+}
+#right .amico i {
+  font-size: 0.8rem;
+  margin-right: 5px;
 }/*# sourceMappingURL=app.css.map */
