@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import "variables";
 aside{
     background-color: black;
 }
@@ -15,7 +16,7 @@ a{
 }
 
 #center{
-    background-color: grey;
+    background-color: $grigio;
 }
 
 #profilo_chip{
@@ -31,6 +32,50 @@ a{
     
 }
 
+#left{
+    a{
+        font-size: 0.8rem;
+        color: $grigio;
+    }
+    i{
+        margin-right: 10px;
+        color: $grigio;
+        font-size: 20px;
+    }
+    hr{
+        color: $grigio;
+    }
+    li{
+
+        margin: 5px 0;
+    }
+    .logo{
+        li{
+            margin: 10px 0;
+        }
+        i{
+            font-size: 15px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .cuore{
+            background-color: lightblue;
+        }
+        .podcast{
+            color: lightgreen;
+            background-color: green;
+        }
+        .piu{
+            color: black;
+            background-color: $grigio;
+        }
+    }
+    .menu_icon{
+        margin: 5px 0;
+        height: 20px;
+    }
+}
+
 #right{
     #amico_head{
         padding: 0 1rem;
@@ -41,11 +86,11 @@ a{
         color: white;
     }
     i{
-        color: grey;
+        color: $grigio;
     }
     .amico{
         margin: 25px 0;
-        color: grey;
+        color: $grigio;
         .amico_nome{
             font-size: 0.7rem;
         }

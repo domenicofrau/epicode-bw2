@@ -30,6 +30,45 @@ a {
   color: white;
 }
 
+#left a {
+  font-size: 0.8rem;
+  color: grey;
+}
+#left i {
+  margin-right: 10px;
+  color: grey;
+  font-size: 20px;
+}
+#left hr {
+  color: grey;
+}
+#left li {
+  margin: 5px 0;
+}
+#left .logo li {
+  margin: 10px 0;
+}
+#left .logo i {
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+#left .logo .cuore {
+  background-color: lightblue;
+}
+#left .logo .podcast {
+  color: lightgreen;
+  background-color: green;
+}
+#left .logo .piu {
+  color: black;
+  background-color: grey;
+}
+#left .menu_icon {
+  margin: 5px 0;
+  height: 20px;
+}
+
 #right #amico_head {
   padding: 0 1rem;
 }
