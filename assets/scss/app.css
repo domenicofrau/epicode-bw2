@@ -107,15 +107,19 @@ a {
   margin-right: 5px;
 }
 
-.card-album {
+.tessera {
   padding: 0;
   width: 22%;
   margin: 0 5px;
   background-color: rgb(29, 29, 29);
 }
-.card-album a, .card-album p {
+.tessera a, .tessera p {
   color: white;
 }
-.card-album img {
+.tessera img {
   border-radius: 10px;
+}
+
+.artista img {
+  border-radius: 100%;
 }/*# sourceMappingURL=app.css.map */

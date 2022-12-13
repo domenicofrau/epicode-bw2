@@ -117,7 +117,7 @@ a{
     }
 }
 
-.card-album{
+.tessera{
     padding: 0;
     width: 22%;
     margin: 0 5px;
@@ -127,6 +127,12 @@ a{
     }
     img{
         border-radius: 10px;
+    }
+}
+
+.artista{
+    img{
+        border-radius: 100%;
     }
 }
 

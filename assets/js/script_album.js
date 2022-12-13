@@ -38,7 +38,7 @@ function search(key) {
     .catch(error => console.log('error', error));
 }
 
-// getArtist(412)
+getArtist(412)
 // getArtisTopTrack(412,5)
 // getAlbum(75621062)
 // search("queen")
