@@ -10,40 +10,32 @@ let giorno = new Date();
 let saluto = document.getElementById("benvenuto")
 let unicamente = document.getElementById("unicamentePerTe")
 let artisti = document.getElementById("artistiDelGiorno")
+let perTe = document.getElementById("perTe")
 
-async function getAlbum(id) {
-    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`, requestOptions)
-    return response.json()
-}
 
-async function getArtist(id) {
-    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`, requestOptions)
-    return response.json()
-}
+let lista_sponsor = [331985167, 366045987, 361295177, 384939427]
+let lista_album = [331985167, 366045987, 361295177, 384939427]
+let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917]
+
 
 
 function creaArtista() {
-    let sponsor = [52115362, 13087269, 3239781, 7371074, 73023, 7917]
-
     for (let i = 0; i < 4; i++) {
         try {
-            let prom = getArtist(sponsor[random(sponsor.length)])
+            let prom = getArtist(lista_artisti[random(lista_artisti.length)])
             prom.then((artista) => {
                 artisti.innerHTML += `<div class="card tessera artista p-3"><a href=""><img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="..."><div class="card-body p-0 py-3"><h5 class="card-title">${artista.name}</h5><p class="card-text">Artista</p></div></a></div>`
             })
         } catch (e) {
             console.log("Errore: " + e)
         }
-        
     }
 }
 
 function creaAlbum() {
-    let sponsor = [331985167, 366045987, 361295177, 384939427]
-
     for (let i = 0; i < 4; i++) {
         try {
-            let prom = getAlbum(sponsor[random(sponsor.length)])
+            let prom = getAlbum(lista_album[random(lista_album.length)])
             prom.then((album) => {
                 unicamente.innerHTML += `<div class="card tessera album p-3"><a href=""><img src="${album.cover_xl}" class="card-img-top shadow  " alt="..."><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
             })
@@ -54,20 +46,30 @@ function creaAlbum() {
     }
 }
 
-
-
-
-
-
-
-creaAlbum()
-creaArtista()
-
-
-
+function creaPerTe() {
+    for (let i = 0; i < 2; i++) {
+        try {
+            let prom = getAlbum(lista_album[random(lista_album.length)])
+            prom.then((album) => {
+                perTe.innerHTML += `<div class="card tessera album p-3"><a href=""><img src="${album.cover_xl}" class="card-img-top shadow  " alt="..."><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
+            })
+        } catch (e) {
+            console.log("Errore: " + e)
+        } 
+    }
+    for (let x = 0; x < 2; x++) {
+        try {
+            let prom = getArtist(lista_artisti[random(lista_artisti.length)])
+            prom.then((artista) => {
+                perTe.innerHTML += `<div class="card tessera artista p-3"><a href=""><img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="..."><div class="card-body p-0 py-3"><h5 class="card-title">${artista.name}</h5><p class="card-text">Artista</p></div></a></div>`
+            })
+        } catch (e) {
+            console.log("Errore: " + e)
+        }
+    }
+}
 
 function cambioAnnuncio() {
-    let sponsor = [331985167, 366045987, 361295177, 384939427]
     try {
         let prom = getAlbum(sponsor[random(sponsor.length)])
         prom.then((album) => {
@@ -117,7 +119,24 @@ function cambiaSaluto() {
     }
 }
 
+/*
+ *  FUNZIONI DI FETCH
+ */
+async function getAlbum(id) {
+    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`, requestOptions)
+    return response.json()
+}
 
+async function getArtist(id) {
+    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`, requestOptions)
+    return response.json()
+}
 
+/*
+ *  AVVIO FUNZIONI
+ */
 cambiaSaluto()
 cambioAnnuncio()
+creaAlbum()
+creaArtista()
+creaPerTe()
