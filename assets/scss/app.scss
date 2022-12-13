@@ -117,6 +117,19 @@ a{
     }
 }
 
+.card-album{
+    padding: 0;
+    width: 22%;
+    margin: 0 5px;
+    background-color: rgb(29, 29, 29);
+    a,p{
+        color:white
+    }
+    img{
+        border-radius: 10px;
+    }
+}
+
 // main{
 //     section{
 //         div{

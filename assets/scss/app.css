@@ -105,4 +105,17 @@ a {
 #right .amico i {
   font-size: 0.8rem;
   margin-right: 5px;
+}
+
+.card-album {
+  padding: 0;
+  width: 22%;
+  margin: 0 5px;
+  background-color: rgb(29, 29, 29);
+}
+.card-album a, .card-album p {
+  color: white;
+}
+.card-album img {
+  border-radius: 10px;
 }/*# sourceMappingURL=app.css.map */

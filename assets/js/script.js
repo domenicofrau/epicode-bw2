@@ -8,11 +8,28 @@ var requestOptions = { method: 'GET', redirect: 'follow' };
 let annuncio = { titolo: document.getElementById("annuncio_titolo"), img: document.getElementById("annuncio_img"), descrizione: document.getElementById("annuncio_testo"), bt_share: document.getElementById("annuncio_share"), bt_play: document.getElementById("annuncio_play") }
 let giorno = new Date();
 let saluto = document.getElementById("benvenuto")
-
+let sezione = document.getElementById("unicamentePerTe")
 
 async function getAlbum(id) {
     const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`, requestOptions)
     return response.json()
+}
+
+
+function creaAlbum() {
+    let sponsor = [331985167, 366045987, 361295177, 384939427]
+
+    for (let i = 0; i < 4; i++) {
+        try {
+            let prom = getAlbum(sponsor[random(sponsor.length)])
+            prom.then((album) => {
+                sezione.innerHTML += `<div class="card card-album p-3"><a href=""><img src="${album.cover_xl}" class="card-img-top shadow  " alt="..."><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
+            })
+        } catch (e) {
+            console.log("Errore: " + e)
+        }
+        
+    }
 }
 
 
@@ -21,9 +38,7 @@ async function getAlbum(id) {
 
 
 
-
-
-
+creaAlbum()
 
 
 
