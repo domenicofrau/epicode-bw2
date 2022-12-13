@@ -5,42 +5,9 @@
  *
  */
 var requestOptions = { method: 'GET', redirect: 'follow' };
-
-
-let saluto = document.getElementById("benvenuto")
+let annuncio = { titolo: document.getElementById("annuncio_titolo"), img: document.getElementById("annuncio_img"), descrizione: document.getElementById("annuncio_testo"), bt_share: document.getElementById("annuncio_share"), bt_play: document.getElementById("annuncio_play") }
 let giorno = new Date();
-
-let annuncio = document.getElementById("annunci")
-
-
-
-async function cambioAnnuncio() {
-    let sponsor = [60114382,75621062]
-    try {
-        let prom = getAlbum(sponsor[random(sponsor.length)])
-        prom.then((album) => {
-          console.log(album)
-            creaAnnuncio(album)
-        })
-      } catch (e) {
-        console.log("Errore: " + e)
-      }
-}
-
-
-function creaAnnuncio(album) {
-    let titolo = document.getElementById("annuncio_titolo")
-    let img = document.getElementById("annuncio_img")
-    let descrizione = document.getElementById("annuncio_testo")
-    let bt_share = document.getElementById("annuncio_share")
-    let bt_play = document.getElementById("annuncio_play")
-    bt_share.href = album.share
-    img.src = album.cover_xl
-    titolo.innerHTML = album.title
-    descrizione.innerHTML = `Scopri il nuovo album di ${album.artist.name} con ${album.nb_tracks} tracce inedite`
-}
-
-
+let saluto = document.getElementById("benvenuto")
 
 
 async function getAlbum(id) {
@@ -52,11 +19,34 @@ async function getAlbum(id) {
 
 
 
-cambioAnnuncio()
 
 
 
 
+
+
+
+
+
+function cambioAnnuncio() {
+    let sponsor = [331985167, 366045987, 361295177, 384939427]
+    try {
+        let prom = getAlbum(sponsor[random(sponsor.length)])
+        prom.then((album) => {
+            salvaAlbum(album.id)
+            annuncio.bt_share.href = album.share
+            annuncio.img.src = album.cover_xl
+            annuncio.titolo.innerHTML = album.title
+            annuncio.descrizione.innerHTML = `Scopri il nuovo singolo "${album.title}" di ${album.artist.name}`
+        })
+    } catch (e) {
+        console.log("Errore: " + e)
+    }
+}
+
+function salvaAlbum(id) {
+    localStorage.setItem("id_album", id)
+}
 
 function random(max) {
     return Math.floor(Math.random() * max);
@@ -70,22 +60,26 @@ function cambiaSaluto() {
         case ((ora >= 6) && (ora < 12)):
             saluto.innerHTML = "Buongiorno"
             break;
-    
+
         case ((ora >= 12) && (ora < 16)):
             saluto.innerHTML = "Buon Pomeriggio"
             break;
-    
+
         case ((ora >= 16) && (ora <= 23 && min <= 59)):
             saluto.innerHTML = "Buonasera"
             break;
-    
+
         case ((ora >= 0) && (ora < 6)):
             saluto.innerHTML = "Buonanotte"
             break;
-    
+
         default:
             saluto.innerHTML = "Benvenuto"
             break;
     }
 }
+
+
+
 cambiaSaluto()
+cambioAnnuncio()
