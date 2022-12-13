@@ -69,9 +69,9 @@ function creaPerTe() {
     }
 }
 
-function cambioAnnuncio() {
+function creaAnnuncio() {
     try {
-        let prom = getAlbum(sponsor[random(sponsor.length)])
+        let prom = getAlbum(lista_sponsor[random(lista_sponsor.length)])
         prom.then((album) => {
             salvaAlbum(album.id)
             annuncio.bt_share.href = album.share
@@ -136,7 +136,7 @@ async function getArtist(id) {
  *  AVVIO FUNZIONI
  */
 cambiaSaluto()
-cambioAnnuncio()
+creaAnnuncio()
 creaAlbum()
 creaArtista()
 creaPerTe()
