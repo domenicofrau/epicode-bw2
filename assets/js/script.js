@@ -31,8 +31,13 @@ async function cambioAnnuncio() {
 function creaAnnuncio(album) {
     let titolo = document.getElementById("annuncio_titolo")
     let img = document.getElementById("annuncio_img")
+    let descrizione = document.getElementById("annuncio_testo")
+    let bt_share = document.getElementById("annuncio_share")
+    let bt_play = document.getElementById("annuncio_play")
+    bt_share.href = album.share
     img.src = album.cover_xl
     titolo.innerHTML = album.title
+    descrizione.innerHTML = `Scopri il nuovo album di ${album.artist.name} con ${album.nb_tracks} tracce inedite`
 }
 
 
