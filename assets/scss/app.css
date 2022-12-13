@@ -122,4 +122,20 @@ a {
 
 .artista img {
   border-radius: 100%;
+}
+
+#artist_img {
+  border-radius: 100%;
+  height: 25px;
+  float: left;
+  margin-right: 5px;
+}
+
+#album_img {
+  max-width: 150px;
+  height: 100%;
+}
+
+#album_type {
+  text-transform: uppercase;
 }/*# sourceMappingURL=app.css.map */

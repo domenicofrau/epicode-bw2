@@ -73,7 +73,7 @@ function creaAnnuncio() {
     try {
         let prom = getAlbum(lista_sponsor[random(lista_sponsor.length)])
         prom.then((album) => {
-            salvaAlbum(album.id)
+            // salvaAlbum(album.id)
             annuncio.bt_share.href = album.share
             annuncio.img.src = album.cover_xl
             annuncio.titolo.innerHTML = album.title
