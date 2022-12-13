@@ -162,3 +162,15 @@ a{
 //     }
 // }
 
+#sticky{
+    position: sticky;
+    top:30px;
+}
+#center_nav{
+    background-color: red;
+    width: 100%;
+}
+#annunci .card{
+    background-color: $antracite;
+    color: $bianco;
+}

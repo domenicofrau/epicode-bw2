@@ -25,48 +25,53 @@
 
         <!----- Sidebar SX (Menu) ----->
         <aside id="left" class="col-2 p-4">
-            <section id="menu_sinistra">
-                <nav>
-                    <div id="menu_principale">
-                        <ul class="list-unstyled">
-                            <li><a href="#"><i class="bi bi-house-door-fill"></i>Home</a></li>
-                            <li><a href="#"><i class="bi bi-search"></i>Cerca</a></li>
-                            <li><a href="#"><i class="bi bi-collection-play"></i>La tua libreria</a></li>
-                        </ul>
-                    </div>
-                    <div id="menu_secondario">
-                        <ul class="list-unstyled logo">
-                            <li><a href="#"><i class="bi bi-plus piu"></i>Crea playlist</a></li>
-                            <li><a href="#"><i class="bi bi-heart-fill cuore"></i>Brani che ti piacciono</a></li>
-                            <li><a href="#"><i class="bi bi-bookmark-fill podcast"></i>I tuoi episodi</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </section>
-            
-            <section id="playlist">
-                <hr>
-                <ul class="list-unstyled">
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li>
-                        <ah style="max-width:200px" ref=""></ah>lorem
-                    </li>
-                </ul>
-            </section>
+            <div id="sticky">
+
+                <section id="menu_sinistra">
+                    <nav>
+                        <div id="menu_principale">
+                            <ul class="list-unstyled">
+                                <li><a href="#"><i class="bi bi-house-door-fill"></i>Home</a></li>
+                                <li><a href="#"><i class="bi bi-search"></i>Cerca</a></li>
+                                <li><a href="#"><i class="bi bi-collection-play"></i>La tua libreria</a></li>
+                            </ul>
+                        </div>
+                        <div id="menu_secondario">
+                            <ul class="list-unstyled logo">
+                                <li><a href="#"><i class="bi bi-plus piu"></i>Crea playlist</a></li>
+                                <li><a href="#"><i class="bi bi-heart-fill cuore"></i>Brani che ti piacciono</a></li>
+                                <li><a href="#"><i class="bi bi-bookmark-fill podcast"></i>I tuoi episodi</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </section>
+
+                <section id="playlist">
+                    <hr>
+                    <ul class="list-unstyled">
+                        <li><a href=""></a>lorem</li>
+                        <li><a href=""></a>lorem</li>
+                        <li><a href=""></a>lorem</li>
+                        <li><a href=""></a>lorem</li>
+                        <li><a href=""></a>lorem</li>
+                        <li><a href=""></a>lorem</li>
+                        <li><a href=""></a>lorem</li>
+                        <li><a href=""></a>lorem</li>
+                        <li><a href=""></a>lorem</li>
+                        <li>
+                            <ah style="max-width:200px" ref=""></ah>lorem
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
         </aside>
 
         <!----- Center ----->
         <div id="center" class="col-8 px-4 py-2">
 
-            <nav class="d-flex justify-content-between container navbar sticky-top">
+
+            <nav id="center_nav" class="sticky-top d-flex justify-content-between navbar">
                 <div>
                     <a href="#">
                         << /a>
@@ -100,6 +105,8 @@
             </nav>
 
 
+
+
             <section clas="mb-5" id="annunci">
                 <div class="card px-3 pb-4 pt-4">
                     <div class="row">
@@ -109,12 +116,14 @@
                         <div class="col-9">
                             <div class="card-body">
                                 <h1 class="card-title" id="annuncio_titolo">Top Hits Italy 2022</h1>
-                                <p class="card-text" id="annuncio_testo">Tutte le hit del momento, Pinguini Tattici Nucleari, Black Eyed
+                                <p class="card-text" id="annuncio_testo">Tutte le hit del momento, Pinguini Tattici
+                                    Nucleari, Black Eyed
                                     Peas, Fedez, Salmo...</p>
                                 <button type="button" style="width: 100px;"
                                     class="btn rounded-pill p-1 pt-3 pb-3 btn-success" id="annuncio_play">Play</button>
                                 <button type="button" style="width: 100px;"
-                                    class="btn rounded-pill p-1 pt-3 pb-3 btn-dark"><a href="#" id="annuncio_share" target="_blank">Condividi</a></button>
+                                    class="btn rounded-pill p-1 pt-3 pb-3 btn-dark"><a href="#" id="annuncio_share"
+                                        target="_blank">Condividi</a></button>
                                 <button type="button" style="width: 100px;"
                                     class="btn rounded-pill p-1 pt-3 pb-3 btn-dark">...</button>
                             </div>
@@ -126,7 +135,29 @@
             <section class="mb-5" id="welcome">
                 <h2 class="my-4 mb fw-bold" id="benvenuto">Buongiorno</h2>
 
-                <section id="playlist">
+
+
+                <section id="playlist" class=" d-flex row justify-content-center">
+
+
+                    <div class="card mb-3 mx-2 col-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="assets/img/playlist/01.png" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title">Titolo 1</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
                     <div class="row justify-content-between">
                         <div class="col-4 card">
                             <div class="row">
@@ -210,58 +241,62 @@
 
             </section>
 
-            <section class="mb-5" >
+            <section class="mb-5">
                 <h2 class="my-4 fw-bold">Per Te</h2>
                 <div class="row text-dark d-flex flex-row justify-content-evenly" id="perTe">
-                    
+
                 </div>
             </section>
 
-            <section class="mb-5" >
+            <section class="mb-5">
                 <h2 class="my-4 fw-bold">Unicamente per te</h2>
                 <div class="row text-dark d-flex flex-row justify-content-evenly" id="unicamentePerTe">
-                    
+
                 </div>
             </section>
 
-            <section class="mb-5" >
+            <section class="mb-5">
                 <h2 class="my-4 fw-bold">Artisti del Giorno</h2>
                 <div class="row text-dark d-flex flex-row justify-content-evenly" id="artistiDelGiorno">
-                    
+
                 </div>
             </section>
-            
+
         </div>
 
         <!----- Sidebar DX (Amico) ----->
         <aside id="right" class="col-2  py-4">
-            <!----- Head Amico ----->
-            <section id="amico_head" class="d-flex justify-content-between">
-                <h3 class="d-inline">Attività Amici</h3>
-                <span>
-                    <i class="bi bi-person-add"></i>
-                    <i class="bi bi-x"></i>
-                </span>
-            </section>
+            <div id="sticky">
 
-            <!----- Amici ----->
-            <section>
+                <!----- Head Amico ----->
+                <section id="amico_head" class="d-flex justify-content-between">
+                    <h3 class="d-inline">Attività Amici</h3>
+                    <span>
+                        <i class="bi bi-person-add"></i>
+                        <i class="bi bi-x"></i>
+                    </span>
+                </section>
 
-                <!----- Amico ----->
-                <div class="amico container d-flex">
-                    <div>
-                        <img src="assets/img/39425.jpg" alt="" class="amico_img rounded-circle">
+                <!----- Amici ----->
+                <section>
+
+                    <!----- Amico ----->
+                    <div class="amico container d-flex">
+                        <div>
+                            <img src="assets/img/39425.jpg" alt="" class="amico_img rounded-circle">
+                        </div>
+                        <div>
+                            <h4 class="amico_nome m-0">Charlie Hookham</h4>
+                            <p class="amico_titolo m-0">in Camera • Yumi Zouma</p>
+                            <i class="bi bi-disc"></i><span class="amico_album ml-1">EP III</span>
+                        </div>
+                        <div>
+                            <p class="amico_tempo">4 ore</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="amico_nome m-0">Charlie Hookham</h4>
-                        <p class="amico_titolo m-0">in Camera • Yumi Zouma</p>
-                        <i class="bi bi-disc"></i><span class="amico_album ml-1">EP III</span>
-                    </div>
-                    <div>
-                        <p class="amico_tempo">4 ore</p>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
+
         </aside>
 
     </main>
