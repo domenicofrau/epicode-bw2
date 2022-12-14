@@ -253,7 +253,7 @@ function creaAlbum() {
         try {
             let prom = getAlbum(lista_album[random(lista_album.length)])
             prom.then((album) => {
-                unicamente.innerHTML += `<div class="card tessera album p-3"><a href=""><img src="${album.cover_xl}" class="card-img-top shadow  " alt="..."><img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt=""><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
+                unicamente.innerHTML += `<div class="card tessera album p-3"><a href="" onclick="salvaAlbum(${album.id})"><img src="${album.cover_xl}" class="card-img-top shadow  " alt="..."><img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt=""><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
             })
         } catch (e) {
             console.log("Errore: " + e)
@@ -289,7 +289,6 @@ function creaAnnuncio() {
     try {
         let prom = getAlbum(lista_sponsor[random(lista_sponsor.length)])
         prom.then((album) => {
-            // salvaAlbum(album.id)
             annuncio.bt_share.href = album.share
             annuncio.img.src = album.cover_xl
             annuncio.titolo.innerHTML = album.title
@@ -302,6 +301,7 @@ function creaAnnuncio() {
 
 function salvaAlbum(id) {
     localStorage.setItem("id_album", id)
+    document.location.href = "album.html"
 }
 
 function random(max) {
