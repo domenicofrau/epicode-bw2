@@ -12,10 +12,11 @@ let banner = {
     artist_img: document.getElementById("artist_img")
 }
 
-function lancia(that) {
+function lancia(url) {
     let player = document.getElementById("player")
     player.setAttribute("autoplay", "")
-    player.src = that
+    window.localStorage.setItem("traccia", url)
+    player.src = url
 }
 
 

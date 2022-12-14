@@ -1,4 +1,13 @@
 
+/*
+    Funzione per caricare la traccia dal localstorage
+*/
+function caricaTraccia() {
+    let player = document.getElementById("player")
+    player.src = window.localStorage.getItem("traccia")
+}
+
+
 let amici = creaAmico(creaUtente())
 
 function Utente(nome, traccia, artista, album, tempo){
@@ -113,3 +122,4 @@ function esci() {
 cambiaUtente()
 creaSidebarSX()
 creaSidebarDX()
+// caricaTraccia()
