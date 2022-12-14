@@ -16,7 +16,6 @@ let lista_sponsor = [331985167, 366045987, 361295177, 384939427]
 let lista_album = [331985167, 366045987, 361295177, 384939427]
 let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917]
 
-
 function creaArtista(posizione) {
     try {
         let prom = getArtist(lista_artisti[random(lista_artisti.length)])
