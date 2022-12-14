@@ -205,15 +205,20 @@ coverArray[59] = "./assets/img/search/60.png";
 
 
 function creaSfoglia() {
-    coverArray.forEach(cover => 
-    // for (let i = 0; i < 12; i++) {
-         copertine.innerHTML += `
-                                 <a class="card tessera mb-4" href="">
-                                     <img src="${cover}" class="card-img-top shadow" alt="...">
-                                 </a>
-                                 `
-//     }
-);}
+    coverArray.forEach(cover => {
+
+        try {
+            copertine.innerHTML += `
+            <a class="card tessera mb-4" href="">
+            <img src="${cover}" class="card-img-top shadow" alt="...">
+            </a>
+            `
+        } catch (e) {
+            console.log("ERRORE: " , e)
+        }
+    }
+
+)}
 
 /*
 -------------------------------------------------------------------------------------
@@ -226,62 +231,34 @@ let lista_album = [331985167, 366045987, 361295177, 384939427]
 let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917]
 
 
-function creaArtista() {
-    for (let i = 0; i < 4; i++) {
-        try {
-            let prom = getArtist(lista_artisti[random(lista_artisti.length)])
-            prom.then((artista) => {
-                artisti.innerHTML += `<div class="card tessera artista p-3">
-                                            <a href="">
-                                                    <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
-                                                    <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
-                                                    <div class="card-body p-0 py-3">
-                                                    <h5 class="card-title">${artista.name}</h5>
-                                                    <p class="card-text">Artista</p>
-                                                </div>
-                                            </a>
-                                        </div>`
-            })
-        } catch (e) {
-            console.log("Errore: " + e)
-        }
+function creaArtista(posizione) {
+    try {
+        let prom = getArtist(lista_artisti[random(lista_artisti.length)])
+        prom.then((artista) => {
+            posizione.innerHTML += `<div class="card tessera artista p-3">
+                                        <a href="">
+                                                <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
+                                                <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
+                                                <div class="card-body p-0 py-3">
+                                                <h5 class="card-title">${artista.name}</h5>
+                                                <p class="card-text">Artista</p>
+                                            </div>
+                                        </a>
+                                    </div>`
+        })
+    } catch (e) {
+        console.log("Errore: " + e)
     }
 }
 
-function creaAlbum() {
-    for (let i = 0; i < 4; i++) {
-        try {
-            let prom = getAlbum(lista_album[random(lista_album.length)])
-            prom.then((album) => {
-                unicamente.innerHTML += `<div class="card tessera album p-3"><a href="" onclick="salvaAlbum(${album.id})"><img src="${album.cover_xl}" class="card-img-top shadow  " alt="..."><img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt=""><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
-            })
-        } catch (e) {
-            console.log("Errore: " + e)
-        }
-
-    }
-}
-
-function creaPerTe() {
-    for (let i = 0; i < 2; i++) {
-        try {
-            let prom = getAlbum(lista_album[random(lista_album.length)])
-            prom.then((album) => {
-                perTe.innerHTML += `<div class="card tessera album p-3"><a href=""><img src="${album.cover_xl}" class="card-img-top shadow" alt="..."><img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt=""><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
-            })
-        } catch (e) {
-            console.log("Errore: " + e)
-        }
-    }
-    for (let x = 0; x < 2; x++) {
-        try {
-            let prom = getArtist(lista_artisti[random(lista_artisti.length)])
-            prom.then((artista) => {
-                perTe.innerHTML += `<div class="card tessera artista p-3"><a href=""><img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="..."><img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt=""><div class="card-body p-0 py-3"><h5 class="card-title">${artista.name}</h5><p class="card-text">Artista</p></div></a></div>`
-            })
-        } catch (e) {
-            console.log("Errore: " + e)
-        }
+function creaAlbum(posizione) {
+    try {
+        let prom = getAlbum(lista_album[random(lista_album.length)])
+        prom.then((album) => {
+            posizione.innerHTML += `<div class="card tessera album p-3"><a href="album.html" onclick="salvaAlbum(${album.id})"><img src="${album.cover_xl}" class="card-img-top shadow  " alt="..."><img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt=""><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
+        })
+    } catch (e) {
+        console.log("Errore: " + e)
     }
 }
 
@@ -301,7 +278,6 @@ function creaAnnuncio() {
 
 function salvaAlbum(id) {
     localStorage.setItem("id_album", id)
-    document.location.href = "album.html"
 }
 
 function random(max) {
@@ -353,7 +329,15 @@ async function getArtist(id) {
  */
 cambiaSaluto()
 creaAnnuncio()
-creaAlbum()
-creaArtista()
-creaPerTe()
 creaSfoglia()
+
+for (let i = 0; i < 2; i++) {
+    creaAlbum(perTe)
+    creaArtista(perTe)
+}
+
+for (let i = 0; i < 4; i++) {
+    creaAlbum(unicamente)
+    creaArtista(artisti)
+    
+}
