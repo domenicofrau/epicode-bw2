@@ -5,11 +5,13 @@
 @import "_alessio";
 
 aside{
-    background-color: black
+    background-color: #000000
 }
-// footer{
-//     background-color: white;
-// }
+
+#right {
+    
+    background-color: $antracite
+}
 
 .amico_img{
     height: 45px;
@@ -20,7 +22,7 @@ a{
 }
 
 #center{
-    background-color: $nero;
+    background-color: $antracite;
 }
 
 #profilo_chip{
@@ -125,7 +127,7 @@ a{
     padding: 0;
     width: 22%;
     margin: 0 5px;
-    background-color: $antracite;
+    background-color: $antracite_alt;
     a,p{
         color:white
     }
@@ -206,22 +208,18 @@ a{
     text-transform: uppercase;
 }
 
-// main{
-//     section{
-//         div{
-//             background-color: orange;
-//             border: 1px solid black;
-//         }
-//     }
-// }
 
 #sticky{
     position: sticky;
     top:30px;
 }
 #center_nav{
-    background-color: black;
+    background-color: red;
     width: 100%;
+    padding-bottom: 1rem;
+    z-index: 100;
+    position: sticky;
+    top: 0;
 }
 #annunci .card{
     background-color: $antracite;
