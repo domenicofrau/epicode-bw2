@@ -9,3 +9,47 @@
     --bs-btn-padding-y: 0;
     --bs-btn-border-width: 0px;
 }
+
+#banner-img{
+    max-height: 450px;
+}
+
+#badge{
+    height: 25px;
+}
+
+#titolo-banner{
+    font-size:600%;
+    font-weight: 700;
+}
+
+#artist-play-btn{
+    height: 60px;
+}
+#artist-play-btn:hover{
+    scale:1.05;
+    cursor: pointer;
+}
+
+#artist-follow-btn{
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+    height: 30px;
+    width: 60px;
+    transform: translate(0,5px);
+    font-size: 14px;
+    font-weight: 500;
+    border:solid 1px gray;
+}
+#artist-follow-btn:hover{
+    border:solid 1px white;
+    
+}
+
+#artist-more-dots{
+    font-size: 300%;
+    transform: translate(0, 80px);
+    color:gray;
+    cursor: pointer;
+}
