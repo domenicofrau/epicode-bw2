@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Login - Spotify</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/scss/app.css" />
+</head>
+
+<body>
+
+    <!----------------------------------------------------- Header ----------------------------------------------------->
+    <header>
+
+    </header>
+
+
+    <!----------------------------------------------------- Main ----------------------------------------------------->
+
+    <main>
+
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" alt="" height="50px">
+                </a>
+            </div>
+        </nav>
+        <section class="container col-4 my-5">
+
+            <form action="/index.html" onsubmit="login(this)">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nome utente</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Accedi</button>
+            </form>
+        </section>
+
+
+
+    </main>
+
+    <!-----------------------------------------------------Footer----------------------------------------------------->
+
+
+
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/dom_creator.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
