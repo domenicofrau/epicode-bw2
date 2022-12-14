@@ -33,22 +33,22 @@
             <nav id="center_nav" class="sticky-top d-flex justify-content-between navbar">
                 <div>
                     <a href="#" onclick="history.back()"><img class="freccia-nav" src="assets/img/back.png" alt=""> </a>
-                    <a href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/next.png" alt=""></a>
-                    <input id="searchBar" class="d-inline rounded-pill form-control me-5" type="text" placeholder="Cosa vuoi ascoltare?">
+                    <a href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/next.png"
+                            alt=""></a>
+                    <input id="searchBar" class="d-inline rounded-pill form-control me-5" type="text"
+                        placeholder="Cosa vuoi ascoltare?">
                 </div>
                 <div class="dropdown">
 
                     <button class="btn_account btn btn-dark dropdown-toggle rounded-pill m-0" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="assets/img/39425.jpg" class="d-inline rounded-circle" alt="profilo_img"
-                            id="profilo_img" style="height: 30px;">
-                        Riccardo Calvi
+                        data-bs-toggle="dropdown" aria-expanded="false" id="profilo">
+
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Account</a></li>
                         <li><a class="dropdown-item" href="#">Profilo</a></li>
                         <li><a class="dropdown-item" href="#">Sessione privata</a></li>
-                        <li><a class="dropdown-item" href="#">Esci</a></li>
+                        <li><a class="dropdown-item" href="index.html" onclick="esci()">Esci</a></li>
                     </ul>
                 </div>
 
@@ -70,30 +70,31 @@
                 <div class="row text-dark d-flex flex-row justify-content-evenly" id="contenitore">
                     <table class="table">
                         <thead>
-                          <tr>
-                            <th class="text-white" scope="col-1">#</th>
-                            <th class="text-white" scope="col-8">TITOLO</th>
-                            <th class="text-white" scope="col-2">ALBUM</th>
-                            <th class="text-white" scope="col-1"><i class="bi bi-clock"></i></th>
-                          </tr>
+                            <tr>
+                                <th class="text-white" scope="col-1">#</th>
+                                <th class="text-white" scope="col-8">TITOLO</th>
+                                <th class="text-white" scope="col-2">ALBUM</th>
+                                <th class="text-white" scope="col-1"><i class="bi bi-clock"></i></th>
+                            </tr>
                         </thead>
                         <tbody class="table-group-divider">
-                          <tr>
-                     
-                            <th class="col-1 text-white" scope="row">1 <span><img  src="/epicode-bw2/assets/img/39425.jpg" alt=""></span></th>
+                            <tr>
 
-                            <td>
-                                <h5 class="col-7 text-white" id="titoloCanzoneAlbum">titolo </h5>
-                                <p class="text-white" id="cantanteCanzoneAlbum">cantante</p>
+                                <th class="col-1 text-white" scope="row">1 <span><img
+                                            src="/epicode-bw2/assets/img/39425.jpg" alt=""></span></th>
 
-                            </td>
-                            <td class="col-3 text-white" id="riproduzioniAlmbum">694.578</td>
-                            <P class="hide"><i class="bi bi-heart"></i> </P>
-                            <td class="col-1 text-white" id="durataAlbum">1:28</td>
-                          </tr>
-                          
+                                <td>
+                                    <h5 class="col-7 text-white" id="titoloCanzoneAlbum">titolo </h5>
+                                    <p class="text-white" id="cantanteCanzoneAlbum">cantante</p>
+
+                                </td>
+                                <td class="col-3 text-white" id="riproduzioniAlmbum">694.578</td>
+                                <P class="hide"><i class="bi bi-heart"></i> </P>
+                                <td class="col-1 text-white" id="durataAlbum">1:28</td>
+                            </tr>
+
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </section>
 
@@ -101,7 +102,7 @@
         </div>
 
 
-        
+
         <!----- Sidebar DX (Amico) ----->
         <aside id="right" class="col-2  py-4">
 
