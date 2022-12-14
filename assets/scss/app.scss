@@ -139,6 +139,41 @@ a{
     transform: translate(0,-15px);
 }
 
+.btn-playlist{
+    display: none;
+    height: 45px;
+    width: 45px;
+    transform: translate(0,-30px);
+}
+
+.cover-playlist{
+    width: 100%;
+    height: 100%;
+}
+
+.playlist-card{
+    background-color: $antracite;
+    color: white;
+    height: 100px;
+}
+
+.playlist-card .background-card{
+    opacity: 70%;
+}
+
+.playlist-card:hover{
+    cursor: pointer;
+    background-color: $antracite_hover;
+    .btn-playlist{
+        display: block;
+    }
+    
+}
+
+.btn-playlist, .cover-playlist{
+    opacity: 100%;
+}
+
 .tessera:hover {
     background-color: $antracite_hover;
     .hide{
