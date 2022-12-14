@@ -1,6 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 @import "variables";
 @import "_dome";
+@import "_giada";
+
 aside{
     background-color: black
 }
@@ -183,7 +185,7 @@ a{
     top:30px;
 }
 #center_nav{
-    background-color: red;
+    background-color: black;
     width: 100%;
 }
 #annunci .card{

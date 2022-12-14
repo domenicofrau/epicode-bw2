@@ -24,53 +24,21 @@
     <main class="d-flex">
 
         <!----- Sidebar SX (Menu) ----->
-        <aside id="left" class="col-3 vh-100 p-4">
-            <section id="menu_sinistra">
-                <nav>
-                    <div id="menu_principale">
-                        <ul class="list-unstyled">
-                            <li><a href="#"><i class="bi bi-house-door-fill"></i>Home</a></li>
-                            <li><a href="#"><i class="bi bi-search"></i>Cerca</a></li>
-                            <li><a href="#"><i class="bi bi-collection-play"></i>La tua libreria</a></li>
-                        </ul>
-                    </div>
-                    <div id="menu_secondario">
-                        <ul class="list-unstyled logo">
-                            <li><a href="#"><i class="bi bi-plus piu"></i>Crea playlist</a></li>
-                            <li><a href="#"><i class="bi bi-heart-fill cuore"></i>Brani che ti piacciono</a></li>
-                            <li><a href="#"><i class="bi bi-bookmark-fill podcast"></i>I tuoi episodi</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </section>
-            <hr>
-            <section id="playlist">
-                <ul class="list-unstyled">
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                    <li><a href=""></a>lorem</li>
-                </ul>
-            </section>
+        <aside id="left" class="col-2  p-4">
+            
         </aside>
 
         <!----------------------------------------- Center ---------------------------------------------------->
-        <div id="center" class="col-7 vh-100 px-4 py-2 ">
+        <div id="center" class="col-8  px-4 py-2 album">
 
-            <nav class="d-flex justify-content-between container navbar sticky-top">
+            <nav id="center_nav" class="sticky-top d-flex justify-content-between navbar">
                 <div>
-                    <a href="#"></a>
-                    <a href="#">></a>
+                    <a href="#"><img class="freccia-nav" src="assets/img/forward.png" alt=""> </a>
+                    <a href="#"><img class="freccia-nav" src="assets/img/next.png" alt=""></a>
                 </div>
                 <div class="dropdown">
 
-                    <button class="btn btn-dark dropdown-toggle rounded-pill m-0" type="button"
+                    <button class="btn_account btn btn-dark dropdown-toggle rounded-pill m-0" type="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="assets/img/39425.jpg" class="d-inline rounded-circle" alt="profilo_img"
                             id="profilo_img" style="height: 30px;">
@@ -84,7 +52,17 @@
                     </ul>
                 </div>
 
+                <!-- <div>
+                    <div id="profilo_chip" class="rounded-pill">
+                        <img src="assets/img/39425.jpg" class="d-inline rounded-circle" alt="profilo_img"
+                            id="profilo_img">
+                        <h5 id="profilo_nome" class="d-inline">Riccardo Calvi</h5>
+                        <i class="bi bi-caret-down-fill"></i>
+
+                    </div>
+                </div> -->
             </nav>
+
             <!-----------------------parte superiore------------------------------>
             <div class="container d-flex mb-3" id="album_banner">
                 <img src="assets/img/39425.jpg" id="album_img" alt="">
@@ -169,34 +147,8 @@
         </div>
 
         <!----- Sidebar DX (Amico) ----->
-        <aside id="right" class="col-2 vh-100 py-4">
-            <!----- Head Amico ----->
-            <section id="amico_head" class="d-flex justify-content-between">
-                <h3 class="d-inline">Attività Amici</h3>
-                <span>
-                    <i class="bi bi-person-add"></i>
-                    <i class="bi bi-x"></i>
-                </span>
-            </section>
-
-            <!----- Amici ----->
-            <section>
-
-                <!----- Amico ----->
-                <div class="amico container d-flex">
-                    <div>
-                        <img src="assets/img/39425.jpg" alt="" class="amico_img rounded-circle">
-                    </div>
-                    <div>
-                        <h4 class="amico_nome m-0">Charlie Hookham</h4>
-                        <p class="amico_titolo m-0">in Camera • Yumi Zouma</p>
-                        <i class="bi bi-disc"></i><span class="amico_album ml-1">EP III</span>
-                    </div>
-                    <div>
-                        <p class="amico_tempo">4 ore</p>
-                    </div>
-                </div>
-            </section>
+        <aside id="right" class="col-2  py-4">
+           
         </aside>
 
     </main>
@@ -238,6 +190,7 @@
     </footer> -->
 
     <script src="assets/js/script_album.js"></script>
+    <script src="assets/js/dom_creator.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
