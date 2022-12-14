@@ -106,6 +106,10 @@ function cambiaUtente() {
     document.getElementById("profilo").innerHTML = `<img src="https://picsum.photos/200" class="d-inline rounded-circle" alt="profilo_img" id="profilo_img">${window.localStorage.getItem("nome")}`
 }
 
+function esci() {
+    window.localStorage.setItem("nome", "")
+}
+
 cambiaUtente()
 creaSidebarSX()
 creaSidebarDX()
