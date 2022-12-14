@@ -143,7 +143,8 @@ function creaCategorie() {
 
 
 barra.addEventListener("keyup", (event) => {    
-    if (barra.value == "") {
+    console.log(barra.value)
+    if (barra.value === "") {
         creaCategorie()
     } else{
         creaRicerca(barra.value)

@@ -12,19 +12,6 @@ let banner = {
     artist_img: document.getElementById("artist_img")
 }
 
-
-{/* <tr>
-<th class="col-1 text-white" scope="row">1</th>
-<td>
-    <h5 class="col-4 text-white" id="titoloCanzoneAlbum">titolo </h5>
-    <p class="text-white" id="cantanteCanzoneAlbum">cantante</p>
-
-</td>
-<td class="col-4 text-white" id="riproduzioniAlmbum">694.578</td>
-<td class="col-2 text-white" id="durataAlbum">1:28</td>
-</tr> */}
-
-
 function creaTracce(album) {
     let lista = document.getElementById("lista_tracce");
 
@@ -75,6 +62,8 @@ try {
         console.log(album)
         creaBanner(album)
         creaTracce(album)
+        document.title = `${album.title} - Spotify`
+
     })
 } catch (e) {
     console.log("Errore: " + e)

@@ -47,6 +47,7 @@ try {
         console.log(artista)
         creaBanner(artista)
         topTrack(artista.tracklist)
+        document.title = `${artista.name} - Spotify`
         // creaTracce(album)
     })
 } catch (e) {
