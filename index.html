@@ -2,7 +2,7 @@
 <html lang="it">
 
 <head>
-    <title>Home - Spotify</title>
+    <title>Login - Spotify</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,173 +21,41 @@
 
     <!----------------------------------------------------- Main ----------------------------------------------------->
 
-    <main class="d-flex">
+    <main>
 
-        <!----- Sidebar SX (Menu) ----->
-        <aside id="left" class="col-2 p-4">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" alt="" height="50px">
+                </a>
+            </div>
+        </nav>
+        <section class="container col-4 my-5">
 
-        </aside>
-
-        <!----- Center ----->
-        <div id="center" class="col-8 px-4 py-2">
-
-
-            <nav id="center_nav" class="sticky-top d-flex justify-content-between navbar">
-                <div>
-                    <a href="#" onclick="history.back()"><img class="freccia-nav" src="assets/img/back.png" alt=""> </a>
-                    <a href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/next.png"
-                            alt=""></a>
-                </div>
-                <div class="dropdown">
-
-                    <button class="btn_account btn btn-dark dropdown-toggle rounded-pill m-0" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="assets/img/39425.jpg" class="d-inline rounded-circle" alt="profilo_img"
-                            id="profilo_img" style="height: 30px;">
-                        Riccardo Calvi
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Account</a></li>
-                        <li><a class="dropdown-item" href="#">Profilo</a></li>
-                        <li><a class="dropdown-item" href="#">Sessione privata</a></li>
-                        <li><a class="dropdown-item" href="#">Esci</a></li>
-                    </ul>
+            <form action="/home.html" onsubmit="login(this)">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nome utente</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
                 </div>
 
-                <!-- <div>
-                    <div id="profilo_chip" class="rounded-pill">
-                        <img src="assets/img/39425.jpg" class="d-inline rounded-circle" alt="profilo_img"
-                            id="profilo_img">
-                        <h5 id="profilo_nome" class="d-inline">Riccardo Calvi</h5>
-                        <i class="bi bi-caret-down-fill"></i>
-
-                    </div>
-                </div> -->
-            </nav>
-
-
-
-
-            <section clas="mb-5" id="annunci">
-                <div class="card px-3 pb-4 pt-4">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="assets/img/banner/01.png" class="img-fluid " alt="Card title" id="annuncio_img">
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <h1 class="card-title" id="annuncio_titolo">Top Hits Italy 2022</h1>
-                                <p class="card-text" id="annuncio_testo">Tutte le hit del momento, Pinguini Tattici
-                                    Nucleari, Black Eyed
-                                    Peas, Fedez, Salmo...</p>
-                                <button type="button" style="width: 100px;"
-                                    class="btn rounded-pill p-1 pt-3 pb-3 btn-success" id="annuncio_play">Play</button>
-                                <button type="button" style="width: 100px;"
-                                    class="btn rounded-pill p-1 pt-3 pb-3 btn-dark"><a href="#" id="annuncio_share"
-                                        target="_blank">Condividi</a></button>
-                                <button type="button" style="width: 100px;"
-                                    class="btn rounded-pill p-1 pt-3 pb-3 btn-dark">...</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Ricordami</label>
                 </div>
-            </section>
-
-            <section class="mb-5" id="welcome">
-                <h2 class="my-4 ms-2 text-white fw-bold" id="benvenuto">Buongiorno</h2>
-
-            </section>
-
-            <section id="playlist" class=" d-flex row justify-content-center">
+                <button type="submit" class="btn btn-primary">Accedi</button>
+            </form>
+        </section>
 
 
-                <div class="container-fluid card mb-3 px-0 mx-2 col-3 playlist-card">
-                    <div class="row g-0">
-                        <div class="col-md-3">
-                            <img src="assets/img/playlist/01.png"
-                                class="rounded-start p-0 shadow cover-playlist" alt="...">
-                        </div>
-                        <div class="col-md-8 background-card">
-                            <div class="card-body p-2">
-                                <h5 class="card-title mt-2">Coding Music</h5>
-                            </div>
-                        </div>
-                        <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
-                            alt="">
-                    </div>
-                </div>
-
-
-            </section>
-
-
-
-            <section class="mb-5">
-                <h2 class="my-4 ms-2 text-white fw-bold">Per Te</h2>
-                <div class="row text-dark d-flex flex-row justify-content-evenly" id="perTe">
-
-                </div>
-            </section>
-
-            <section class="mb-5">
-                <h2 class="my-4 ms-2 text-white fw-bold">Unicamente per te</h2>
-                <div class="row text-dark d-flex flex-row justify-content-evenly" id="unicamentePerTe">
-
-                </div>
-            </section>
-
-            <section class="mb-5">
-                <h2 class="my-4 ms-2 text-white fw-bold">Artisti del Giorno</h2>
-                <div class="row text-dark d-flex flex-row justify-content-evenly" id="artistiDelGiorno">
-
-                </div>
-            </section>
-
-        </div>
-
-        <!----- Sidebar DX (Amico) ----->
-        <aside id="right" class="col-2  py-4">
-        </aside>
 
     </main>
 
     <!-----------------------------------------------------Footer----------------------------------------------------->
 
-    <!-- <footer class="position-fixed bottom-0 w-100 m-0">
-        <section class="row">
-            <div class="col-3">
-                <div class="d-flex mb-1 w-100 align-items-center">
-                    <img class="col-5 float-left" src="assets/img/39425.jpg" alt="" id="footer_img" />
-                    <div>
-                        <h3 class="col-6 p-0 m-0" id="footer_titolo">canzone</h3>
-                        <p class="col-10 m-0" id="footer_artista">Artista</p>
-                    </div>
-                    <i class="bi bi-heart col-1"></i>
-                </div>
-            </div>
-            <div class="col-6">
-                <div>
-                    <div class=" d-flex justify-content-center">
-                        <div class="d-flex justify-content-around w-50">
-                            <i class="bi bi-shuffle"></i>
-                            <i class="bi bi-skip-backward-fill"></i>
-                            <i class="bi bi-play-circle-fill"></i>
-                            <i class="bi bi-skip-forward-fill"></i>
-                            <i class="bi bi-repeat"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-1"></div>
-                        <div class="col-10"></div>
-                        <div class="col-1"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3"></div>
-        </section>
-    </footer> -->
 
-    <script src="assets/js/script.js"></script>
+
+    <script src="assets/js/login.js"></script>
     <script src="assets/js/dom_creator.js"></script>
 
 
