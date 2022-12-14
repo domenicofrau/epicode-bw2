@@ -37,11 +37,21 @@
 
 
     table {
-        tr {
+       
+        tr {   
+              
             &:hover {
                 background-color: #312b29;
 
             }
+             
+           th{
+            img{
+                width: 40px;
+              margin-left:4px ;
+            }
+           }
+            
 
              /*  tr + .hide{
             display: block;
