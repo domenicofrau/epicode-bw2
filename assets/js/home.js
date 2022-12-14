@@ -33,7 +33,7 @@ function creaArtista(posizione) {
         let prom = getArtist(lista_artisti[random(lista_artisti.length)])
         prom.then((artista) => {
             posizione.innerHTML += `<div class="card tessera artista p-3">
-                                        <a href="">
+                                        <a href="artist.html" onclick="salvaArtista(${artista.id})">
                                                 <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
                                                 <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
                                                 <div class="card-body p-0 py-3">
@@ -75,6 +75,10 @@ function creaAnnuncio() {
 
 function salvaAlbum(id) {
     localStorage.setItem("id_album", id)
+}
+
+function salvaArtista(id) {
+    localStorage.setItem("id_artist", id)
 }
 
 function random(max) {
