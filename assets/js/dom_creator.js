@@ -5,8 +5,8 @@ asideSX.innerHTML += `<div id="sticky">
         <nav>
             <div id="menu_principale">
                 <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-house-door-fill"></i>Home</a></li>
-                    <li><a href="#"><i class="bi bi-search"></i>Cerca</a></li>
+                    <li><a href="index.html"><i class="bi bi-house-door-fill"></i>Home</a></li>
+                    <li><a href="search.html"><i class="bi bi-search"></i>Cerca</a></li>
                     <li><a href="#"><i class="bi bi-collection-play"></i>La tua libreria</a></li>
                 </ul>
             </div>
@@ -32,7 +32,7 @@ asideSX.innerHTML += `<div id="sticky">
             <li><a href=""></a>lorem</li>
             <li><a href=""></a>lorem</li>
             <li><a href=""></a>lorem</li>
-            <li><ah style="max-width:200px" ref=""></ah>lorem</li>
+            <li><a href=""></a>lorem</li>
         </ul>
     </section>
 </div>`
