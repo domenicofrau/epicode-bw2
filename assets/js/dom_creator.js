@@ -82,9 +82,8 @@ function creaSidebarDX(params) {
 }
 
 function creaAmico(utenti) {
-    let out
+    let out = ""
     utenti.forEach(utente => {
-        console.log(utente)
         out += `<!----- Amico ----->
         <div class="amico container d-flex">
             <div>

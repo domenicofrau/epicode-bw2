@@ -1,7 +1,6 @@
 /*
  *      EXTRA:
- *          - Aggiungere pagina di login per ottenere il nome dell'utente
- *            e popolarlo all'interno della web app
+ *          - Aggiungere pagina per i brani preferiti 
  *
  */
 var requestOptions = { method: 'GET', redirect: 'follow' };
