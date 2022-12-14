@@ -35,8 +35,12 @@
                     <a href="#" onclick="history.back()"><img class="freccia-nav" src="assets/img/back.png" alt=""> </a>
                     <a href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/next.png"
                             alt=""></a>
-                    <input id="searchBar" class="d-inline rounded-pill form-control me-5" type="text"
-                        placeholder="Cosa vuoi ascoltare?">
+
+                        <div class="input-group position-absolute d-inline">
+                            <span id="lente" class="input-group-text bg-white"><i class="bi bi-search"></i>
+                            <input id="searchBar" type="text" class="form-control position-absolute ms-4 py-2" placeholder="Cosa vuoi ascoltare?" aria-label="Cosa vuoi ascoltare?" aria-describedby="basic-addon1"></span>
+                          </div>
+
                 </div>
                 <div class="dropdown">
 
