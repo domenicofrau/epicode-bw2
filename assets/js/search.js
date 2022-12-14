@@ -9,18 +9,53 @@ function search(key) {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${key}`, requestOptions)
     .then(response => response.json())
     .then(result => {
-        console.log("Ricerca: ",result)
+        creaTracce(result)
     })
     .catch(error => console.log('error', error));
 }
 
 
 
+function creaTracce(album) {
+    let lista = document.getElementById("lista_tracce");
+
+    let array = album.data
+
+    for (let i = 0; i < array.length; i++) {
+        const traccia = array[i];
+    
+        let riga = lista.insertRow(lista.rows.length);
+        var cell1 = riga.insertCell(0);
+        var cell2 = riga.insertCell(1);
+        var cell3 = riga.insertCell(2);
+        var cell4 = riga.insertCell(3);
+
+        cell1.innerHTML = `<td class="col-1 text-white" scope="row"> ${i+1} <span><img src="${traccia.album.cover_xl}" class="w-100" alt=""></span></td>`;
+        cell2.innerHTML = `<span><h5 class="col-4 " id="track_title">${traccia.title_short}</h5><p class="" id="artist_name">${traccia.artist.name}</p></span>`;
+        cell3.innerHTML = traccia.rank;
+        cell4.innerHTML = Math.floor(traccia.duration / 60);
+    };
+
+
+}
+
 
 
 function creaRicerca(key) {
     titolo.innerHTML = "Brani"
-    contenitore.innerHTML = ""
+    contenitore.innerHTML = `<table class="table" id="lista_tracce">
+    <thead>
+        <tr>
+            <th class="text-white" scope="col-1">#</th>
+            <th class="text-white" scope="col-8">TITOLO</th>
+            <th class="text-white" scope="col-2">ALBUM</th>
+            <th class="text-white" scope="col-1"><i class="bi bi-clock"></i></th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+
+    </tbody>
+</table>`
     search(key)
 }
 
@@ -29,6 +64,7 @@ function creaRicerca(key) {
 
 function creaCategorie() {
     titolo.innerHTML = "Sfoglia tutto"
+    contenitore.innerHTML = ""
     let categorie = [
         "./assets/img/search/01.png",
         "./assets/img/search/02.png",
@@ -106,9 +142,7 @@ function creaCategorie() {
 }
 
 
-barra.addEventListener("keyup", (event) => {
-    console.log(barra.value)
-    
+barra.addEventListener("keyup", (event) => {    
     if (barra.value == "") {
         creaCategorie()
     } else{
@@ -120,4 +154,4 @@ barra.addEventListener("keyup", (event) => {
 /*
  *  AVVIO FUNZIONI
  */
-// creaCategorie()
+creaCategorie()
