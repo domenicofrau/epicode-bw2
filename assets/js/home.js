@@ -11,10 +11,23 @@ let saluto = document.getElementById("benvenuto")
 let unicamente = document.getElementById("unicamentePerTe")
 let artisti = document.getElementById("artistiDelGiorno")
 let perTe = document.getElementById("perTe")
+let playlist = document.getElementById("playlist")
+
 
 let lista_sponsor = [331985167, 366045987, 361295177, 384939427]
 let lista_album = [331985167, 366045987, 361295177, 384939427]
 let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917]
+
+function creaPlaylist() {
+    playlist.innerHTML += `<div class="container-fluid card mb-3 px-0 mx-2 col-3 playlist-card"><div class="row g-0"><div class="col-md-3"><img src="assets/img/playlist/01.png" class="rounded-start p-0 shadow cover-playlist" alt="..."></div><div class="col-md-8 background-card">
+            <div class="card-body p-2">
+                <h5 class="card-title mt-2">Coding Music</h5>
+            </div>
+        </div>
+        <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"alt="">
+        </div>
+        </div>`
+}
 
 function creaArtista(posizione) {
     try {
@@ -114,6 +127,10 @@ async function getArtist(id) {
  */
 cambiaSaluto()
 creaAnnuncio()
+
+for (let i = 0; i < 6; i++) {
+    creaPlaylist()
+}
 
 for (let i = 0; i < 2; i++) {
     creaAlbum(perTe)

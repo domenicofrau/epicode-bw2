@@ -1,3 +1,6 @@
+let nomeUtente = document.getElementById("profilo")
+nomeUtente.innerHTML = `<img src="https://picsum.photos/200" class="d-inline rounded-circle" alt="profilo_img" id="profilo_img">${window.localStorage.getItem("nome")}`
+
 let asideSX = document.getElementById("left")
 asideSX.innerHTML += `<div id="sticky">
 
