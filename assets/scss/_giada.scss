@@ -1,0 +1,61 @@
+#center {
+    background-color: #121212;
+}
+
+
+.bottoni {
+    .play {
+        font-size: 32px;
+
+      /*  &:hover {
+            transform: scale(1.5);
+
+        }*/
+
+
+    }
+}
+    .hide {
+       display: contents;
+     
+    }
+        a {
+         
+            font-size: 20px;
+            padding: 15px;
+        
+
+          /*  &:hover+.hide {
+
+                background-color: #121212;
+                color: white;
+                width: 50px;
+
+            }*/
+        }
+
+
+
+    table {
+        tr {
+            &:hover {
+                background-color: #312b29;
+
+            }
+
+             /*  tr + .hide{
+            display: block;
+            color: white;
+                }*/
+            #cantanteCanzoneAlbum {
+
+                &:hover {
+                    text-decoration: underline;
+
+                }
+
+            }
+
+        }
+
+    }
