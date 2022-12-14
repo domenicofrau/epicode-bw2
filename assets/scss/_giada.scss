@@ -7,16 +7,12 @@
     .play {
         font-size: 32px;
 
-      /*  &:hover {
-            transform: scale(1.5);
-
-        }*/
-
+     
 
     }
 }
     .hide {
-       display: contents;
+       display: none;
      
     }
         a {
@@ -25,30 +21,33 @@
             padding: 15px;
         
 
-          /*  &:hover+.hide {
-
+           &:hover+.hide {
+                display:inline;
+              
                 background-color: #121212;
                 color: white;
                 width: 50px;
 
-            }*/
+            }
         }
 
 
 
     table {
-       
+   
         tr {   
-              
+              color: white;
             &:hover {
                 background-color: #312b29;
 
             }
-             
-           th{
+            
+           td{
+           
             img{
                 width: 40px;
-              margin-left:4px ;
+               margin-left:4px ;
+       
             }
            }
             

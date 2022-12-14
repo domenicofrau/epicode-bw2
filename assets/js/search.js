@@ -30,8 +30,8 @@ function creaTracce(album) {
         var cell3 = riga.insertCell(2);
         var cell4 = riga.insertCell(3);
 
-        cell1.innerHTML = `<td class="col-1 text-white" scope="row"> ${i+1} <span><img src="${traccia.album.cover_xl}" class="w-100" alt=""></span></td>`;
-        cell2.innerHTML = `<span><h5 class="col-4 " id="track_title">${traccia.title_short}</h5><p class="" id="artist_name">${traccia.artist.name}</p></span>`;
+        cell1.innerHTML = `<td class="col-1 text-white" scope="row"> <span class="px-1"> ${i+1} </span><span><img src="${traccia.album.cover_xl}" alt=""></span></td>`;
+        cell2.innerHTML = `<span><h6 class="col-4 m-0" id="track_title">${traccia.title_short}</h6><p class="m-0" id="artist_name">${traccia.artist.name}</p></span>`;
         cell3.innerHTML = traccia.rank;
         cell4.innerHTML = Math.floor(traccia.duration / 60);
     };
@@ -43,16 +43,16 @@ function creaTracce(album) {
 
 function creaRicerca(key) {
     titolo.innerHTML = "Brani"
-    contenitore.innerHTML = `<table class="table" id="lista_tracce">
+    contenitore.innerHTML = `<table  id="lista_tracce">
     <thead>
         <tr>
-            <th class="text-white" scope="col-1">#</th>
+            <th class="text-white m-0" scope="col-1">#</th>
             <th class="text-white" scope="col-8">TITOLO</th>
             <th class="text-white" scope="col-2">ALBUM</th>
             <th class="text-white" scope="col-1"><i class="bi bi-clock"></i></th>
         </tr>
     </thead>
-    <tbody class="table-group-divider">
+    <tbody class="table-group-divider row">
 
     </tbody>
 </table>`
