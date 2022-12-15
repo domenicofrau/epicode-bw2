@@ -14,15 +14,7 @@
 
 <body>
 
-    <!----------------------------------------------------- Header ----------------------------------------------------->
-    <header>
-
-    </header>
-
-
-    <!----------------------------------------------------- Main ----------------------------------------------------->
-
-    <main >  
+    <main>
         <nav class="navbar navbar-light bg-light">
             <div class="logo">
                 <a class="navbar-brand" href="#">
@@ -30,45 +22,45 @@
                 </a>
             </div>
         </nav>
-    <div class="contenitore">
+        <div class="contenitore">
 
-      
-        <section class="container d-flex flex-column align-items-center col-4 my-5">
-           <div class="bottoni">
-            <p class="loginP">Per continuare, accedi a Spotify.</p>
-            <button class="bottone blu "> <i class="bi bi-facebook"></i> continua con facebook</button>
-            <button class="bottone nero"> <i class="bi bi-apple"></i> continua con apple</button>
-            <button class="bottone mb-5"> <i class="bi bi-google"></i> continua con google</button>
-            </div>
-          <p class="linea"></p>
-            <form action="/home.html" onsubmit='window.localStorage.setItem("nome", this.username.value)'>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Indirizzo e-mail o nome utente</label>
-                    <input type="text" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="Indirizzo e-mail o nome utente ">
-                    <div id="emailHelp" class="form-text"></div>
+            <section class="container d-flex flex-column align-items-center col-4 my-5">
+                <div class="bottoni">
+                    <p class="loginP">Per continuare, accedi a Spotify.</p>
+                    <button class="bottone blu "> <i class="bi bi-facebook"></i> continua con facebook</button>
+                    <button class="bottone nero"> <i class="bi bi-apple"></i> continua con apple</button>
+                    <button class="bottone mb-5"> <i class="bi bi-google"></i> continua con google</button>
+                </div>
+                <p class="linea"></p>
+                <form action="/home.html" onsubmit='window.localStorage.setItem("nome", this.username.value)'>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Indirizzo e-mail o nome utente</label>
+                        <input type="text" id="exampleInputEmail1" name="username" aria-describedby="emailHelp"
+                            placeholder="Indirizzo e-mail o nome utente ">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-3 ">
+                        <p class="passwordReset">Hai dimenticato la password?</p>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+                        <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary accedi">ACCEDI</button>
+                </form>
+
+                <div class="linea">
+
                 </div>
 
-                <div class="mb-3 "> 
-                       <p class="passwordReset">Hai dimenticato la password?</p>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                
-                    <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+                <div class="iscriviti">
+                    <p class="loginP">Non hai un account?</p>
+                    <button class="bottone">ISCRIVITI A SPOTIFY </button>
                 </div>
-                <button type="submit" class="btn btn-primary accedi">ACCEDI</button>
-            </form>
-            
-            <div class="linea">
-
-            </div>
-
-             <div class="iscriviti">
-            <p class="loginP">Non hai un account?</p>
-            <button class="bottone">ISCRIVITI A SPOTIFY </button>
-            </div>
-    </div>
+        </div>
         </section>
 
-</div>
+        </div>
 
     </main>
 
