@@ -2,12 +2,12 @@
 /*
     Funzione per caricare la traccia dal localstorage
 */
-window.onscroll= function(){
+window.onscroll = function () {
     const header = document.querySelector('#center_nav');
     let top = window.scrollY;
-    if (top > 40){
+    if (top > 40) {
         header.classList.add('active');
-    }else{
+    } else {
         header.classList.remove('active');
     }
 }
@@ -24,7 +24,7 @@ function caricaTraccia() {
 let amici = creaAmico(creaUtente())
 
 
-function Utente(nome, traccia, artista, album, tempo,img){
+function Utente(nome, traccia, artista, album, tempo, img) {
     this.nome = nome;
     this.traccia = traccia;
     this.artista = artista;
@@ -105,7 +105,7 @@ function creaSidebarSX() {
             <li><a href=""></a>Top Christmas Song! &#127877;&#127876;</li>
         </ul>
     </section>
-</div>`  
+</div>`
 }
 
 function creaSidebarDX() {
@@ -128,10 +128,11 @@ function creaSidebarDX() {
     </section>
     </div>
     `
-    
+
 }
 
 function creaPlayer() {
+    let traccia = JSON.parse(window.localStorage.getItem("traccia"))
     document.getElementById("footer").innerHTML += `<div class="d-flex justify-content-between align-items-center position-sticky bottom-0" id="player-spotify">
     <div class="d-flex justify-content-around">
         <div>
@@ -234,8 +235,11 @@ function creaPlayer() {
             onchange="changeVolume(this.value)" />
         <button class="iconPlayer" onclick="espandi()"><i class="bi bi-arrows-angle-expand"></i></button>
     </div>
-    <audio class="player" src=""></audio>
+    <audio class="player" src="${traccia.preview}"></audio>
 </div>`
+
+    setNameArtistSong(traccia.artist.name, traccia.title_short, traccia.album.cover_xl);
+
 }
 
 function creaAmico(utenti) {
@@ -258,7 +262,7 @@ function creaAmico(utenti) {
     });
     return out
 }
-  
+
 function cambiaUtente() {
     document.getElementById("profilo").innerHTML = `<img src="https://picsum.photos/200" class="d-inline rounded-circle" alt="profilo_img" id="profilo_img">${window.localStorage.getItem("nome")}`
 }
