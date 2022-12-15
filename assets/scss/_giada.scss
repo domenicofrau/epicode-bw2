@@ -129,7 +129,12 @@ table {
             }
 
         }
+        #artist_name{
+            &:hover {
+                text-decoration: underline;
 
+            }
+        }
         #riproduzioniAlmbum {
             &:hover+.nascondi {
                 display: block;
@@ -203,11 +208,7 @@ table {
     }
 }
 
-.numeri {
-    &:hover {
-        display: none;
-    }
-}
+
 
 /////////////search////////////////////////////////////
 /// 
@@ -236,6 +237,10 @@ table {
     display: flex;
     justify-content: space-between;
 
+.secondoContenitore{
+width: 700px;
+
+}
     table {
         width: 90%;
 
