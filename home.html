@@ -26,18 +26,18 @@
 
         <!----- Sidebar SX (Menu) ----->
         <aside id="left" class="col-2 p-4">
- 
+
         </aside>
 
         <!----- Center ----->
 
         <div id="center" class="col-8">
-
             <nav id="center_nav" class="d-flex justify-content-between navbar">
                 <div>
-                    <a class="freccia-nav-a" href="#" onclick="history.back()"><img class="freccia-nav" src="assets/img/icone/back.png" alt=""> </a>
-                    <a class="freccia-nav-a" href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/icone/next.png"
-                            alt=""></a>
+                    <a class="freccia-nav-a" href="#" onclick="history.back()"><img class="freccia-nav"
+                            src="assets/img/icone/back.png" alt=""> </a>
+                    <a class="freccia-nav-a" href="#" onclick="history.forward()"><img class="freccia-nav"
+                            src="assets/img/icone/next.png" alt=""></a>
                 </div>
                 <div class="dropdown">
 
@@ -54,144 +54,148 @@
                 </div>
             </nav>
 
+            <div class="px-3">
 
 
 
-            <section clas="mb-5" id="annunci">
-                <div class="card px-3 py-4">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="" class="img-fluid " alt="Card title" id="annuncio_img">
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <h1 class="card-title" id="annuncio_titolo"></h1>
-                                <p class="card-text" id="annuncio_testo"></p>
-                                <div id="contenitore_annuncio" class="mt-5">
-                                    <button type="button" style="width: 100px;"
-                                        class="btn rounded-pill p-1 py-3 px-3 mx-2 btn-success"
-                                        id="annuncio_play">Play</button>
-                                    <button type="button" style="width: 100px;"
-                                        class="annuncio_segui btn rounded-pill py-3 px-3 ms-2 btn-dark" id="annuncio_share">Segui</button>
-                                    <button type="button" style="width: 100px;"
-                                        class="btn rounded-pill py-2 btn-dark" id="annuncio_dots">···</button>
+
+
+                <section clas="mb-5" id="annunci">
+                    <div class="card px-3 py-4">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="" class="img-fluid " alt="Card title" id="annuncio_img">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h1 class="card-title" id="annuncio_titolo"></h1>
+                                    <p class="card-text" id="annuncio_testo"></p>
+                                    <div id="contenitore_annuncio" class="mt-5">
+                                        <button type="button" style="width: 100px;"
+                                            class="btn rounded-pill p-1 py-3 px-3 mx-2 btn-success"
+                                            id="annuncio_play">Play</button>
+                                        <button type="button" style="width: 100px;"
+                                            class="annuncio_segui btn rounded-pill py-3 px-3 ms-2 btn-dark"
+                                            id="annuncio_share">Segui</button>
+                                        <button type="button" style="width: 100px;"
+                                            class="btn rounded-pill py-2 btn-dark" id="annuncio_dots">···</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="mb-5" id="welcome">
-                <h2 class="my-4 ms-2 text-white fw-bold" id="benvenuto">Buongiorno</h2>
+                <section class="mb-5" id="welcome">
+                    <h2 class="my-4 ms-2 text-white fw-bold" id="benvenuto">Buongiorno</h2>
 
-            </section>
+                </section>
 
-            <section id="playlist" class="row d-flex justify-content-evenly">
-                <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
-                    <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/01.png"
-                                class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
-                        <div class="col-9 background-card">
-                            <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Coding Music</h5>
+                <section id="playlist" class="row d-flex justify-content-evenly">
+                    <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
+                        <div class="row g-0">
+                            <div class="col-3"><img src="assets/img/playlist/01.png"
+                                    class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
+                            <div class="col-9 background-card">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title ms-2 mt-4">Coding Music</h5>
+                                </div>
                             </div>
+                            <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
+                                alt="">
                         </div>
-                        <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
-                            alt="">
                     </div>
-                </div>
-                <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
-                    <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/02.png"
-                                class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
-                        <div class="col-9 background-card">
-                            <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Canzoni di Natale</h5>
+                    <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
+                        <div class="row g-0">
+                            <div class="col-3"><img src="assets/img/playlist/02.png"
+                                    class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
+                            <div class="col-9 background-card">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title ms-2 mt-4">Canzoni di Natale</h5>
+                                </div>
                             </div>
+                            <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
+                                alt="">
                         </div>
-                        <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
-                            alt="">
                     </div>
-                </div>
-                <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
-                    <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/03.png"
-                                class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
-                        <div class="col-9 background-card">
-                            <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Fabrizio De André</h5>
+                    <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
+                        <div class="row g-0">
+                            <div class="col-3"><img src="assets/img/playlist/03.png"
+                                    class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
+                            <div class="col-9 background-card">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title ms-2 mt-4">Fabrizio De André</h5>
+                                </div>
                             </div>
+                            <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
+                                alt="">
                         </div>
-                        <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
-                            alt="">
                     </div>
-                </div>
-                <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
-                    <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/04.png"
-                                class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
-                        <div class="col-9 background-card">
-                            <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Chill Out</h5>
+                    <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
+                        <div class="row g-0">
+                            <div class="col-3"><img src="assets/img/playlist/04.png"
+                                    class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
+                            <div class="col-9 background-card">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title ms-2 mt-4">Chill Out</h5>
+                                </div>
                             </div>
+                            <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
+                                alt="">
                         </div>
-                        <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
-                            alt="">
                     </div>
-                </div>
-                <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
-                    <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/05.png"
-                                class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
-                        <div class="col-9 background-card">
-                            <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">alle 3 di notte</h5>
+                    <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
+                        <div class="row g-0">
+                            <div class="col-3"><img src="assets/img/playlist/05.png"
+                                    class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
+                            <div class="col-9 background-card">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title ms-2 mt-4">alle 3 di notte</h5>
+                                </div>
                             </div>
+                            <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
+                                alt="">
                         </div>
-                        <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
-                            alt="">
                     </div>
-                </div>
-                <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
-                    <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/06.png"
-                                class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
-                        <div class="col-9 background-card">
-                            <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">the fucking mood</h5>
+                    <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
+                        <div class="row g-0">
+                            <div class="col-3"><img src="assets/img/playlist/06.png"
+                                    class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
+                            <div class="col-9 background-card">
+                                <div class="card-body p-2">
+                                    <h5 class="card-title ms-2 mt-4">the fucking mood</h5>
+                                </div>
                             </div>
+                            <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
+                                alt="">
                         </div>
-                        <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
-                            alt="">
                     </div>
-                </div>
 
-            </section>
-
+                </section>
 
 
-            <section class="mb-5">
-                <h2 class="my-4 ms-2 text-white fw-bold">Per Te</h2>
-                <div class="row text-dark d-flex flex-row justify-content-evenly" id="perTe">
 
-                </div>
-            </section>
+                <section class="mb-5">
+                    <h2 class="my-4 ms-2 text-white fw-bold">Per Te</h2>
+                    <div class="row text-dark d-flex flex-row justify-content-evenly" id="perTe">
 
-            <section class="mb-5">
-                <h2 class="my-4 ms-2 text-white fw-bold">Unicamente per te</h2>
-                <div class="row text-dark d-flex flex-row justify-content-evenly" id="unicamentePerTe">
+                    </div>
+                </section>
 
-                </div>
-            </section>
+                <section class="mb-5">
+                    <h2 class="my-4 ms-2 text-white fw-bold">Unicamente per te</h2>
+                    <div class="row text-dark d-flex flex-row justify-content-evenly" id="unicamentePerTe">
 
-            <section class="mb-5">
-                <h2 class="my-4 ms-2 text-white fw-bold">Artisti del Giorno</h2>
-                <div class="row text-dark d-flex flex-row justify-content-evenly" id="artistiDelGiorno">
+                    </div>
+                </section>
 
-                </div>
-            </section>
+                <section class="mb-5">
+                    <h2 class="my-4 ms-2 text-white fw-bold">Artisti del Giorno</h2>
+                    <div class="row text-dark d-flex flex-row justify-content-evenly" id="artistiDelGiorno">
 
+                    </div>
+                </section>
+            </div>
         </div>
 
         <!----- Sidebar DX (Amico) ----->
@@ -202,7 +206,7 @@
 
     <!-----------------------------------------------------Footer----------------------------------------------------->
     <footer id="footer">
-        
+
     </footer>
 
 

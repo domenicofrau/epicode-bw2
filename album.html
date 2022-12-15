@@ -53,115 +53,116 @@
                     </ul>
                 </div>
             </nav>
+            <div class="px-3">
 
-            <!-----------------------parte superiore------------------------------>
-            <div class="container d-flex mb-3" id="album_banner">
-                <img src="" id="album_img" alt="">
-                <div class="container piccola">
-                    <p class="mb-0 text-white " id="album_type"></p>
-                    <h1 id="album_title" class="text-white display-1 fw-bold ">TITOLO</h1>
-                    <span>
-                        <img id="artist_img" src="" alt="">
-                        <p id="album_description" class="text-white">lorem</p>
-                    </span>
+                <!-----------------------parte superiore------------------------------>
+                <div class="container d-flex mb-3" id="album_banner">
+                    <img src="" id="album_img" alt="">
+                    <div class="container piccola">
+                        <p class="mb-0 text-white " id="album_type"></p>
+                        <h1 id="album_title" class="text-white display-1 fw-bold ">TITOLO</h1>
+                        <span>
+                            <img id="artist_img" src="" alt="">
+                            <p id="album_description" class="text-white">lorem</p>
+                        </span>
+                    </div>
+                </div>
+
+                <!-----------------------bottoni------------------------------>
+                <div>
+                    <div class=" bottoni">
+
+                        <a class="p-1 text-success play" href=""><i class="bi bi-play-circle-fill"></i></a>
+
+
+                        <a class="p-1 text-white" href=""><i class="bi bi-heart icone"></i></a>
+                        <P class="hide">Salva in La tua libreria </P>
+
+                        <a class="p-1 text-white " href=""><i class="bi bi-arrow-down-circle"></i></a>
+                        <p class="hide">Download</p>
+
+
+                        <a class="p-1 text-white small" href=""><i class="bi bi-three-dots"></i></a>
+                        <P class="hide">Altre opzioni per </P>
+
+                        <i class="bi bi-three-dots-vertical  text-white"></i>
+                        <i class="bi bi-shuffle  text-white shuffle "></i>
+                    </div>
+                    <!-----------------------tabella------------------------------>
+
+                    <table id="lista_tracce">
+                        <thead>
+                            <tr>
+                                <th class="col-lg-1 text-white small">#</th>
+                                <th class="col-lg-7 text-white small">TITOLO</th>
+
+                                <th class="col-lg-3 text-white small">RIPODUZIONI</th>
+                                <th class="col-lg-1 text-white small"><i class="bi bi-clock"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th class="col-lg-1 text-white small numeri" scope="row">1<i
+                                        class="bi bi-play-fill dentro"></i></th>
+                                <td>
+                                    <h5 class=" col-lg-7 text-white" id="titoloCanzoneAlbum">titolo </h5>
+                                    <p class="text-white" id="cantanteCanzoneAlbum">cantante</p>
+
+                                </td>
+                                <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578</td>
+
+
+                                <td class=" col-lg-1 text-white small" id="durataAlbum">1:28</td>
+                                <td><i class="bi bi-three-dots-vertical puntini"></i></td>
+
+                            </tr>
+                            <tr>
+                                <th class="col-lg-1 text-white small" scope="row">2</th>
+                                <td>
+                                    <span>
+                                        <h5 class="col-lg-7 text-white" id="track_title">titolo</h5>
+                                        <p class="text-white" id="artist_name">cantante</p>
+                                    </span>
+
+                                </td>
+                                <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578</td>
+                                <td class="col-lg-1 text-white small" id="durataAlbum">1:28</td>
+                                <td><i class="bi bi-three-dots-vertical puntini"></i></td>
+
+
+
+                            </tr>
+                            <tr>
+                                <th class="col-1 text-white small" scope="row">3</th>
+                                <td>
+                                    <h5 class="col-4 text-white" id="titoloCanzoneAlbum">titolo </h5>
+                                    <p classe="text-white " id="cantanteCanzoneAlbum">cantante</p>
+
+                                </td>
+                                <td class="col-4 text-white small" id="riproduzioniAlmbum">694.578</td>
+                                <td class="col-1 text-white small" id="durataAlbum">1:28</td>
+                                <td><i class="bi bi-three-dots-vertical puntini"></i></td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
-
-            <!-----------------------bottoni------------------------------>
-            <div>
-                <div class=" bottoni">
-
-                    <a class="p-1 text-success play" href=""><i class="bi bi-play-circle-fill"></i></a>
-
-
-                    <a class="p-1 text-white" href=""><i class="bi bi-heart icone"></i></a>
-                    <P class="hide">Salva in La tua libreria </P>
-
-                    <a class="p-1 text-white " href=""><i class="bi bi-arrow-down-circle"></i></a>
-                    <p class="hide">Download</p>
-
-
-                    <a class="p-1 text-white small" href=""><i class="bi bi-three-dots"></i></a>
-                    <P class="hide">Altre opzioni per </P>
-
-                    <i class="bi bi-three-dots-vertical  text-white"></i>
-                    <i class="bi bi-shuffle  text-white shuffle "></i>
-                </div>
-                <!-----------------------tabella------------------------------>
-
-                <table id="lista_tracce">
-                    <thead>
-                        <tr>
-                            <th class="col-lg-1 text-white small">#</th>
-                            <th class="col-lg-7 text-white small">TITOLO</th>
-
-                            <th class="col-lg-3 text-white small">RIPODUZIONI</th>
-                            <th class="col-lg-1 text-white small"><i class="bi bi-clock"></i></th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <tr>
-                            <th class="col-lg-1 text-white small numeri" scope="row">1<i
-                                    class="bi bi-play-fill dentro"></i></th>
-                            <td>
-                                <h5 class=" col-lg-7 text-white" id="titoloCanzoneAlbum">titolo </h5>
-                                <p class="text-white" id="cantanteCanzoneAlbum">cantante</p>
-
-                            </td>
-                            <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578</td>
-
-
-                            <td class=" col-lg-1 text-white small" id="durataAlbum">1:28</td>
-                            <td><i class="bi bi-three-dots-vertical puntini"></i></td>
-
-                        </tr>
-                        <tr>
-                            <th class="col-lg-1 text-white small" scope="row">2</th>
-                            <td>
-                                <span>
-                                    <h5 class="col-lg-7 text-white" id="track_title">titolo</h5>
-                                    <p class="text-white" id="artist_name">cantante</p>
-                                </span>
-
-                            </td>
-                            <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578</td>
-                            <td class="col-lg-1 text-white small" id="durataAlbum">1:28</td>
-                            <td><i class="bi bi-three-dots-vertical puntini"></i></td>
-                            
-                           
-
-                        </tr>
-                        <tr>
-                            <th class="col-1 text-white small" scope="row">3</th>
-                            <td>
-                                <h5 class="col-4 text-white" id="titoloCanzoneAlbum">titolo </h5>
-                                <p classe="text-white " id="cantanteCanzoneAlbum">cantante</p>
-
-                            </td>
-                            <td class="col-4 text-white small" id="riproduzioniAlmbum">694.578</td>
-                            <td class="col-1 text-white small" id="durataAlbum">1:28</td>
-                            <td><i class="bi bi-three-dots-vertical puntini"></i></td>
-
-                        </tr>
-
-
-                    </tbody>
-                </table>
             </div>
 
-        </div>
+            <!----- Sidebar DX (Amico) ----->
+            <aside id="right" class="col-2  py-4">
 
-        <!----- Sidebar DX (Amico) ----->
-        <aside id="right" class="col-2  py-4">
-
-        </aside>
+            </aside>
 
     </main>
 
 
     <!-----------------------------------------------------Footer----------------------------------------------------->
     <footer id="footer">
-        
+
     </footer>
 
 
