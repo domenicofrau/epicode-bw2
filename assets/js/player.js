@@ -27,6 +27,10 @@ function avviaTraccia(player, traccia) {
     player.src = traccia.preview;
     player.play();
     seconds = 1;
+    let fillerBarElement = document.querySelector("#filler_bar-time");
+    fillerBarElement.style.animation = 'none';
+    fillerBarElement.offsetHeight; /* trigger reflow */
+    fillerBarElement.style.animation = null; 
 
     setStartFillerBar();
     setNameArtistSong(traccia.artist.name, traccia.title_short, traccia.album.cover_xl);
@@ -109,15 +113,6 @@ let clearIntervalID = 0;
 function setStartFillerBar() {
     const progressTimeElement = document.querySelector("#progress-time");
     const fillerBarElement = document.querySelector("#filler_bar-time");
-    const audioPlayer = document.querySelector(".player");
-
-    console.log(audioPlayer);
-
-    // console.log(progressTimeElement, fillerBarElement);
-
-    // console.log(
-    // 	fillerBarElement.className.includes("paused-animation_filler-bar")
-    // );
 
     fillerBarElement.classList.add("animation_filler-bar");
 
@@ -152,8 +147,6 @@ function setPauseFillerBar() {
     let fillerBarElement = document.querySelector("#filler_bar-time");
 
     fillerBarElement.classList.toggle("paused-animation_filler-bar");
-
-    // console.log(clearIntervalID);
 
     clearInterval(clearIntervalID);
 }
