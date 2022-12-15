@@ -65,9 +65,9 @@
             <!-----------------------parte superiore------------------------------>
             <div class="container d-flex mb-3" id="album_banner">
                 <img src="assets/img/39425.jpg" id="album_img" alt="">
-                <div class="container">
-                    <p class="mb-0 text-white" id="album_type"></p>
-                    <h1 id="album_title" class="text-white display-1 fw-bold">TITOLO</h1>
+                <div class="container piccola">
+                    <p class="mb-0 text-white " id="album_type"></p>
+                    <h1 id="album_title" class="text-white display-1 fw-bold ">TITOLO</h1>
                     <span>
                         <img id="artist_img" src="assets/img/39425.jpg" alt="">
                         <p id="album_description" class="text-white">lorem</p>
@@ -85,57 +85,69 @@
                     <a class="p-1 text-white" href=""><i class="bi bi-heart"></i></a>
                      <P class="hide">Salva in La tua libreria </P>
                     
-                    <a class="p-1 text-white" href=""><i class="bi bi-arrow-down-circle"></i></a>
+                    <a class="p-1 text-white " href=""><i class="bi bi-arrow-down-circle"></i></a>
                     <p class="hide">Download</p>
 
                   
-                    <a class="p-1 text-white" href=""><i class="bi bi-three-dots"></i></a>
+                  <a class="p-1 text-white small" href=""><i class="bi bi-three-dots"></i></a>
                     <P class="hide">Altre opzioni per </P>
+
+                  <i class="bi bi-three-dots-vertical puntini text-white"></i>
+                    <i class="bi bi-shuffle  text-white shuffle puntini"></i>
                 </div>
                 <!-----------------------tabella------------------------------>
-                <table id="lista_tracce">
+ 
+                <table id="lista_tracce ">
                     <thead >
                         <tr>
-                            <th class="col-1 text-white" >#</th>
-                            <th class="col-7 text-white">TITOLO</th>
+                            <th class="col-lg-1 text-white small" >#</th>
+                            <th class="col-lg-7 text-white small">TITOLO</th>
                
-                            <th class="col-3 text-white">RIPODUZIONI</th>
-                            <th class="col-1 text-white"><i class="bi bi-clock"></i></th>
+                            <th class="col-lg-3 text-white small">RIPODUZIONI</th>
+                            <th class="col-lg-1 text-white small"><i class="bi bi-clock"></i></th>
                         </tr>
                     </thead>
-                    <tbody class="table-group-divider ">
+                    <tbody class="table-group-divider  ">
                         <tr>
-                            <th class="col-1 text-white" scope="row">1</th>
+                            <th class="col-lg-1 text-white small numeri" scope="row">1<i class="bi bi-play-fill dentro"></i></th>
                             <td>
-                                <h5 class="col-6 text-white" id="titoloCanzoneAlbum">titolo </h5>
+                                <h5 class=" col-lg-7 text-white" id="titoloCanzoneAlbum">titolo </h5>
                                 <p class="text-white" id="cantanteCanzoneAlbum">cantante</p>
 
                             </td>
-                            <td class="col-5 text-white" id="riproduzioniAlmbum">694.578</td>
-                            <P class="hide"><i class="bi bi-heart"></i> </P>
-                            <td class="col-6 text-white" id="durataAlbum">1:28</td>
+                            <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578</td>
+                         
+                       
+                            <td class=" col-lg-1 text-white small" id="durataAlbum">1:28</td>
+                           
+                            <td class="  text-white small puntini" > <i class="bi bi-three-dots-vertical"></i></td>
                         </tr>
                         <tr>
-                            <th class="col-1 text-white" scope="row">2</th>
+                            <th class="col-lg-1 text-white small" scope="row">2</th>
                             <td>
                                 <span>
-                                    <h5 class="col-4 text-white" id="track_title">titolo</h5>
+                                    <h5 class="col-lg-7 text-white" id="track_title">titolo</h5>
                                     <p class="text-white" id="artist_name">cantante</p>  
                                 </span>
 
                             </td>
-                            <td class="col-4 text-white" id="riproduzioniAlmbum">694.578</td>
-                            <td class="col-1 text-white" id="durataAlbum">1:28</td>
+                            <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578<i class="bi bi-heart nascondi"></i></td>
+                            <td class="col-lg-1 text-white small" id="durataAlbum">1:28</td>
+                            <i class="bi bi-three-dots"></i>
+                            <td class="  text-white small puntini" > <i class="bi bi-three-dots-vertical"></i></td>
+
                         </tr>
                         <tr>
-                            <th class="col-1 text-white" scope="row">3</th>
+                            <th class="col-1 text-white small" scope="row">3</th>
                             <td>
                                 <h5 class="col-4 text-white" id="titoloCanzoneAlbum">titolo </h5>
-                                <p classe="text-white" id="cantanteCanzoneAlbum">cantante</p>
+                                <p classe="text-white " id="cantanteCanzoneAlbum">cantante</p>
 
                             </td>
-                            <td class="col-4 text-white" id="riproduzioniAlmbum">694.578</td>
-                            <td class="col-1 text-white" id="durataAlbum">1:28</td>
+                            <td class="col-4 text-white small" id="riproduzioniAlmbum">694.578<i class="bi bi-heart nascondi"></i></td>
+                            <td class="col-1 text-white small" id="durataAlbum">1:28</td>
+                            <i class="bi bi-three-dots"></i>
+                            <td class="  text-white small puntini" > <i class="bi bi-three-dots-vertical"></i></td>
                         </tr>
 
 

@@ -46,9 +46,9 @@ function creaRicerca(key) {
     contenitore.innerHTML = `<table  id="lista_tracce">
     <thead>
         <tr>
-            <th class="text-white m-0" scope="col-1">#</th>
-            <th class="text-white" scope="col-8">TITOLO</th>
-            <th class="text-white" scope="col-2">ALBUM</th>
+            <th class="text-white  noSpace" scope="col-1">#</th>
+            <th class="text-white " scope="col-7">TITOLO</th>
+            <th class="text-white space" scope="col-3">ALBUM</th>
             <th class="text-white" scope="col-1"><i class="bi bi-clock"></i></th>
         </tr>
     </thead>

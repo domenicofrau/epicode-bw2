@@ -3,68 +3,247 @@
 // }
 
 
+div {
+
+    #album_img {
+        @media screen and(max-width: 480px) {
+
+            display: block;
+        }
+    }
+
+    ////inserisci le media query per il banner
+
+}
+
+
+
+
+
+
+
 .bottoni {
+
+
     .play {
-        font-size: 32px;
+        font-size: 45px;
 
-     
+        &:hover {
 
+            font-size: 50px;
+        }
+
+        @media screen and(max-width: 480px) {
+            float: right
+        }
+
+
+    }
+
+    @media screen and(max-width: 480px) {
+        margin-bottom: 0;
+
+    }
+
+
+
+
+    a {
+
+        font-size: 30px;
+        margin: 8px;
+        padding: 15px;
+
+        &:hover+.hide {
+            display: inline;
+            background-color: #121212;
+            color: white;
+            width: 50px;
+
+        }
+
+        @media screen and(max-width: 480px) {
+            font-size: 20px;
+
+        }
+    }
+
+    .shuffle {
+        @media screen and(max-width: 480px) {
+            float: right;
+            margin-right: 10px;
+        }
+    }
+
+    .puntini {
+        display: none;
+
+        @media screen and(max-width: 480px) {
+            display: inline-block;
+            font-size: 20px;
+            margin-top: 15px;
+            margin-left: 150px;
+        }
     }
 }
-    .hide {
-       display: none;
-     
+
+
+
+
+
+
+
+table {
+
+    tr {
+
+        color: white;
+
+        &:hover {
+            background-color: #312b29;
+
+        }
+
     }
-        a {
-         
-            font-size: 20px;
-            padding: 15px;
-        
 
-           &:hover+.hide {
-                display:inline;
-              
-                background-color: #121212;
-                color: white;
-                width: 50px;
+    td {
 
+        img {
+            width: 40px;
+            margin-left: 4px;
+
+        }
+
+        #cantanteCanzoneAlbum {
+
+            &:hover {
+                text-decoration: underline;
+
+            }
+
+        }
+
+        #riproduzioniAlmbum {
+            &:hover+.nascondi {
+                display: block;
+            }
+
+            .nascondi {
+                display: block;
+                margin-left: 185px;
             }
         }
 
+        .small {
+            @media screen and(max-width: 480px) {
+                display: none;
+            }
 
+            @media screen and(max-width: 1024px) {
+                :hover {
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+.piccola {
+
+    @media screen and(max-width: 480px) {
+
+        display: block;
+    }
+
+}
+
+.dentro {
+    display: none;
+
+}
+
+.dentro:hover,
+.numeri:hover {
+    .numeri {
+        display: none;
+    }
+
+    .dentro {
+        display: block;
+    }
+}
+
+.numeri {
+    &:hover {
+        display: none;
+    }
+}
+
+/////////////search////////////////////////////////////
+/// 
+/// 
+
+.noSpace {
+    width: 80px;
+}
+
+.space {
+    width: 300px;
+}
+
+#lista_tracce {
+    @media screen and(max-width: 480px) {
+
+        width: 100%;
+    }
+
+
+}
+
+/////////////////////artist//////////////////////////////
+
+.popolariContenitore {
+    display: flex;
+    justify-content: space-between;
 
     table {
-   
-        tr {   
-              color: white;
-            &:hover {
-                background-color: #312b29;
+        width: 90%;
 
-            }
-            
-           td{
-           
-            img{
-                width: 40px;
-               margin-left:4px ;
-       
-            }
-           }
-            
-
-             /*  tr + .hide{
-            display: block;
-            color: white;
-                }*/
-            #cantanteCanzoneAlbum {
-
-                &:hover {
-                    text-decoration: underline;
-
-                }
-
-            }
-
+        img {
+            width: 25px;
         }
 
     }
+
+    p {
+        font-weight: bold;
+        font-size: 11px;
+        margin: 10px;
+    }
+
+    section {
+        h6 {
+            font-size: 13px;
+        }
+
+        img {
+            border-radius: 100px;
+            width: 50px;
+        }
+    }
+}
