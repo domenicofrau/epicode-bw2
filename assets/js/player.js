@@ -3,9 +3,8 @@
 
 // funzione per play
 function playA() {
-    let song = window.localStorage.getItem("traccia")
-    song = JSON.parse(song)
-    console.log(song)
+    let song = JSON.parse(window.localStorage.getItem("traccia"))
+    // console.log(song)
 
     let aux = document.querySelector(".player");
     if (aux.paused || aux.currentTime === 0 || aux.ended) {
@@ -60,8 +59,8 @@ function selectedPlayPause() {
     let aux = document.querySelector(".player");
     if (aux.play()) {
         aux.pause()
-    } else {
-        aux.play()
+    } else if (!aux.play()){
+        console.log("ciao")
     }
     btnPlay.classList.toggle("d-none");
     btnPause.classList.toggle("d-none");
