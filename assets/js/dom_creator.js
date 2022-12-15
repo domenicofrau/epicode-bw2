@@ -37,7 +37,7 @@ function creaUtente() {
     let out = []
     out.push(new Utente("Germano", "Ave o Maria", "Chierichetti Papali", "Canzoni di Parrocchia", "1 ora", "https://www.kulturjam.it/wp-content/uploads/Germano-Mosconi-il-giornalista-che-fece-la-storia-della-bestemmia-2.jpg"))
     out.push(new Utente("Antonino", "Portapalazzo", "Willie Peyote", "Sindrome di Tôret", "3 ore", "https://www.ristorantiweb.com/wp-content/uploads/sites/9/2018/09/Antonino-Cannavacciuolo.jpg"))
-    out.push(new Utente("Babbo Natale", "El Tiempo", "Kermesse", "Igloo 10, Part 2", "2 ore", "https://www.nostrofiglio.it/images/2020/12/15/babbo-natale-colore_900x760.jpg"))
+    out.push(new Utente("Federico", "Come Together", "The Beatles", "Abbey Road", "2 ore", "https://am4pap001files.storage.live.com/y4mGKt9X2YQPfmP_1VadK8rRPydrOnq_dN1Avg5nJMyrBRGmGc6efI0V2AmZx62xrf-_XHEQH3kuvPe0ZA4po7IlTaG1sCf7Ghzu7pcELg-sMgDgX_MW1NG8ho-XORM6DYDAxrl6SKy8GpEkbPVn3-Tj8WKiHDHgeOgAlzEebRenbwzQ3mtrd8E_wqorTEMNMKd?encodeFailures=1&width=322&height=273"))
     out.push(new Utente("Lino", "Moon Dude", "Jessica Pratt", "On Your Own Love Again", "2 giorni", "https://metadata-static.plex.tv/4/people/40fe22ff957809226d7aabfbd2413d06.jpg"))
     return out
 }
