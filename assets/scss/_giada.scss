@@ -6,10 +6,10 @@
 .banner {
 display: flex;
 
-        @media screen and(max-width: 480px) {
+     /*   @media screen and(max-width: 480px) {
 
             display: block;
-        }
+        }*/
     }
 
 
@@ -26,29 +26,25 @@ display: flex;
 
 .bottoni {
 
-@media screen and(max-width: 480px) {
+//@media screen and(max-width: 480px) {
 
 
 }
     .play {
         font-size: 45px;
 
-        &:hover {
-
-            font-size: 50px;
-        }
-
-        @media screen and(max-width: 480px) {
+       
+       /* @media screen and(max-width: 480px) {
             float: right
-        }
+        }*/
 
 
     }
 
-    @media screen and(max-width: 480px) {
+    /*@media screen and(max-width: 480px) {
       //  margin-bottom: 0;
 
-    }
+    }*/
 
 
 
@@ -67,32 +63,25 @@ display: flex;
         
         }
 
-        @media screen and(max-width: 480px) {
+       /* @media screen and(max-width: 480px) {
             font-size: 20px;
 
-        }
+        }*/
     }
 
-    .shuffle {
-
-
-        @media screen and(max-width: 480px) {
-            float: right;
-            margin-right: 10px;
-        }
-    }
+    
 
     .puntini {
         display: none;
 
-        @media screen and(max-width: 480px) {
+       /* @media screen and(max-width: 480px) {
             display: inline-block;
             font-size: 20px;
             margin-top: 15px;
-            margin-left: 150px;
-        }
+            margin-left: 150px; leva pure la classe
+        }*/
     }
-}
+
 
 
 
@@ -101,7 +90,7 @@ display: flex;
 
 
 table {
-
+margin: 50px;
     tr {
 
         color: white;
@@ -148,11 +137,10 @@ table {
 .puntini{
     display: none;
    
-    @media screen and(max-width: 480px) {
+   /* @media screen and(max-width: 480px) {
         display: block;  
-        margin-left: 200px;
-
-    }
+        margin-left: 200px; togli classe
+    }*/ 
 
 }
       
@@ -164,7 +152,7 @@ table {
 
 
 
-  .small {
+ /* .small {
             @media screen and(max-width: 480px) {
                 display: none;
             }
@@ -173,8 +161,8 @@ table {
                 :hover {
                     display: block;
                 }
-            }
-        }
+            }*/
+        
 
 
 
@@ -185,10 +173,10 @@ table {
 
 .piccola {
 
-    @media screen and(max-width: 480px) {
+  /*  @media screen and(max-width: 480px) {
 
         display: block;
-    }
+    }*/
 
 }
 
@@ -197,7 +185,7 @@ table {
 
 }
 
-.dentro:hover,
+/*.dentro:hover,
 .numeri:hover {
     .numeri {
         display: none;
@@ -206,7 +194,7 @@ table {
     .dentro {
         display: block;
     }
-}
+}*/
 
 
 
