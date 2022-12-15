@@ -5,7 +5,6 @@
 window.onscroll= function(){
     const header = document.querySelector('#center_nav');
     let top = window.scrollY;
-    console.log(top)
     if (top > 40){
         header.classList.add('active');
     }else{
