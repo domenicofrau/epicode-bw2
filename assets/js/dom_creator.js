@@ -271,8 +271,8 @@ function esci() {
     window.localStorage.setItem("nome", "")
 }
 
+creaPlayer()
 cambiaUtente()
 creaSidebarSX()
 creaSidebarDX()
-creaPlayer()
 // caricaTraccia()
