@@ -12,31 +12,31 @@ let banner = {
     artist_img: document.getElementById("artist_img")
 }
 
-function lancia(url) {
-    let player = document.getElementById("player")
-    player.setAttribute("autoplay", "")
-    window.localStorage.setItem("traccia", url)
-    player.src = url
+function salvaTraccia(traccia) {
+    traccia = JSON.stringify(traccia)
+    window.localStorage.setItem("traccia", traccia)
+
+    playA()
 }
 
 
 function creaTracce(album) {
     let lista = document.getElementById("lista_tracce");
 
-
     let array = album.tracks.data
 
     for (let i = 0; i < array.length; i++) {
         const traccia = array[i];
-    
-        // console.log(traccia)
+
+        let tracciaOut = JSON.stringify(traccia)
+
         let riga = lista.insertRow(lista.rows.length);
         var cell1 = riga.insertCell(0);
         var cell2 = riga.insertCell(1);
         var cell3 = riga.insertCell(2);
         var cell4 = riga.insertCell(3);
 
-        cell1.innerHTML = `<button class="carica" onclick="lancia('${traccia.preview}')">${i+1}</button>`;
+        cell1.innerHTML = `<button class="carica" onclick='salvaTraccia(${tracciaOut})'>${i+1}</button>`;
         cell2.innerHTML = `<span><h5 class="col-4 " id="track_title">${traccia.title_short}</h5><p class="" id="artist_name">${traccia.artist.name}</p></span>`;
         cell3.innerHTML = traccia.rank;
         cell4.innerHTML = Math.floor(traccia.duration / 60);
