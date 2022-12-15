@@ -13,15 +13,15 @@ let perTe = document.getElementById("perTe")
 let playlist = document.getElementById("playlist")
 
 
-let lista_sponsor = [331985167, 366045987, 361295177, 384939427]
-let lista_album = [331985167, 366045987, 361295177, 384939427, 11898198]
-let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917]
+let lista_sponsor = [331985167, 366045987, 361295177, 384939427,384830817, 359324967,321660907,342410187,368969877,361543547]
+let lista_album = [ 331985167,366045987, 361295177, 384939427,384939227,377360177,384966267,383623707,376156727,379835987,371519127,331966797,111239,11898198,77648602,59853992,226069]
+let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917, 7979, 3315, 390032,2279, 6168800, 10666535, 1288678, 2276, 8513, 3305, 3164, 390032, 57573792, 1, 11, 847, 848,4050205,416239,384236,10583405,176]
 
 function creaArtista(posizione) {
     try {
         let prom = getArtist(lista_artisti[random(lista_artisti.length)])
         prom.then((artista) => {
-            posizione.innerHTML += `<div class="card tessera artista p-3">
+            posizione.innerHTML += `<div class="card tessera artista p-1">
                                         <a href="artist.html" onclick="salvaArtista(${artista.id})">
                                                 <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
                                                 <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
@@ -41,7 +41,20 @@ function creaAlbum(posizione) {
     try {
         let prom = getAlbum(lista_album[random(lista_album.length)])
         prom.then((album) => {
-            posizione.innerHTML += `<div class="card tessera album p-3"><a href="album.html" onclick="salvaAlbum(${album.id})"><img src="${album.cover_xl}" class="card-img-top shadow  " alt="..."><img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt=""><div class="card-body p-0 py-3"><h5 class="card-title">${album.title}</h5><p class="card-text">${album.artist.name}</p></div></a></div>`
+            posizione.innerHTML += `<div class="card tessera album p-1">
+                                        <a href="album.html" onclick="salvaAlbum(${album.id})">
+                                            <img src="${album.cover_xl}" class="card-img-top shadow  " alt="...">
+                                            <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
+                                            <div class="card-body p-0 py-3">
+                                                <h5 class="card-title">
+                                                    ${album.title}
+                                                </h5>
+                                                <p class="card-text">
+                                                    ${album.artist.name}
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>`
         })
     } catch (e) {
         console.log("Errore: " + e)
