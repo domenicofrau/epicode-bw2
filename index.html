@@ -41,15 +41,10 @@
             <button class="bottone mb-5"> <i class="bi bi-google"></i> continua con google</button>
             </div>
           <p class="linea"></p>
-            <form action="/home.html" onsubmit="login(this)">
+            <form action="/home.html" onsubmit='window.localStorage.setItem("nome", this.username.value)'>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Indirizzo e-mail o nome utente</label>
                     <input type="text" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="Indirizzo e-mail o nome utente ">
-                    <div id="emailHelp" class="form-text"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Password</label>
-                    <input type="text" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="Password ">
                     <div id="emailHelp" class="form-text"></div>
                 </div>
 
@@ -76,16 +71,6 @@
 </div>
 
     </main>
-
-    <!-----------------------------------------------------Footer----------------------------------------------------->
-
-
-
-
-
-    <script src="assets/js/login.js"></script>
-    <script src="assets/js/dom_creator.js"></script>
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
