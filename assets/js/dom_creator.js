@@ -25,12 +25,13 @@ function caricaTraccia() {
 let amici = creaAmico(creaUtente())
 
 
-function Utente(nome, traccia, artista, album, tempo,){
+function Utente(nome, traccia, artista, album, tempo,img){
     this.nome = nome;
     this.traccia = traccia;
     this.artista = artista;
     this.album = album;
     this.tempo = tempo;
+    this.immagine = img;
 }
 
 function creaUtente() {
@@ -38,7 +39,7 @@ function creaUtente() {
     out.push(new Utente("Marco", "Free", "Florence + The Machine", "Dance Fever", "1 ora"))
     out.push(new Utente("Antonio", "Portapalazzo", "Willie Peyote", "Sindrome di Tôret", "3 ore"))
     out.push(new Utente("Marta", "El Tiempo", "Kermesse", "Igloo 10, Part 2", "2 ore"))
-    out.push(new Utente("Lino", "Moon Dude", "Jessica Pratt", "On Your Own Love Again","2 giorni"))
+    out.push(new Utente("Lino", "Moon Dude", "Jessica Pratt", "On Your Own Love Again","2 giorni","https://metadata-static.plex.tv/4/people/40fe22ff957809226d7aabfbd2413d06.jpg"))
     return out
 }
 
@@ -137,7 +138,7 @@ function creaAmico(utenti) {
         out += `<!----- Amico ----->
         <div class="amico container d-flex">
             <div class="col-2">
-                <img src="https://picsum.photos/200" alt="" class="amico_img rounded-circle">
+                <img src="${utente.immagine}" alt="" class="amico_img rounded-circle">
             </div>
             <div class="col-6">
                 <h4 class="amico_nome m-0">${utente.nome}</h4>
