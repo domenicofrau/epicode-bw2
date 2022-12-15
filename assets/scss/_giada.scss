@@ -3,18 +3,20 @@
 // }
 
 
-div {
+.banner {
+display: flex;
 
-    #album_img {
         @media screen and(max-width: 480px) {
 
             display: block;
         }
     }
 
+
+
     ////inserisci le media query per il banner
 
-}
+
 
 
 
@@ -24,7 +26,10 @@ div {
 
 .bottoni {
 
+@media screen and(max-width: 480px) {
 
+
+}
     .play {
         font-size: 45px;
 
@@ -41,7 +46,7 @@ div {
     }
 
     @media screen and(max-width: 480px) {
-        margin-bottom: 0;
+      //  margin-bottom: 0;
 
     }
 
@@ -59,7 +64,7 @@ div {
             background-color: #121212;
             color: white;
             width: 50px;
-
+        
         }
 
         @media screen and(max-width: 480px) {
@@ -69,6 +74,8 @@ div {
     }
 
     .shuffle {
+
+
         @media screen and(max-width: 480px) {
             float: right;
             margin-right: 10px;
@@ -133,8 +140,26 @@ table {
                 margin-left: 185px;
             }
         }
+.puntini{
+    display: none;
+   
+    @media screen and(max-width: 480px) {
+        display: block;  
+        margin-left: 200px;
 
-        .small {
+    }
+
+}
+      
+    }
+
+
+
+}
+
+
+
+  .small {
             @media screen and(max-width: 480px) {
                 display: none;
             }
@@ -145,16 +170,6 @@ table {
                 }
             }
         }
-    }
-
-
-
-
-
-
-}
-
-
 
 
 
@@ -327,3 +342,10 @@ form {
     flex-direction: column;
     align-items: center;
 }
+///////////////////////////////////////
+ #right{
+    @media screen and(max-width: 480px) {
+
+    display: none;
+    }
+ }
