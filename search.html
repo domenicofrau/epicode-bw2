@@ -30,17 +30,19 @@
 
         <!----- Center ----->
         <div id="center" class="col-8">
-            <nav id="center_nav" class="sticky-top d-flex justify-content-between navbar">
+
+            <nav id="center_nav" class="d-flex justify-content-between navbar">
                 <div>
-                    <a href="#" onclick="history.back()"><img class="freccia-nav" src="assets/img/back.png" alt=""> </a>
-                    <a href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/next.png"
-                            alt=""></a>
-
-                        <div class="input-group position-absolute d-inline">
-                            <span id="lente" class="input-group-text bg-white"><i class="bi bi-search"></i>
-                            <input id="searchBar" type="text" class="form-control position-absolute ms-4 py-2" placeholder="Cosa vuoi ascoltare?" aria-label="Cosa vuoi ascoltare?" aria-describedby="basic-addon1"></span>
-                          </div>
-
+                    <a class="freccia-nav-a" href="#" onclick="history.back()"><img class="freccia-nav"
+                            src="assets/img/back.png" alt=""> </a>
+                    <a class="freccia-nav-a" href="#" onclick="history.forward()"><img class="freccia-nav"
+                            src="assets/img/next.png" alt=""></a>
+                    <div class="input-group position-absolute d-inline">
+                        <span id="lente" class="input-group-text bg-white"><i class="bi bi-search"></i>
+                            <input id="searchBar" type="text" class="form-control position-absolute ms-4 py-2"
+                                placeholder="Cosa vuoi ascoltare?" aria-label="Cosa vuoi ascoltare?"
+                                aria-describedby="basic-addon1"></span>
+                    </div>
                 </div>
                 <div class="dropdown">
 
@@ -55,19 +57,7 @@
                         <li><a class="dropdown-item" href="index.html" onclick="esci()">Esci</a></li>
                     </ul>
                 </div>
-
-                <!-- <div>
-                    <div id="profilo_chip" class="rounded-pill">
-                        <img src="assets/img/39425.jpg" class="d-inline rounded-circle" alt="profilo_img"
-                            id="profilo_img">
-                        <h5 id="profilo_nome" class="d-inline">Riccardo Calvi</h5>
-                        <i class="bi bi-caret-down-fill"></i>
-
-                    </div>
-                </div> -->
             </nav>
-
-
 
             <section class="mb-5">
                 <h2 class="my-4 text-white fw-bold" id="titolo">Sfoglia tutto</h2>
@@ -76,10 +66,7 @@
                 </div>
             </section>
 
-
         </div>
-
-
 
         <!----- Sidebar DX (Amico) ----->
         <aside id="right" class="col-2  py-4">

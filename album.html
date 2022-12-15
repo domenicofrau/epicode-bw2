@@ -34,9 +34,10 @@
 
             <nav id="center_nav" class="d-flex justify-content-between navbar">
                 <div>
-                    <a class="freccia-nav-a" href="#" onclick="history.back()"><img class="freccia-nav" src="assets/img/back.png" alt=""> </a>
-                    <a class="freccia-nav-a" href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/next.png"
-                            alt=""></a>
+                    <a class="freccia-nav-a" href="#" onclick="history.back()"><img class="freccia-nav"
+                            src="assets/img/back.png" alt=""> </a>
+                    <a class="freccia-nav-a" href="#" onclick="history.forward()"><img class="freccia-nav"
+                            src="assets/img/next.png" alt=""></a>
                 </div>
                 <div class="dropdown">
 
@@ -72,60 +73,62 @@
 
                     <a class="p-1 text-success play" href=""><i class="bi bi-play-circle-fill"></i></a>
 
-                 
+
                     <a class="p-1 text-white" href=""><i class="bi bi-heart"></i></a>
-                     <P class="hide">Salva in La tua libreria </P>
-                    
+                    <P class="hide">Salva in La tua libreria </P>
+
                     <a class="p-1 text-white " href=""><i class="bi bi-arrow-down-circle"></i></a>
                     <p class="hide">Download</p>
 
-                  
-                  <a class="p-1 text-white small" href=""><i class="bi bi-three-dots"></i></a>
+
+                    <a class="p-1 text-white small" href=""><i class="bi bi-three-dots"></i></a>
                     <P class="hide">Altre opzioni per </P>
 
-                  <i class="bi bi-three-dots-vertical puntini text-white"></i>
+                    <i class="bi bi-three-dots-vertical puntini text-white"></i>
                     <i class="bi bi-shuffle  text-white shuffle puntini"></i>
                 </div>
                 <!-----------------------tabella------------------------------>
- 
+
                 <table id="lista_tracce ">
-                    <thead >
+                    <thead>
                         <tr>
-                            <th class="col-lg-1 text-white small" >#</th>
+                            <th class="col-lg-1 text-white small">#</th>
                             <th class="col-lg-7 text-white small">TITOLO</th>
-               
+
                             <th class="col-lg-3 text-white small">RIPODUZIONI</th>
                             <th class="col-lg-1 text-white small"><i class="bi bi-clock"></i></th>
                         </tr>
                     </thead>
                     <tbody class="table-group-divider  ">
                         <tr>
-                            <th class="col-lg-1 text-white small numeri" scope="row">1<i class="bi bi-play-fill dentro"></i></th>
+                            <th class="col-lg-1 text-white small numeri" scope="row">1<i
+                                    class="bi bi-play-fill dentro"></i></th>
                             <td>
                                 <h5 class=" col-lg-7 text-white" id="titoloCanzoneAlbum">titolo </h5>
                                 <p class="text-white" id="cantanteCanzoneAlbum">cantante</p>
 
                             </td>
                             <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578</td>
-                         
-                       
+
+
                             <td class=" col-lg-1 text-white small" id="durataAlbum">1:28</td>
-                           
-                            <td class="  text-white small puntini" > <i class="bi bi-three-dots-vertical"></i></td>
+
+                            <td class="  text-white small puntini"> <i class="bi bi-three-dots-vertical"></i></td>
                         </tr>
                         <tr>
                             <th class="col-lg-1 text-white small" scope="row">2</th>
                             <td>
                                 <span>
                                     <h5 class="col-lg-7 text-white" id="track_title">titolo</h5>
-                                    <p class="text-white" id="artist_name">cantante</p>  
+                                    <p class="text-white" id="artist_name">cantante</p>
                                 </span>
 
                             </td>
-                            <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578<i class="bi bi-heart nascondi"></i></td>
+                            <td class="col-lg-3 text-white small" id="riproduzioniAlmbum">694.578<i
+                                    class="bi bi-heart nascondi"></i></td>
                             <td class="col-lg-1 text-white small" id="durataAlbum">1:28</td>
                             <i class="bi bi-three-dots"></i>
-                            <td class="  text-white small puntini" > <i class="bi bi-three-dots-vertical"></i></td>
+                            <td class="  text-white small puntini"> <i class="bi bi-three-dots-vertical"></i></td>
 
                         </tr>
                         <tr>
@@ -135,10 +138,11 @@
                                 <p classe="text-white " id="cantanteCanzoneAlbum">cantante</p>
 
                             </td>
-                            <td class="col-4 text-white small" id="riproduzioniAlmbum">694.578<i class="bi bi-heart nascondi"></i></td>
+                            <td class="col-4 text-white small" id="riproduzioniAlmbum">694.578<i
+                                    class="bi bi-heart nascondi"></i></td>
                             <td class="col-1 text-white small" id="durataAlbum">1:28</td>
                             <i class="bi bi-three-dots"></i>
-                            <td class="  text-white small puntini" > <i class="bi bi-three-dots-vertical"></i></td>
+                            <td class="  text-white small puntini"> <i class="bi bi-three-dots-vertical"></i></td>
                         </tr>
 
 
@@ -154,46 +158,10 @@
 
         <!----- Sidebar DX (Amico) ----->
         <aside id="right" class="col-2  py-4">
-           
+
         </aside>
 
     </main>
-
-    <!-----------------------------------------------------Footer----------------------------------------------------->
-
-    <!-- <footer class="position-fixed bottom-0 w-100 m-0">
-        <section class="row">
-            <div class="col-3">
-                <div class="d-flex mb-1 w-100 align-items-center">
-                    <img class="col-5 float-left" src="assets/img/39425.jpg" alt="" id="footer_img" />
-                    <div>
-                        <h3 class="col-6 p-0 m-0" id="footer_titolo">canzone</h3>
-                        <p class="col-10 m-0" id="footer_artista">Artista</p>
-                    </div>
-                    <i class="bi bi-heart col-1"></i>
-                </div>
-            </div>
-            <div class="col-6">
-                <div>
-                    <div class=" d-flex justify-content-center">
-                        <div class="d-flex justify-content-around w-50">
-                            <i class="bi bi-shuffle"></i>
-                            <i class="bi bi-skip-backward-fill"></i>
-                            <i class="bi bi-play-circle-fill"></i>
-                            <i class="bi bi-skip-forward-fill"></i>
-                            <i class="bi bi-repeat"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-1"></div>
-                        <div class="col-10"></div>
-                        <div class="col-1"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3"></div>
-        </section>
-    </footer> -->
 
     <script src="assets/js/album.js"></script>
     <script src="assets/js/dom_creator.js"></script>
