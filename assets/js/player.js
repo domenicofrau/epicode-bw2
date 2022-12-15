@@ -1,6 +1,14 @@
 // PLAYER
 
 
+function espandi() {
+    if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+    }
+}
+
 // funzione per play
 function playA() {
     let song = JSON.parse(window.localStorage.getItem("traccia"))
