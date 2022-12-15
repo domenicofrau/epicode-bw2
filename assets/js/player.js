@@ -10,8 +10,7 @@ function playA() {
     if (aux.paused || aux.currentTime === 0 || aux.ended) {
         avviaTraccia(aux, song)
     } else {
-        aux.pause();
-        setPauseFillerBar();
+        fermaTraccia(aux)
         avviaTraccia(aux, song)
     }
 }
@@ -24,6 +23,12 @@ function avviaTraccia(player, traccia) {
     setStartFillerBar();
     setNameArtistSong(traccia.artist.name, traccia.title_short, traccia.album.cover_xl);
 }
+
+function fermaTraccia(player) {
+    player.pause();
+    setPauseFillerBar();
+}
+
 
 
 function selectedHeart() {
@@ -57,10 +62,11 @@ function selectedPlayPause() {
     let btnPlay = document.getElementById("btn_play");
     let btnPause = document.getElementById("btn_pause");
     let aux = document.querySelector(".player");
-    if (aux.play()) {
-        aux.pause()
-    } else if (!aux.play()){
-        console.log("ciao")
+    if (!aux.paused) {
+        fermaTraccia(aux)
+    } else{
+        aux.play()
+        setStartFillerBar();
     }
     btnPlay.classList.toggle("d-none");
     btnPause.classList.toggle("d-none");
