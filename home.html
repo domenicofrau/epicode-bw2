@@ -6,6 +6,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/scss/app.css" />
@@ -30,12 +31,12 @@
 
         <!----- Center ----->
 
-        <div id="center" class="col-8 px-4 py-2">
+        <div id="center" class="col-8">
 
             <nav id="center_nav" class="d-flex justify-content-between navbar">
                 <div>
-                    <a href="#" onclick="history.back()"><img class="freccia-nav" src="assets/img/back.png" alt=""> </a>
-                    <a href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/next.png"
+                    <a class="freccia-nav-a" href="#" onclick="history.back()"><img class="freccia-nav" src="assets/img/back.png" alt=""> </a>
+                    <a class="freccia-nav-a" href="#" onclick="history.forward()"><img class="freccia-nav" src="assets/img/next.png"
                             alt=""></a>
                 </div>
                 <div class="dropdown">
@@ -57,7 +58,7 @@
 
 
             <section clas="mb-5" id="annunci">
-                <div class="card px-3 pb-4 pt-4">
+                <div class="card px-3 py-4">
                     <div class="row">
                         <div class="col-3">
                             <img src="assets/img/banner/01.png" class="img-fluid " alt="Card title" id="annuncio_img">
@@ -66,15 +67,14 @@
                             <div class="card-body">
                                 <h1 class="card-title" id="annuncio_titolo"></h1>
                                 <p class="card-text" id="annuncio_testo"></p>
-                                <div id="contenitore_annuncio" class="position-absolute bottom-0 start-50">
+                                <div id="contenitore_annuncio" class="mt-5">
                                     <button type="button" style="width: 100px;"
-                                        class="btn rounded-pill p-1 pt-3 pb-3 btn-success"
+                                        class="btn rounded-pill p-1 py-3 px-3 mx-2 btn-success"
                                         id="annuncio_play">Play</button>
                                     <button type="button" style="width: 100px;"
-                                        class="btn rounded-pill p-1 pt-3 pb-3 btn-dark"><a href="#" id="annuncio_share"
-                                            target="_blank">Salva</a></button>
+                                        class="annuncio_segui btn rounded-pill py-3 px-3 ms-2 btn-dark" id="annuncio_share">Segui</button>
                                     <button type="button" style="width: 100px;"
-                                        class="btn rounded-pill p-1 pt-3 pb-3 btn-dark">...</button>
+                                        class="btn rounded-pill py-2 btn-dark" id="annuncio_dots">···</button>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
 
             </section>
 
-            <section id="playlist" class="container-fluid d-flex row justify-content-between">
+            <section id="playlist" class="row d-flex justify-content-evenly">
                 <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
                     <div class="row g-0">
                         <div class="col-3"><img src="assets/img/playlist/01.png"
@@ -103,11 +103,11 @@
                 </div>
                 <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
                     <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/01.png"
+                        <div class="col-3"><img src="assets/img/playlist/02.png"
                                 class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
                         <div class="col-9 background-card">
                             <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Coding Music</h5>
+                                <h5 class="card-title ms-2 mt-4">Canzoni di Natale</h5>
                             </div>
                         </div>
                         <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
@@ -116,11 +116,11 @@
                 </div>
                 <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
                     <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/01.png"
+                        <div class="col-3"><img src="assets/img/playlist/03.png"
                                 class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
                         <div class="col-9 background-card">
                             <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Coding Music</h5>
+                                <h5 class="card-title ms-2 mt-4">Fabrizio De André</h5>
                             </div>
                         </div>
                         <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
@@ -129,11 +129,11 @@
                 </div>
                 <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
                     <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/01.png"
+                        <div class="col-3"><img src="assets/img/playlist/04.png"
                                 class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
                         <div class="col-9 background-card">
                             <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Coding Music</h5>
+                                <h5 class="card-title ms-2 mt-4">Chill Out</h5>
                             </div>
                         </div>
                         <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
@@ -142,11 +142,11 @@
                 </div>
                 <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
                     <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/01.png"
+                        <div class="col-3"><img src="assets/img/playlist/05.png"
                                 class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
                         <div class="col-9 background-card">
                             <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Coding Music</h5>
+                                <h5 class="card-title ms-2 mt-4">alle 3 di notte</h5>
                             </div>
                         </div>
                         <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"
@@ -155,11 +155,11 @@
                 </div>
                 <div class="container-fluid card mb-3 px-0 mx-1 col-3 playlist-card" id="carta-playlist">
                     <div class="row g-0">
-                        <div class="col-3"><img src="assets/img/playlist/01.png"
+                        <div class="col-3"><img src="assets/img/playlist/06.png"
                                 class="rounded-start p-0 shadow cover-playlist" alt="..."></div>
                         <div class="col-9 background-card">
                             <div class="card-body p-2">
-                                <h5 class="card-title ms-2 mt-4">Coding Music</h5>
+                                <h5 class="card-title ms-2 mt-4">the fucking mood</h5>
                             </div>
                         </div>
                         <img class="btn-playlist position-absolute top-50 end-0 m-2" src="assets/img/play_btn.png"

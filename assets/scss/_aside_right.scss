@@ -1,0 +1,54 @@
+.amico_img {
+    height: 45px;
+}
+
+#right {
+    #amico_head {
+        padding: 0 1rem;
+
+    }
+
+    h3 {
+        padding-top:0.3rem;
+        font-size: 1rem;
+        color: white;
+    }
+
+    i {
+        color: $grigio;
+    }
+
+    .amico {
+        justify-content: center;
+        margin: 25px 0;
+        color: $grigio;
+
+        .amico_nome {
+            font-size: 0.7rem;
+        }
+
+        .amico_titolo {
+            font-size: 0.5rem;
+        }
+
+        .amico_album {
+            font-size: 0.6rem;
+            font-weight: 600;
+        }
+
+        .amico_img {
+            margin-right: 10px;
+            height: 30px;
+        }
+
+        .amico_tempo {
+            font-size: 0.5rem;
+            margin-left: 10px;
+        }
+
+        i {
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+    }
+}

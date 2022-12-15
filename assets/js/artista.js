@@ -26,7 +26,7 @@ function creaTracce(tracce) {
         var cell3 = riga.insertCell(2);
         var cell4 = riga.insertCell(3);
 
-        cell1.innerHTML = `<td class="col-1 text-white" scope="row"> ${i+1} <span><img src="${traccia.album.cover_xl}" class="w-100" alt=""></span></td>`;
+        cell1.innerHTML = `<button class="carica" onclick="lancia('${traccia.preview}')">${i+1}</button>`;
         cell2.innerHTML = `<span><h5 class="col-4 " id="track_title">${traccia.title_short}</h5><p class="" id="artist_name">${traccia.artist.name}</p></span>`;
         cell3.innerHTML = traccia.rank;
         cell4.innerHTML = Math.floor(traccia.duration / 60);

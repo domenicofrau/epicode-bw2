@@ -76,16 +76,40 @@
     width: 30%;
 }
 
+#annuncio_titolo{
+    font-size:400%;
+    font-weight: 700;
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
 #annuncio_play{
     background-color: rgb(30, 215, 96);
     color: black;
-    font-weight: 700;
+    font-weight: 600;
+    &:hover{
+        scale:1.04;
+    }
 }
 
-#annuncio_play:hover{
-    scale:1.05;
+#annuncio_share{
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border:solid 1px white;
+    font-weight: 600;
+    &:hover{
+        scale:1.04;
+    }
 }
 
-#contenitore_annuncio{
-    transform: translate(-250px, -25px);
+#annuncio_dots{
+    background-color: rgba(0, 0, 0, 0);
+    color: gray;
+    border:none;
+    font-size: 250%;
+    &:hover{
+        filter: brightness(2)
+    }
 }
