@@ -15,7 +15,9 @@ let banner = {
 function salvaTraccia(traccia) {
     traccia = JSON.stringify(traccia)
     window.localStorage.setItem("traccia", traccia)
-
+    if (document.getElementById("footer").innerHTML == "") {
+        creaPlayer()
+    }
     playA()
 }
 

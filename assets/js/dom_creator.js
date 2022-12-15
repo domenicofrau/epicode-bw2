@@ -35,10 +35,10 @@ function Utente(nome, traccia, artista, album, tempo, img) {
 
 function creaUtente() {
     let out = []
-    out.push(new Utente("Germano", "Ave o Maria", "Chierichetti Papali", "Canzoni di Parrocchia", "1 ora","https://www.kulturjam.it/wp-content/uploads/Germano-Mosconi-il-giornalista-che-fece-la-storia-della-bestemmia-2.jpg"))
-    out.push(new Utente("Antonino", "Portapalazzo", "Willie Peyote", "Sindrome di Tôret", "3 ore","https://www.ristorantiweb.com/wp-content/uploads/sites/9/2018/09/Antonino-Cannavacciuolo.jpg"))
-    out.push(new Utente("Babbo Natale", "El Tiempo", "Kermesse", "Igloo 10, Part 2", "2 ore","https://www.nostrofiglio.it/images/2020/12/15/babbo-natale-colore_900x760.jpg"))
-    out.push(new Utente("Lino", "Moon Dude", "Jessica Pratt", "On Your Own Love Again","2 giorni","https://metadata-static.plex.tv/4/people/40fe22ff957809226d7aabfbd2413d06.jpg"))
+    out.push(new Utente("Germano", "Ave o Maria", "Chierichetti Papali", "Canzoni di Parrocchia", "1 ora", "https://www.kulturjam.it/wp-content/uploads/Germano-Mosconi-il-giornalista-che-fece-la-storia-della-bestemmia-2.jpg"))
+    out.push(new Utente("Antonino", "Portapalazzo", "Willie Peyote", "Sindrome di Tôret", "3 ore", "https://www.ristorantiweb.com/wp-content/uploads/sites/9/2018/09/Antonino-Cannavacciuolo.jpg"))
+    out.push(new Utente("Babbo Natale", "El Tiempo", "Kermesse", "Igloo 10, Part 2", "2 ore", "https://www.nostrofiglio.it/images/2020/12/15/babbo-natale-colore_900x760.jpg"))
+    out.push(new Utente("Lino", "Moon Dude", "Jessica Pratt", "On Your Own Love Again", "2 giorni", "https://metadata-static.plex.tv/4/people/40fe22ff957809226d7aabfbd2413d06.jpg"))
     return out
 }
 
@@ -133,7 +133,10 @@ function creaSidebarDX() {
 
 function creaPlayer() {
     let traccia = JSON.parse(window.localStorage.getItem("traccia"))
-    document.getElementById("footer").innerHTML += `<div class="d-flex justify-content-between align-items-center position-sticky bottom-0" id="player-spotify">
+    if (traccia) {
+
+
+        document.getElementById("footer").innerHTML += `<div class="d-flex justify-content-between align-items-center position-sticky bottom-0" id="player-spotify">
     <div class="d-flex justify-content-around">
         <div>
             <img id="cover-player" src="./assets/img/logo-player.png" alt="" />
@@ -238,8 +241,10 @@ function creaPlayer() {
     <audio class="player" src="${traccia.preview}"></audio>
 </div>`
 
-    setNameArtistSong(traccia.artist.name, traccia.title_short, traccia.album.cover_xl);
-
+        setNameArtistSong(traccia.artist.name, traccia.title_short, traccia.album.cover_xl);
+    } else {
+        document.getElementById("footer").innerHTML = ""
+    }
 }
 
 function creaAmico(utenti) {

@@ -51,21 +51,21 @@ function selectedHeart() {
 
     btnHeart.classList.toggle("d-none");
     btnHeartFill.classList.toggle("d-none");
+    
+    // // Al primo click, mi deve apparire il placeholder con la scritta "aggiunto"
+    // modalPlaceholder.classList.toggle("d-none");
+    // // Dopo pochi secondi, mi deve sparí il placeholder
+    // const showPlaceholdet = setTimeout(() => {
+    //     modalPlaceholder.classList.add("d-none");
+    // }, 3000);
 
-    // Al primo click, mi deve apparire il placeholder con la scritta "aggiunto"
-    modalPlaceholder.classList.toggle("d-none");
-    // Dopo pochi secondi, mi deve sparí il placeholder
-    const showPlaceholdet = setTimeout(() => {
-        modalPlaceholder.classList.add("d-none");
-    }, 3000);
+    // console.log(replaceTxtRemoved.className);
 
-    console.log(replaceTxtRemoved.className);
+    // // quando clicco di nuovo sul cuoricino, deve comparire il placeholder
+    // // con la scritta "rimosso"
 
-    // quando clicco di nuovo sul cuoricino, deve comparire il placeholder
-    // con la scritta "rimosso"
-
-    replaceTxtAdded.classList.toggle("d-none");
-    replaceTxtRemoved.classList.toggle("d-none");
+    // replaceTxtAdded.classList.toggle("d-none");
+    // replaceTxtRemoved.classList.toggle("d-none");
 }
 
 function selectedPlayPause() {
