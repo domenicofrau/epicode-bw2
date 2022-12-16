@@ -1,4 +1,3 @@
-// PLAYER
 
 function espandi() {
     if (!document.fullscreenElement) {
@@ -8,7 +7,7 @@ function espandi() {
     }
 }
 
-// funzione per play
+
 function playA() {
     let song = JSON.parse(window.localStorage.getItem("traccia"))
 
@@ -118,11 +117,6 @@ function setStartFillerBar() {
     }
 }
 
-// Devi fare in modo che l'animazione e il tempo si fermino
-
-// L'animazione ora si deve fermare, senza toccare il tempo.
-// Devo trovare un modo per passare l'ID del clearInterval in modo dinamico
-
 function setPauseFillerBar() {
     let fillerBarElement = document.querySelector("#filler_bar-time");
 
@@ -130,8 +124,6 @@ function setPauseFillerBar() {
 
     clearInterval(clearIntervalID);
 }
-
-// ora devi fare in modo che il titolo e l'artista cambi di testo al click
 
 function setNameArtistSong(traccia) {
     document.querySelector("#cover-player").src = traccia.album.cover_xl;
@@ -141,18 +133,15 @@ function setNameArtistSong(traccia) {
 
 let newObj;
 
-// Funzione che recupera l'url dell'audio cliccato
 function getAudioObj(audioPreview) {
     newObj = new Audio(audioPreview);
 }
 
-// Funzione che cambia il volume dell'audio cliccato
 function changeVolume(rangeValue) {
     let playerElement = document.querySelector(".player");
     playerElement.volume = rangeValue;
 }
 
-// Funzione che al click muta e smuta l'audio
 let audioState = false;
 function mutedAudio() {
     let playerElement = document.querySelector(".player");
@@ -165,5 +154,3 @@ function mutedAudio() {
         audioState = false;
     }
 }
-
-  // creare una funzione che resetta
