@@ -292,7 +292,7 @@ function creaPlayer() {
         <audio class="player" src="${traccia.preview}"></audio>
             </div>`
     
-            setNameArtistSong(traccia.artist.name, traccia.title_short, traccia.album.cover_xl);
+            setNameArtistSong(traccia);
         } else {
             document.getElementById("footer").innerHTML = ""
         }

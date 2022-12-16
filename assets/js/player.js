@@ -32,7 +32,7 @@ function avviaTraccia(player, traccia) {
     fillerBarElement.style.animation = null; 
 
     setStartFillerBar();
-    setNameArtistSong(traccia.artist.name, traccia.title_short, traccia.album.cover_xl);
+    setNameArtistSong(traccia);
 }
 
 function fermaTraccia(player) {
@@ -153,10 +153,10 @@ function setPauseFillerBar() {
 
 // ora devi fare in modo che il titolo e l'artista cambi di testo al click
 
-function setNameArtistSong(artist, song, coverImg) {
-    document.querySelector("#cover-player").src = coverImg;
-    document.querySelector("#sub-test_player").innerHTML = artist;
-    document.querySelector("#title-song").innerHTML = song;
+function setNameArtistSong(traccia) {
+    document.querySelector("#cover-player").src = traccia.album.cover_xl;
+    document.querySelector("#sub-test_player").innerHTML = `<a href="artist.html" onclick='localStorage.setItem("id_artist", ${traccia.artist.id})'>${traccia.artist.name}</a>`;
+    document.querySelector("#title-song").innerHTML = traccia.title_short;
 }
 
 let newObj;
