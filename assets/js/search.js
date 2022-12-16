@@ -148,6 +148,7 @@ barra.addEventListener("keyup", (event) => {
         creaCategorie()
     } else{
         creaRicerca(barra.value)
+        document.title = `${barra.value} - Spotify`
     }
   });
 
