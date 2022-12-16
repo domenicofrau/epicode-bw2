@@ -6,14 +6,22 @@ let amici = [
 ]
 
 window.onscroll = function () {
-    const header = document.querySelector('#center_nav');
+    let header = document.querySelector('#center_nav');
     let top = window.scrollY;
     if (top > 40) {
         header.classList.add('active');
     } else {
         header.classList.remove('active');
     }
+    let header_album = document.querySelector('#scroll');
+    let top_album = window.scrollY;
+    if (top > 325) {
+        header_album.classList.add('attivo');
+    } else {
+        header_album.classList.remove('attivo');
+    }
 }
+
 
 function caricaTraccia() {
     let player = document.getElementById("player")

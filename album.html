@@ -61,7 +61,16 @@
 
             <!-----------------------bottoni------------------------------>
             
-                <div class=" bottoni mb-3 ms-2">
+
+            <!----------------------------------------------------controlli-->
+            <div id="controlli_album">
+                <img id="artist-play-btn" class="mt-2 ms-4" src="assets/img/play_btn.png" alt="">
+                <a class="icone_controlli_album pt-3 px-2 text-white" href=""><i class="bi bi-heart icone"></i></a>
+                <a class="icone_controlli_album pt-3 px-2 text-white " href=""><i class="bi bi-arrow-down-circle"></i></a>
+                <span id="artist-more-dots" class="ms-4">...</span>
+            </div>
+
+                <!-- <div class=" bottoni mb-3 ms-2">
 
                     <a class="p-1 text-success play" href=""><i class="bi bi-play-circle-fill"></i></a>
 
@@ -77,13 +86,24 @@
                     <P class="hide">Altre opzioni per </P>
 
                    
-                </div>
+                </div> -->
         
                 <!-----------------------tabella------------------------------>
 
-                <div class="secondoContenitore mb-5 px-3">
+                <div class="secondoContenitore mb-5">
                     <table class="table" id="corpo_tabella">
-                        <tbody>
+                        <thead id="head_tabella">
+                            <tr id="scroll">
+                              <th scope="col-1 text-start">#</th>
+                              <th scope="col-0 text-start"></th>
+                              <th scope="col-6">titolo</th>
+                              <th scope="col-1 text-center">riproduzioni</th>
+                              <th scope="col-1 text-end"></th>
+                              <th scope="col-1 text-end"><i class="bi bi-clock"></i></th>
+                              <th scope="col-1 text-center"></th>
+                            </tr>
+                          </thead>
+                        <tbody class="px-3">
                         </tbody>
                     </table>
                 </div>
