@@ -78,6 +78,7 @@ try {
         document.title = `${artista.name} - Spotify`
         // creaTracce(album)
     })
+    artisti_consigliati(lista_artisti)
 } catch (e) {
     console.log("Errore: " + e)
 }
@@ -100,6 +101,10 @@ async function getArtist(id) {
     return response.json()
 }
 
+function random(max) {
+    return Math.floor(Math.random() * max);
+}
+
 async function getTopTrack(url) {
     const response = await fetch(url, requestOptions)
     return response.json()
@@ -108,11 +113,21 @@ async function getTopTrack(url) {
 function artisti_consigliati(lista) {
    
     for (let i = 0; i < 4; i++) {
-        const artista = lista[i];
+        const artista = lista[[random(lista.length)]];
         try {
              let prom = getArtist(artista)
              prom.then((artista) => {
-                 console.log(artista)
+                 let perTe = document.getElementById("perTe")
+                 perTe.innerHTML += `<div class="card tessera artista p-2">
+                 <a href="#" onclick='localStorage.setItem("id_artist", ${artista.id}); location.reload()'>
+                         <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
+                         <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
+                         <div class="card-body p-0 py-3">
+                         <h5 class="card-title">${artista.name}</h5>
+                         <p class="card-text">Artista</p>
+                     </div>
+                 </a>
+             </div>`
                  
              })
          } catch (e) {
@@ -122,4 +137,3 @@ function artisti_consigliati(lista) {
     }
 }
 
-artisti_consigliati(lista_artisti)
