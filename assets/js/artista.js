@@ -39,8 +39,8 @@ function creaTracce(tracce) {
         var cell6 = riga.insertCell(5);
         var cell7 = riga.insertCell(6);
 
-        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span
-        class="hide-icon"><a  onclick="salvaTraccia(${tracciaOut})"><i class="bi bi-play-fill"></i></a></span></th>`
+        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span></i><span
+        class="hide-icon"><a  onclick='salvaTraccia(${tracciaOut})'><i class="bi bi-play-fill"></i></a></span></th>`
         cell2.innerHTML = `<td class="col-1 not"><img src="${traccia.album.cover_xl}"></td>`
         cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
         cell4.innerHTML = `<td class="col-1 text-center">${traccia.rank}</td>`

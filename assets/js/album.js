@@ -23,7 +23,7 @@ function salvaTraccia(traccia) {
 
 
 function creaTracce(album) {
-    let lista = document.getElementById("lista_tracce");
+    let lista = document.getElementById("corpo_tabella");
 
     let array = album.tracks.data
 
@@ -33,15 +33,23 @@ function creaTracce(album) {
         let tracciaOut = JSON.stringify(traccia)
 
         let riga = lista.insertRow(lista.rows.length);
+        riga.className = "riga_tabella"
         var cell1 = riga.insertCell(0);
         var cell2 = riga.insertCell(1);
         var cell3 = riga.insertCell(2);
         var cell4 = riga.insertCell(3);
+        var cell5 = riga.insertCell(4);
+        var cell6 = riga.insertCell(5);
+        var cell7 = riga.insertCell(6);
 
-        cell1.innerHTML = `<button class="carica" onclick='salvaTraccia(${tracciaOut})'>${i+1}</button>`;
-        cell2.innerHTML = `<span><h5 class="col-4 " id="track_title">${traccia.title_short}</h5><p class="" id="artist_name">${traccia.artist.name}</p></span>`;
-        cell3.innerHTML = traccia.rank;
-        cell4.innerHTML = Math.floor(traccia.duration / 60);
+        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span></i><span
+        class="hide-icon"><a  onclick='salvaTraccia(${tracciaOut})'><i class="bi bi-play-fill"></i></a></span></th>`
+        cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
+        cell4.innerHTML = `<td class="col-1 text-center">${traccia.rank}</td>`
+        cell5.innerHTML = `<td class="col-1 text-end"><i class="hide-icon bi bi-heart"></i></td>`
+        cell6.innerHTML = `<td class="col-1 text-end">${Math.floor(traccia.duration / 60)}</td>`
+        cell7.innerHTML = `<td class="col-1 text-center"><span class="hide-icon dots">···</span> </td>`
+
     };
 
 
@@ -59,9 +67,9 @@ function creaBanner(album) {
     }
 
     if (album.nb_tracks > 1) {
-        banner.descrizione.innerHTML = `${album.artist.name} • ${data.getFullYear()} • ${album.nb_tracks} brani, ${Math.floor(album.duration / 60)} min.`
+        banner.descrizione.innerHTML = `<a href="artist.html" onclick='localStorage.setItem("id_artist", ${album.artist.id})'>${album.artist.name} </a>• ${data.getFullYear()} • ${album.nb_tracks} brani, ${Math.floor(album.duration / 60)} min.`
     } else {
-        banner.descrizione.innerHTML = `${album.artist.name} • ${data.getFullYear()} • ${album.nb_tracks} brano, ${Math.floor(album.duration / 60)} min.`
+        banner.descrizione.innerHTML = `<a href="artist.html" onclick='localStorage.setItem("id_artist", ${album.artist.id})'>${album.artist.name} </a>• ${data.getFullYear()} • ${album.nb_tracks} brano, ${Math.floor(album.duration / 60)} min.`
     }
 }
 
