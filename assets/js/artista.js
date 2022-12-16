@@ -64,7 +64,7 @@ async function creaBanner(artista) {
 
     img.addEventListener('load', () => {
         let colori = colorThief.getColor(img)
-        banner.totale.style.boxShadow = `0px 100px 60px 0px rgb(${colori[0]}, ${colori[1]}, ${colori[2]}, 0.25)`;
+        banner.totale.style.boxShadow = `0px 100px 150px 0px rgb(${colori[0]}, ${colori[1]}, ${colori[2]}, 0.55)`;
     });
 }
 
