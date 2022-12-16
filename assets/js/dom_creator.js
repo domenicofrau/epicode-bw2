@@ -213,8 +213,8 @@ function creaPlayer() {
                 <button onclick="selectedBtnAudioColorizeGreen(this)"><i
                         class="bi bi-skip-start-fill icons-play"></i></button>
                 <button id="btn_play-pause--audio" onclick="selectedPlayPause()">
-                    <i class="bi bi-play-circle" id="btn_play"></i>
-                    <i class="bi bi-pause-circle-fill d-none" id="btn_pause"></i>
+                    <i class="bi bi-play-circle-fill d-none" id="btn_play"></i>
+                    <i class="bi bi-pause-circle " id="btn_pause"></i>
                 </button>
                 <button onclick="selectedBtnAudioColorizeGreen(this)"><i
                         class="bi bi-skip-end-fill icons-play"></i></button>
