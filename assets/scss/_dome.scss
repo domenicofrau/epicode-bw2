@@ -32,7 +32,7 @@
 }
 
 #artist-follow-btn{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     color:white;
     border-radius: 5px;
     height: 30px;
@@ -41,10 +41,9 @@
     font-size: 14px;
     font-weight: 500;
     border:solid 1px gray;
+    &:hover{
+        border:solid 1px white;
 }
-#artist-follow-btn:hover{
-    border:solid 1px white;
-    
 }
 
 #artist-more-dots{
@@ -111,5 +110,48 @@
     font-size: 250%;
     &:hover{
         filter: brightness(2)
+    }
+}
+.hide-icon{
+    display:none;
+}
+#riga_tabella{
+    color:white;
+    height: 60px;
+    th{
+        border-style:none;
+        border-radius: 5px 0 0 5px;
+        padding:1rem 0 0 1rem;
+    }  
+    td{
+        padding:1rem 0 0 0;
+        border-style:none;
+        &:last-child{
+            border-radius: 0 5px 5px 0;
+            padding:0.5rem 0 0 0;
+        }
+        .dots{
+            font-size:150%;
+        }
+    }
+    .not{
+        padding:0;
+    }
+    td img{
+        height: 50px;
+        padding:0.6rem 0 0 0;
+    }
+    &:hover{
+        background-color: $grigio_riga_tabella_artisti_hover;
+        cursor: pointer;
+        .hide-icon{
+            display: inline;
+        }
+        .show-th{
+            display: inline;
+        }
+        .hide-th{
+            display: none;
+        }
     }
 }
