@@ -115,11 +115,12 @@
 .riga_tabella{
     color:white;
     height: 60px;
-    th{
+    td:first-child{
         border-style:none;
         border-radius: 5px 0 0 5px;
-        padding:1rem 0 0 1rem;
-    }  
+        // padding:1rem 2rem 0 1rem;
+        padding: 15px 5px;
+    }
     td{
         padding:1rem 0 0 0;
         border-style:none;
@@ -136,20 +137,30 @@
     }
     td img{
         height: 50px;
-        padding:0.6rem 0 0 0;
+        margin-top: -10px;
     }
     &:hover{
         background-color: $grigio_riga_tabella_artisti_hover;
         cursor: pointer;
+        .hide-icon::after{
+            display: inline;
+            content: "▶";
+            font-size: 75%;
+        }
         .hide-icon{
             display: inline;
         }
-        .show-th{
-            display: inline;
-        }
+        // .show-th{
+        //     display: inline;
+
+        // }
         .hide-th{
             display: none;
         }
+    }
+    .play_traccia i{
+        font-size: 50%;
+        padding: 5px;
     }
 }
 
