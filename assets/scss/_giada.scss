@@ -259,86 +259,79 @@ width: 700px;
 //////////////////login//////////////////////
 
 
-.navbar {
-    .logo {
-        margin: 0 auto;
-        padding: 10px;
-    }
+// .navbar {
+//     .logo {
+//         margin: 0 auto;
+//         padding: 10px;
+//     }
 
-    // border-bottom: 1px solid grey; //dome: ho tolto questo perche va in conflitto con la nav del sito
-}
-
-
-.contenitore {
-    display: flex;
-
-    .navbar {}
-
-    .bottoni {
+//     // border-bottom: 1px solid grey; //dome: ho tolto questo perche va in conflitto con la nav del sito
+// }
 
 
-        border-bottom: grey 1px solid;
+// .contenitore {
+//     display: flex;
 
-    }
+//     .navbar {}
 
-    .nero {
-        background-color: black;
-        color: white;
-    }
-
-    .blu {
-        background-color: #3b5998;
-        color: white;
-    }
-}
-
-form {
-    margin-top: 30px;
-
-    input {
-        width: 450px;
-        padding: 10px;
-    }
-
-    .accedi {
-        border-radius: 25px;
-        padding: 10px;
-        width: 100px;
-        background-color: #1ed760;
-        color: black;
-        border: #1ed760;
-        float: right
-    }
+//     .bottoni {
 
 
+//         border-bottom: grey 1px solid;
 
-}
+//     }
 
-.bottone {
-    border-radius: 20px;
-    width: 450px;
-    margin: 10px;
-    padding: 5px;
-    background-color: white;
-    border-color: grey;
-    font-size: 20px;
-    color: grey;
+//     .nero {
+//         background-color: black;
+//         color: white;
+//     }
 
-}
+//     .blu {
+//         background-color: #3b5998;
+//         color: white;
+//     }
+// }
+
+// form {
+//     margin-top: 30px;
+
+//     input {
+//         width: 450px;
+//         padding: 10px;
+//     }
+
+//     .accedi {
+//         border-radius: 25px;
+//         padding: 10px;
+//         width: 100px;
+//         background-color: #1ed760;
+//         color: black;
+//         border: #1ed760;
+//         float: right
+//     }
 
 
-.linea {
-    border: 1 px solid grey;
-}
-.iscriviti{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-///////////////////////////////////////
- #right{
-    @media screen and(max-width: 480px) {
 
-    display: none;
-    }
- }
+// }
+
+// .bottone {
+//     border-radius: 20px;
+//     width: 450px;
+//     margin: 10px;
+//     padding: 5px;
+//     background-color: white;
+//     border-color: grey;
+//     font-size: 20px;
+//     color: grey;
+
+// }
+
+
+// .linea {
+//     border: 1 px solid grey;
+// }
+// .iscriviti{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
