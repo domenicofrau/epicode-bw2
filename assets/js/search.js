@@ -46,7 +46,7 @@ function creaTracce(album) {
         cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span><a class="hide-icon" onclick='salvaTraccia(${tracciaOut})'></a></th>`
         cell2.innerHTML = `<td class="col-1 not"><img src="${traccia.album.cover_xl}"></td>`
         cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
-        cell4.innerHTML = `<td class="col-1 text-center">${traccia.rank}</td>`
+        cell4.innerHTML = `<td class="col-1 text-center">${traccia.album.title}</td>`
         cell5.innerHTML = `<td class="col-1 text-end"><i class="bi bi-heart"></i></td>`
         cell6.innerHTML = `<td class="col-1 text-end">${Math.floor(traccia.duration / 60)}</td>`
         cell7.innerHTML = `<td class="col-1 text-center"><span class="dots">···</span> </td>`
@@ -62,10 +62,13 @@ function creaRicerca(key) {
     contenitore.innerHTML = `<table  id="corpo_tabella">
     <thead>
         <tr>
-            <th class="text-white  noSpace" scope="col-1">#</th>
-            <th class="text-white " scope="col-7">TITOLO</th>
-            <th class="text-white space" scope="col-3">ALBUM</th>
-            <th class="text-white" scope="col-1"><i class="bi bi-clock"></i></th>
+            <th class="col-1 text-white  noSpace" scope="col-1">#</th>
+            <th class="col-1 text-white  noSpace" scope="col-1"></th>
+            <th class="col-3 text-white " scope="col-7">TITOLO</th>
+            <th class="col-3 text-white space" scope="col-3">ALBUM</th>
+            <th class="col-1 text-white  noSpace" scope="col-1"></th>
+            <th class="col-1 text-white" scope="col-1"><i class="bi bi-clock"></i></th>
+            <th class="col-1 text-white  noSpace" scope="col-1"></th>
         </tr>
     </thead>
     <tbody class="table-group-divider row">

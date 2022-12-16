@@ -43,7 +43,7 @@ footer{
 	color: white;
 
 	.bi-heart-fill {
-		color: green;
+		color: $verde_spotify;
 		// color: green;
 		// overflow: hidden;
 	}
@@ -84,7 +84,7 @@ footer{
 	border-radius: 5px;
 	overflow: hidden;
 	&:hover {
-		background-color: green;
+		background-color: $verde_spotify;
 	}
 	// animation: progress-animation 30s linear;
 }
@@ -113,6 +113,7 @@ footer{
 
 #btn_play-pause--audio {
 	color: white;
+	font-size: 130%;
 }
 
 i:hover {
@@ -130,8 +131,13 @@ i:hover {
 	}
 }
 
+.bi-shuffle,
+.bi-repeat {
+	font-size: 80%;
+}
+
 .btn_colorize-green {
-	color: green !important;
+	color: $verde_spotify !important;
 }
 
 #player_right-side {
@@ -188,7 +194,7 @@ i:hover {
 	#current_device {
 		i,
 		p {
-			color: green;
+			color: $verde_spotify;
 		}
 	}
 
