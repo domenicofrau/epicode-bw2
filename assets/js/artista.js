@@ -20,7 +20,7 @@ function salvaTraccia(traccia) {
 
 
 function creaTracce(tracce) {
-    let tabella = document.getElementById("artista_tabella_tracce");
+    let lista = document.getElementById("corpo_tabella");
 
     let array = tracce.data
 
@@ -29,37 +29,25 @@ function creaTracce(tracce) {
     
         let tracciaOut = JSON.stringify(traccia)
 
-        // let riga = lista.insertRow(lista.rows.length);
-        // var cell1 = riga.insertCell(0);
-        // var cell2 = riga.insertCell(1);
-        // var cell3 = riga.insertCell(2);
-        // var cell4 = riga.insertCell(3);
+        let riga = lista.insertRow(lista.rows.length);
+        riga.className = "riga_tabella"
+        var cell1 = riga.insertCell(0);
+        var cell2 = riga.insertCell(1);
+        var cell3 = riga.insertCell(2);
+        var cell4 = riga.insertCell(3);
+        var cell5 = riga.insertCell(4);
+        var cell6 = riga.insertCell(5);
+        var cell7 = riga.insertCell(6);
 
-        /*
-            <span class="col-1 text-white" scope="row"><button class="carica" onclick="lancia('${traccia.preview}')">${i+1}</button><img src="" alt=""></span>
-            <span class="col-8 text-white">ocean avenue</span>
-            <span class="col-4 text-white">22222</span>
-            <span class="col-1 text-white">4:4</span>
-        */
+        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span
+        class="hide-icon"><a  onclick="salvaTraccia(${tracciaOut})"><i class="bi bi-play-fill"></i></a></span></th>`
+        cell2.innerHTML = `<td class="col-1 not"><img src="${traccia.album.cover_xl}"></td>`
+        cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
+        cell4.innerHTML = `<td class="col-1 text-center">${traccia.rank}</td>`
+        cell5.innerHTML = `<td class="col-1 text-end"><i class="hide-icon bi bi-heart"></i></td>`
+        cell6.innerHTML = `<td class="col-1 text-end">${Math.floor(traccia.duration / 60)}</td>`
+        cell7.innerHTML = `<td class="col-1 text-center"><span class="hide-icon dots">···</span> </td>`
 
-    
-        // tabella.innerHTML =    `
-        //                         // <tr>
-        //                         //     <td class="col-1 text-white" scope="row"><button class="carica" onclick='salvaTraccia(${tracciaOut})'>${i+1}</button><img class="img_tabella" src="${traccia.album.cover_xl}" alt=""></td>
-        //                         //     <td class="col-8 text-white">${traccia.title}</td>
-        //                         //     <td class="col-4 text-white">${traccia.rank}</td>
-        //                         //     <td class="col-1 text-white">${Math.floor(traccia.duration / 60)}</td>
-        //                         //     <td></td>
-        //                         //     <td></td>
-        //                         //     <td></td>
-        //                         // </tr>
-        //                         // `
-        
-        
-        //`<span class="col-1 text-white" scope="row"><button class="carica" onclick='salvaTraccia(${tracciaOut})'>${i+1}</button><img class="img_tabella" src="${traccia.album.cover_xl}" alt=""></span>`;
-        //cell2.innerHTML = `<span class="col-8 text-white">${traccia.title}</span>`;
-        //cell3.innerHTML = `<span class="col-4 text-white">${traccia.rank}</span>`;
-        //cell4.innerHTML = `<span class="col-1 text-white">${Math.floor(traccia.duration / 60)}</span>`;
     };
 
 
