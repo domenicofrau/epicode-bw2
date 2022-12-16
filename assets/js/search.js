@@ -14,26 +14,43 @@ function search(key) {
     .catch(error => console.log('error', error));
 }
 
-
+function salvaTraccia(traccia) {
+    traccia = JSON.stringify(traccia)
+    window.localStorage.setItem("traccia", traccia)
+    if (document.getElementById("footer").innerHTML == "") {
+        creaPlayer()
+    }
+    playA()
+}
 
 function creaTracce(album) {
-    let lista = document.getElementById("lista_tracce");
+    let lista = document.getElementById("corpo_tabella");
 
     let array = album.data
 
     for (let i = 0; i < array.length; i++) {
         const traccia = array[i];
     
+        let tracciaOut = JSON.stringify(traccia)
+
         let riga = lista.insertRow(lista.rows.length);
+        riga.className = "riga_tabella"
         var cell1 = riga.insertCell(0);
         var cell2 = riga.insertCell(1);
         var cell3 = riga.insertCell(2);
         var cell4 = riga.insertCell(3);
+        var cell5 = riga.insertCell(4);
+        var cell6 = riga.insertCell(5);
+        var cell7 = riga.insertCell(6);
 
-        cell1.innerHTML = `<td class="col-1 text-white" scope="row"> <span class="px-1"> ${i+1} </span><span><img src="${traccia.album.cover_xl}" alt=""></span></td>`;
-        cell2.innerHTML = `<span><h6 class="col-4 m-0" id="track_title">${traccia.title_short}</h6><p class="m-0" id="artist_name">${traccia.artist.name}</p></span>`;
-        cell3.innerHTML = traccia.rank;
-        cell4.innerHTML = Math.floor(traccia.duration / 60);
+        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span></i><span
+        class="hide-icon"><a  onclick='salvaTraccia(${tracciaOut})'><i class="bi bi-play-fill"></i></a></span></th>`
+        cell2.innerHTML = `<td class="col-1 not"><img src="${traccia.album.cover_xl}"></td>`
+        cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
+        cell4.innerHTML = `<td class="col-1 text-center">${traccia.rank}</td>`
+        cell5.innerHTML = `<td class="col-1 text-end"><i class="hide-icon bi bi-heart"></i></td>`
+        cell6.innerHTML = `<td class="col-1 text-end">${Math.floor(traccia.duration / 60)}</td>`
+        cell7.innerHTML = `<td class="col-1 text-center"><span class="hide-icon dots">···</span> </td>`
     };
 
 
@@ -43,7 +60,7 @@ function creaTracce(album) {
 
 function creaRicerca(key) {
     titolo.innerHTML = "Brani"
-    contenitore.innerHTML = `<table  id="lista_tracce">
+    contenitore.innerHTML = `<table  id="corpo_tabella">
     <thead>
         <tr>
             <th class="text-white  noSpace" scope="col-1">#</th>
