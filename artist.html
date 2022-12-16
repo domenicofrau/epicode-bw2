@@ -52,8 +52,8 @@
                 <div class="ms-4 position-absolute top-50 text-white">
                     <span><img id="badge" src="assets/img/icone/badge.png" alt=""></span><span class="ms-2">Artista
                         verificato</span>
-                    <h1 id="titolo-banner" class="mb-4">Caparezza</h1>
-                    <span id="ascolti">0 ascoltatori mensili</span>
+                    <h1 id="titolo-banner" class="mb-4"></h1>
+                    <span id="ascolti"></span>
                 </div>
             </div>
 
@@ -66,15 +66,16 @@
 
             <!----------------------------------------------------popolari-->
 
-            <div class="popolariContenitore container-fluid">
-                <h4 class="text-white mt-4 mb-4 ms-2">Popolari</h4>
+            <div class="popolariContenitore">
+                <h4 class="text-white mt-4 mb-4 ms-3">Popolari</h4>
             </div>
 
-            <div class="secondoContenitore mb-5">
+            <div class="secondoContenitore mb-5 px-3">
                 <table class="table" id="corpo_tabella">
-                    <tbody >
+                    <tbody>
                         <tr id="riga_tabella">
-                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
+                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span
+                                    class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
                             <td class="col-1 not"><img src="assets/img/playlist/03.png"></td>
                             <td class="col-6">TITOLO</td>
                             <td class="col-1 text-center">RIPRODUZIONI</td>
@@ -84,7 +85,8 @@
                         </tr>
 
                         <tr id="riga_tabella">
-                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
+                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span
+                                    class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
                             <td class="col-1 not"><img src="assets/img/playlist/03.png"></td>
                             <td class="col-6">TITOLO</td>
                             <td class="col-1 text-center">RIPRODUZIONI</td>
@@ -94,7 +96,8 @@
                         </tr>
 
                         <tr id="riga_tabella">
-                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
+                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span
+                                    class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
                             <td class="col-1 not"><img src="assets/img/playlist/03.png"></td>
                             <td class="col-6">TITOLO</td>
                             <td class="col-1 text-center">RIPRODUZIONI</td>
@@ -104,7 +107,8 @@
                         </tr>
 
                         <tr id="riga_tabella">
-                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
+                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span
+                                    class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
                             <td class="col-1 not"><img src="assets/img/playlist/03.png"></td>
                             <td class="col-6">TITOLO</td>
                             <td class="col-1 text-center">RIPRODUZIONI</td>
@@ -114,7 +118,8 @@
                         </tr>
 
                         <tr id="riga_tabella">
-                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
+                            <th class="col-1 text-center" scope="row"><span class="hide-th">1</span></i><span
+                                    class="hide-icon"><i class="bi bi-play-fill"></i></span></th>
                             <td class="col-1 not"><img src="assets/img/playlist/03.png"></td>
                             <td class="col-6">TITOLO</td>
                             <td class="col-1 text-center">RIPRODUZIONI</td>
@@ -126,21 +131,56 @@
                 </table>
             </div>
 
-            <section id="amico_head">
-                <h5 class="text-white mt-3 mb-4">Brani che ti piacciono </h5>
-                <h6 class="text-white"> <img src="" alt=""> Hai messo Mi piace a 11 brani</h6>
-                <p class="text-white">Di yellow card</p>
+            <section class="mb-5">
+                <h2 class="my-4 ms-2 text-white fw-bold">I fan apprezzano anche</h2>
+                <div class="row text-dark d-flex flex-row justify-content-evenly" id="perTe">
+
+                    <div class="card tessera artista p-1">
+                        <a href="#" >
+                                <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
+                                <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
+                                <div class="card-body p-0 py-3">
+                                <h5 class="card-title">${artista.name}</h5>
+                                <p class="card-text">Artista</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card tessera artista p-1">
+                        <a href="#" >
+                                <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
+                                <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
+                                <div class="card-body p-0 py-3">
+                                <h5 class="card-title">${artista.name}</h5>
+                                <p class="card-text">Artista</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card tessera artista p-1">
+                        <a href="#" >
+                                <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
+                                <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
+                                <div class="card-body p-0 py-3">
+                                <h5 class="card-title">${artista.name}</h5>
+                                <p class="card-text">Artista</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card tessera artista p-1">
+                        <a href="#" >
+                                <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
+                                <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
+                                <div class="card-body p-0 py-3">
+                                <h5 class="card-title">${artista.name}</h5>
+                                <p class="card-text">Artista</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
             </section>
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -6,7 +6,7 @@ let id = localStorage.getItem("id_album")
 let banner = {
     background: document.getElementById("album_banner"),
     img: document.getElementById("album_img"),
-    titolo: document.getElementById("album_title"),
+    titolo: document.getElementById("album_titolo"),
     descrizione: document.getElementById("album_description"),
     tipo: document.getElementById("album_type"),
     artist_img: document.getElementById("artist_img")
@@ -50,7 +50,6 @@ function creaTracce(album) {
 function creaBanner(album) {
     let data = new Date(album.release_date)
     banner.img.src = album.cover_xl
-    banner.titolo.innerHTML = album.title
     banner.titolo.innerHTML = album.title
     banner.artist_img.src = album.artist.picture_xl
     if (album.record_type == "single") {
