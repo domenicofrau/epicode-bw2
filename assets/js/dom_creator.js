@@ -292,7 +292,7 @@ function creaPlayer() {
         </div>
         <audio class="player" src="${traccia.preview}"></audio>
             </div>`
-    
+
             setNameArtistSong(traccia);
         } else {
             document.getElementById("footer").innerHTML = ""
@@ -300,7 +300,7 @@ function creaPlayer() {
     } catch (e) {
         console.log("Errore: " + e)
     }
-    
+
 }
 
 

@@ -1,4 +1,4 @@
-.freccia-nav-a{
+.freccia-nav-a {
     text-decoration: none;
     padding: 0px;
 }
@@ -24,7 +24,8 @@
     z-index: 100;
     position: sticky;
     top: 0;
-    &.active:not(a, button){
+
+    &.active:not(a, button) {
         background-color: rgba(35, 35, 35, 0.833);
         backdrop-filter: blur(5px);
     }

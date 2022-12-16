@@ -1,9 +1,9 @@
 
 function espandi() {
     if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
+        document.documentElement.requestFullscreen();
     } else if (document.exitFullscreen) {
-    document.exitFullscreen();
+        document.exitFullscreen();
     }
 }
 
@@ -27,7 +27,7 @@ function avviaTraccia(player, traccia) {
     let fillerBarElement = document.querySelector("#filler_bar-time");
     fillerBarElement.style.animation = 'none';
     fillerBarElement.offsetHeight; /* trigger reflow */
-    fillerBarElement.style.animation = null; 
+    fillerBarElement.style.animation = null;
 
     setStartFillerBar();
     setNameArtistSong(traccia);
@@ -56,10 +56,10 @@ function selectedPlayPause() {
     let btnPlay = document.getElementById("btn_play");
     let btnPause = document.getElementById("btn_pause");
     let aux = document.querySelector(".player");
-    
+
     if (!aux.paused) {
         fermaTraccia(aux)
-    } else{
+    } else {
         aux.play()
         setStartFillerBar();
     }

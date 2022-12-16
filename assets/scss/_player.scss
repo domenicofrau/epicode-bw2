@@ -1,13 +1,11 @@
-// PLAYER SPOTIFY
-
-footer{
-	position:sticky;
-	bottom:0;
+footer {
+	position: sticky;
+	bottom: 0;
 	z-index: 101;
 }
 
 #player-spotify {
-	background-color: #181818;
+	background-color: $antracite;
 	padding: 2rem 2rem;
 	color: white;
 	width: 100%;
@@ -37,15 +35,12 @@ footer{
 }
 
 #heart-player {
-	// display: flex;
-	// align-items: center;
 	font-size: 1.3rem;
 	color: white;
 
 	.bi-heart-fill {
 		color: $verde_spotify;
-		// color: green;
-		// overflow: hidden;
+
 	}
 
 	&:hover {
@@ -55,7 +50,7 @@ footer{
 }
 
 #sub-test_player {
-	color: grey;
+	color: $grigio;
 }
 
 #controls_player {
@@ -73,7 +68,7 @@ footer{
 	width: 300px;
 	border-radius: 5px;
 	margin: 0 10px;
-	background-color: grey;
+	background-color: $grigio;
 	position: relative;
 }
 
@@ -83,10 +78,10 @@ footer{
 	background-color: white;
 	border-radius: 5px;
 	overflow: hidden;
+
 	&:hover {
 		background-color: $verde_spotify;
 	}
-	// animation: progress-animation 30s linear;
 }
 
 .animation_filler-bar {
@@ -124,7 +119,7 @@ i:hover {
 .bi-skip-start-fill,
 .bi-skip-end-fill,
 .bi-repeat {
-	color: grey;
+	color: $grigio;
 
 	&:hover {
 		color: white;
@@ -144,7 +139,7 @@ i:hover {
 	position: relative;
 
 	button {
-		color: grey;
+		color: $grigio;
 
 		i {
 			font-size: 1.1rem;
@@ -168,11 +163,11 @@ i:hover {
 
 		i {
 			font-size: 1.6rem;
-			color: grey;
+			color: $grigio;
 		}
 
 		p {
-			color: grey;
+			color: $grigio;
 		}
 
 		h4 {
@@ -192,6 +187,7 @@ i:hover {
 	}
 
 	#current_device {
+
 		i,
 		p {
 			color: $verde_spotify;
@@ -202,7 +198,7 @@ i:hover {
 		display: flex !important;
 		justify-content: space-between;
 		align-items: center;
-		// height: 20px;
+
 		i {
 			font-size: 1rem;
 		}
@@ -223,23 +219,6 @@ i:hover {
 	}
 }
 
-#modal-placeholder {
-	position: absolute;
-	top: -68px;
-	background-color: rgb(56, 151, 240);
-	border-radius: 5px;
-	color: white;
-	padding: 8px 5px;
-	display: inline-flex;
-	width: 278px;
-	align-items: center;
-	justify-content: center;
-	font-size: 2rem;
-	right: -25px;
-}
-
-// ANIMAZIONI DEL PLAYER
-
 @keyframes progress-animation {
 	0% {
 		width: 0%;
@@ -255,24 +234,29 @@ i:hover {
 }
 
 
-	#artistMain{
-	
-		#artistSongs img {
-			width: 50px;
-			height: 50px;
-		}
-		td, th{
-			vertical-align: middle;
-			border-bottom-width: 0;
-			text-align: start;
-		}
-		th {
-			text-align: center;
-		}
-		#discography, .feature {
-			gap: 20px;
-		}
+#artistMain {
+
+	#artistSongs img {
+		width: 50px;
+		height: 50px;
 	}
+
+	td,
+	th {
+		vertical-align: middle;
+		border-bottom-width: 0;
+		text-align: start;
+	}
+
+	th {
+		text-align: center;
+	}
+
+	#discography,
+	.feature {
+		gap: 20px;
+	}
+}
 
 .homeContainers {
 	display: flex;
@@ -281,7 +265,7 @@ i:hover {
 	margin-inline: auto;
 }
 
-#watch{
+#watch {
 	background-color: transparent;
 	width: 20px;
 }

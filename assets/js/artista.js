@@ -4,7 +4,7 @@ const img = new Image();
 
 let googleProxyURL = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
 let id = localStorage.getItem("id_artist")
-let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917, 7979, 3315, 390032,2279, 6168800, 10666535, 1288678, 2276, 8513, 3305, 3164, 390032, 57573792, 1, 11, 847, 848,4050205,416239,384236,10583405,176]
+let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917, 7979, 3315, 390032, 2279, 6168800, 10666535, 1288678, 2276, 8513, 3305, 3164, 390032, 57573792, 1, 11, 847, 848, 4050205, 416239, 384236, 10583405, 176]
 let banner = {
     background: document.getElementById("banner-img"),
     titolo: document.getElementById("titolo-banner"),
@@ -29,7 +29,7 @@ function creaTracce(tracce) {
 
     for (let i = 0; i < array.length; i++) {
         const traccia = array[i];
-    
+
         let tracciaOut = JSON.stringify(traccia)
 
         let riga = lista.insertRow(lista.rows.length);
@@ -42,7 +42,7 @@ function creaTracce(tracce) {
         var cell6 = riga.insertCell(5);
         var cell7 = riga.insertCell(6);
 
-        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span><a class="hide-icon" onclick='salvaTraccia(${tracciaOut})'></a></th>`
+        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i + 1}</span><a class="hide-icon" onclick='salvaTraccia(${tracciaOut})'></a></th>`
         cell2.innerHTML = `<td class="col-1 not"><img src="${traccia.album.cover_xl}"></td>`
         cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
         cell4.innerHTML = `<td class="col-1 text-center">${traccia.rank}</td>`
@@ -90,7 +90,7 @@ function topTrack(url) {
     } catch (e) {
         console.log("Errore: " + e)
     }
-    
+
 }
 
 async function getArtist(id) {
@@ -111,10 +111,10 @@ function artisti_consigliati(lista) {
     for (let i = 0; i < 4; i++) {
         const artista = lista[[random(lista.length)]];
         try {
-             let prom = getArtist(artista)
-             prom.then((artista) => {
-                 let perTe = document.getElementById("perTe")
-                 perTe.innerHTML += `<div class="card tessera artista p-2">
+            let prom = getArtist(artista)
+            prom.then((artista) => {
+                let perTe = document.getElementById("perTe")
+                perTe.innerHTML += `<div class="card tessera artista p-2">
                  <a href="#" onclick='localStorage.setItem("id_artist", ${artista.id}); location.reload()'>
                          <img src="${artista.picture_xl}" class="card-img-top shadow rounded-cirlce" alt="...">
                          <img class="hide position-absolute top-50 end-0 m-4" src="assets/img/play_btn.png" alt="">
@@ -124,12 +124,12 @@ function artisti_consigliati(lista) {
                      </div>
                  </a>
              </div>`
-                 
-             })
-         } catch (e) {
-             console.log("Errore: " + e)
-         }
-        
+
+            })
+        } catch (e) {
+            console.log("Errore: " + e)
+        }
+
     }
 }
 

@@ -7,11 +7,11 @@ let titolo = document.getElementById("titolo")
 
 function search(key) {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${key}`, requestOptions)
-    .then(response => response.json())
-    .then(result => {
-        creaTracce(result)
-    })
-    .catch(error => console.log('Errore: ', error));
+        .then(response => response.json())
+        .then(result => {
+            creaTracce(result)
+        })
+        .catch(error => console.log('Errore: ', error));
 }
 
 function salvaTraccia(traccia) {
@@ -30,7 +30,7 @@ function creaTracce(album) {
 
     for (let i = 0; i < array.length; i++) {
         const traccia = array[i];
-    
+
         let tracciaOut = JSON.stringify(traccia)
 
         let riga = lista.insertRow(lista.rows.length);
@@ -43,7 +43,7 @@ function creaTracce(album) {
         var cell6 = riga.insertCell(5);
         var cell7 = riga.insertCell(6);
 
-        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span><a class="hide-icon" onclick='salvaTraccia(${tracciaOut})'></a></th>`
+        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i + 1}</span><a class="hide-icon" onclick='salvaTraccia(${tracciaOut})'></a></th>`
         cell2.innerHTML = `<td class="col-1 not"><img src="${traccia.album.cover_xl}"></td>`
         cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
         cell4.innerHTML = `<td class="col-1 text-center">${traccia.album.title}</td>`
@@ -161,15 +161,15 @@ function creaCategorie() {
 }
 
 
-barra.addEventListener("keyup", (event) => {    
+barra.addEventListener("keyup", (event) => {
     if (barra.value === "") {
         creaCategorie()
         document.title = `Ricerca - Spotify`
-    } else{
+    } else {
         creaRicerca(barra.value)
         document.title = `${barra.value} - Spotify`
     }
-  });
+});
 
 
 /*

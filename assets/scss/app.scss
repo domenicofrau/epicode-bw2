@@ -9,20 +9,21 @@
 @import "_dome";
 @import "_login";
 
-body{
+body {
     height: 100%;
 }
 
-a{
+a {
     text-decoration: none;
-    color: white; 
+    color: white;
 }
-a:hover{
-    color: white; 
+
+a:hover {
+    color: white;
 
 }
 
-.maiuscolo{
+.maiuscolo {
     text-transform: uppercase;
 }
 
@@ -43,7 +44,7 @@ a:hover{
 
     &:hover {
         background-color: $antracite_hover;
-    
+
         .hide {
             display: block;
         }
@@ -69,16 +70,18 @@ a:hover{
 }
 
 .playlist-card {
-    border:none;
+    border: none;
     background-color: $grigio_playlist_home;
     color: white;
-    .background-card{
+
+    .background-card {
         opacity: 70%;
     }
+
     &:hover {
         cursor: pointer;
         background-color: $grigio_playlist_home_hover;
-    
+
         .btn-playlist {
             display: block;
         }
@@ -120,23 +123,23 @@ a:hover{
 }
 
 #annunci .card {
-    background: linear-gradient(225deg, rgba(75,75,75,1) 0%, rgba(22,21,20,1) 100%);
-    border:none;
+    background: linear-gradient(225deg, rgba(75, 75, 75, 1) 0%, rgba(22, 21, 20, 1) 100%);
+    border: none;
     border-radius: 0;
-    color: $bianco;
+    color: white;
 }
 
-#banner-img{
+#banner-img {
     object-fit: cover;
     object-position: 0 -100px;
     filter: blur(2px);
 }
 
-#artist_control{
+#artist_control {
     position: relative;
     z-index: 10;
 }
 
-.img_container{
-    background-color: rgba(0,0,0, 0.8);
+.img_container {
+    background-color: rgba(0, 0, 0, 0.8);
 }

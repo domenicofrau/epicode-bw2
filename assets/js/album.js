@@ -40,7 +40,7 @@ function creaTracce(album) {
         var cell6 = riga.insertCell(5);
         var cell7 = riga.insertCell(6);
 
-        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span><a class="hide-icon" onclick='salvaTraccia(${tracciaOut})'></a></th>`
+        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i + 1}</span><a class="hide-icon" onclick='salvaTraccia(${tracciaOut})'></a></th>`
         cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
         cell4.innerHTML = `<td class="col-1 text-center">${traccia.rank}</td>`
         cell5.innerHTML = `<td class="col-1 text-end"><i class="bi bi-heart"></i></td>`

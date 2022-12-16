@@ -65,11 +65,14 @@
         .logo {
             li {
                 margin: 10px 0;
-                &:hover{
+
+                &:hover {
                     cursor: pointer;
+
                     a {
                         color: white;
                     }
+
                     .cuore,
                     .podcast,
                     .piu {
@@ -77,23 +80,23 @@
                     }
                 }
             }
-    
+
             i {
                 padding: 5px 7px;
                 font-size: 12px;
                 border-radius: 2px;
             }
-    
+
             .cuore {
                 color: #b2b2b2;
                 background: linear-gradient(315deg, rgba(130, 153, 153, 1), rgba(55, 20, 169, 1));
             }
-    
+
             .podcast {
                 color: #149643;
                 background-color: #004537;
             }
-    
+
             .piu {
                 font-size: 12px;
                 color: black;
@@ -104,9 +107,10 @@
 
     #playlist {
         color: $grigio_playlist_sidebar;
-        li:hover{
-            cursor:pointer;
-            color:white;
+
+        li:hover {
+            cursor: pointer;
+            color: white;
         }
 
         li a {

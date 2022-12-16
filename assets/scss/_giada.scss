@@ -16,6 +16,7 @@
 .bottoni {
   //@media screen and(max-width: 480px) {
 }
+
 .play {
   font-size: 45px;
 
@@ -34,7 +35,7 @@ a {
   margin: 8px;
   padding: 15px;
 
-  &:hover + .hide {
+  &:hover+.hide {
     display: inline;
     background-color: #121212;
     color: white;
@@ -60,6 +61,7 @@ a {
 
 table {
   margin: 50px;
+
   tr {
     color: white;
 
@@ -79,13 +81,15 @@ table {
         text-decoration: underline;
       }
     }
+
     #artist_name {
       &:hover {
         text-decoration: underline;
       }
     }
+
     #riproduzioniAlmbum {
-      &:hover + .nascondi {
+      &:hover+.nascondi {
         display: block;
       }
 
@@ -94,6 +98,7 @@ table {
         margin-left: 185px;
       }
     }
+
     .puntini {
       display: none;
 
@@ -165,6 +170,7 @@ table {
 .secondoContenitore {
   width: 700px;
 }
+
 table {
   width: 90%;
 
@@ -189,4 +195,5 @@ section {
     width: 50px;
   }
 }
+
 // }
