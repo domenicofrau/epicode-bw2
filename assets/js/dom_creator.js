@@ -1,7 +1,10 @@
+let amici = [
+    new Utente("Germano", "Ave o Maria", "Chierichetti Papali", "Canzoni di Parrocchia", "1 ora", "https://www.kulturjam.it/wp-content/uploads/Germano-Mosconi-il-giornalista-che-fece-la-storia-della-bestemmia-2.jpg"),
+    new Utente("Antonino", "Portapalazzo", "Willie Peyote", "Sindrome di Tôret", "3 ore", "https://www.ristorantiweb.com/wp-content/uploads/sites/9/2018/09/Antonino-Cannavacciuolo.jpg"),
+    new Utente("Federico", "Come Together", "The Beatles", "Abbey Road", "2 ore", "https://am4pap001files.storage.live.com/y4mGKt9X2YQPfmP_1VadK8rRPydrOnq_dN1Avg5nJMyrBRGmGc6efI0V2AmZx62xrf-_XHEQH3kuvPe0ZA4po7IlTaG1sCf7Ghzu7pcELg-sMgDgX_MW1NG8ho-XORM6DYDAxrl6SKy8GpEkbPVn3-Tj8WKiHDHgeOgAlzEebRenbwzQ3mtrd8E_wqorTEMNMKd?encodeFailures=1&width=322&height=273"),
+    new Utente("Lino", "Moon Dude", "Jessica Pratt", "On Your Own Love Again", "2 giorni", "https://metadata-static.plex.tv/4/people/40fe22ff957809226d7aabfbd2413d06.jpg")
+]
 
-/*
-    Funzione per caricare la traccia dal localstorage
-*/
 window.onscroll = function () {
     const header = document.querySelector('#center_nav');
     let top = window.scrollY;
@@ -12,17 +15,10 @@ window.onscroll = function () {
     }
 }
 
-
-
-
 function caricaTraccia() {
     let player = document.getElementById("player")
     player.src = window.localStorage.getItem("traccia")
 }
-
-
-let amici = creaAmico(creaUtente())
-
 
 function Utente(nome, traccia, artista, album, tempo, img) {
     this.nome = nome;
@@ -33,12 +29,31 @@ function Utente(nome, traccia, artista, album, tempo, img) {
     this.immagine = img;
 }
 
-function creaUtente() {
-    let out = []
-    out.push(new Utente("Germano", "Ave o Maria", "Chierichetti Papali", "Canzoni di Parrocchia", "1 ora", "https://www.kulturjam.it/wp-content/uploads/Germano-Mosconi-il-giornalista-che-fece-la-storia-della-bestemmia-2.jpg"))
-    out.push(new Utente("Antonino", "Portapalazzo", "Willie Peyote", "Sindrome di Tôret", "3 ore", "https://www.ristorantiweb.com/wp-content/uploads/sites/9/2018/09/Antonino-Cannavacciuolo.jpg"))
-    out.push(new Utente("Federico", "Come Together", "The Beatles", "Abbey Road", "2 ore", "https://am4pap001files.storage.live.com/y4mGKt9X2YQPfmP_1VadK8rRPydrOnq_dN1Avg5nJMyrBRGmGc6efI0V2AmZx62xrf-_XHEQH3kuvPe0ZA4po7IlTaG1sCf7Ghzu7pcELg-sMgDgX_MW1NG8ho-XORM6DYDAxrl6SKy8GpEkbPVn3-Tj8WKiHDHgeOgAlzEebRenbwzQ3mtrd8E_wqorTEMNMKd?encodeFailures=1&width=322&height=273"))
-    out.push(new Utente("Lino", "Moon Dude", "Jessica Pratt", "On Your Own Love Again", "2 giorni", "https://metadata-static.plex.tv/4/people/40fe22ff957809226d7aabfbd2413d06.jpg"))
+function aggiungiUtente(that) {
+    amici.push(new Utente(that.nome.value, that.traccia.value, that.artista.value, that.album.value, "1 ora", that.img.value))
+    document.getElementById("right").innerHTML = ``
+    creaSidebarDX(creaAmico(amici))
+}
+
+
+function creaAmico(amici) {
+    let out = ""
+    amici.forEach(utente => {
+        out += `<!----- Amico ----->
+        <div class="amico container d-flex">
+            <div class="col-2">
+                <img src="${utente.immagine}" alt="" class="amico_img rounded-circle">
+            </div>
+            <div class="col-6">
+                <h4 class="amico_nome m-0">${utente.nome}</h4>
+                <p class="amico_titolo m-0">${utente.traccia} • ${utente.artista}</p>
+                <i class="bi bi-disc"></i><span class="amico_album ml-1">${utente.album}</span>
+            </div>
+            <div class="col-4">
+                <p class="amico_tempo">${utente.tempo}</p>
+            </div>
+        </div>`
+    });
     return out
 }
 
@@ -108,14 +123,51 @@ function creaSidebarSX() {
 </div>`
 }
 
-function creaSidebarDX() {
-    document.getElementById("right").innerHTML += `<div id="sticky">
+function creaSidebarDX(lista_amici) {
+    document.getElementById("right").innerHTML += `
+    <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!-- nome, traccia, artista, album, tempo, img -->
+                <form action="#" onsubmit="aggiungiUtente(this)">
+                    <div class="mb-3">
+                        <label for="nome" class="col-form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="traccia" class="col-form-label">Traccia:</label>
+                        <input type="text" class="form-control" id="traccia" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="artista" class="col-form-label">Artista:</label>
+                        <input type="text" class="form-control" id="artista" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="album" class="col-form-label">Album:</label>
+                        <input type="text" class="form-control" id="album" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="img" class="col-form-label">Immagine:</label>
+                        <input type="text" class="form-control" id="img" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aggiungi Amico</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="sticky">
     
     <!----- Head Amico ----->
     <section id="amico_head" class="d-flex justify-content-between">
         <h3 class="d-inline">Attività Amici</h3>
         <span>
-            <img class="icon-sidebar" src="./assets/img/icone/sidebar_add_friend.png" alt="">
+            <a data-bs-toggle="modal" data-bs-target="#addUser"><img class="icon-sidebar" src="./assets/img/icone/sidebar_add_friend.png" alt=""></a>
             <img class="icon-sidebar" src="./assets/img/icone/sidebar_quit.png" alt="">
         </span>
     </section>
@@ -123,7 +175,7 @@ function creaSidebarDX() {
     <!----- Amici ----->
     <section>
     
-    ${amici}
+    ${lista_amici}
         
     </section>
     </div>
@@ -247,26 +299,7 @@ function creaPlayer() {
     }
 }
 
-function creaAmico(utenti) {
-    let out = ""
-    utenti.forEach(utente => {
-        out += `<!----- Amico ----->
-        <div class="amico container d-flex">
-            <div class="col-2">
-                <img src="${utente.immagine}" alt="" class="amico_img rounded-circle">
-            </div>
-            <div class="col-6">
-                <h4 class="amico_nome m-0">${utente.nome}</h4>
-                <p class="amico_titolo m-0">${utente.traccia} • ${utente.artista}</p>
-                <i class="bi bi-disc"></i><span class="amico_album ml-1">${utente.album}</span>
-            </div>
-            <div class="col-4">
-                <p class="amico_tempo">${utente.tempo}</p>
-            </div>
-        </div>`
-    });
-    return out
-}
+
 
 function cambiaUtente() {
     document.getElementById("profilo").innerHTML = `<img src="https://picsum.photos/200" class="d-inline rounded-circle" alt="profilo_img" id="profilo_img">${window.localStorage.getItem("nome")}`
@@ -279,5 +312,5 @@ function esci() {
 creaPlayer()
 cambiaUtente()
 creaSidebarSX()
-creaSidebarDX()
+creaSidebarDX(creaAmico(amici))
 // caricaTraccia()
