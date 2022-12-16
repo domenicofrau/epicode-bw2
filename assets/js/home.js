@@ -4,7 +4,7 @@
  *
  */
 var requestOptions = { method: 'GET', redirect: 'follow' };
-let annuncio = { titolo: document.getElementById("annuncio_titolo"), img: document.getElementById("annuncio_img"), descrizione: document.getElementById("annuncio_testo"), bt_share: document.getElementById("annuncio_share"), bt_play: document.getElementById("annuncio_play") }
+let annuncio = document.getElementById("annunci")
 let giorno = new Date();
 let saluto = document.getElementById("benvenuto")
 let unicamente = document.getElementById("unicamentePerTe")
@@ -61,14 +61,34 @@ function creaAlbum(posizione) {
     }
 }
 
-function creaAnnuncio() {
+function creaAnnuncio(posizione) {
     try {
         let prom = getAlbum(lista_sponsor[random(lista_sponsor.length)])
         prom.then((album) => {
-            annuncio.bt_share.href = album.share
-            annuncio.img.src = album.cover_xl
-            annuncio.titolo.innerHTML = album.title
-            annuncio.descrizione.innerHTML = `Scopri il nuovo singolo "${album.title}" di ${album.artist.name}`
+            posizione.innerHTML += `
+            <div class="card px-3 py-4">
+            <div class="row">
+                <div class="col-3">
+                    <img src="${album.cover_xl}" class="img-fluid " alt="Card title" id="annuncio_img">
+                </div>
+                <div class="col-9">
+                    <div class="card-body">
+                        <a href="album.html" onclick="salvaAlbum(${album.id})"><h1 class="card-title" id="annuncio_titolo">${album.title}</h1></a>
+                        <p class="card-text" id="annuncio_testo">${`Scopri il nuovo singolo "${album.title}" di ${album.artist.name}`}</p>
+                        <div id="contenitore_annuncio" class="mt-5">
+                            <button type="button" style="width: 100px;"
+                                class="btn rounded-pill p-1 py-3 px-3 mx-2 btn-success"
+                                id="annuncio_play"><a href="album.html" onclick="salvaAlbum(${album.id})">Play</a></button>
+                            <button type="button" style="width: 100px;"
+                                class="annuncio_segui btn rounded-pill py-3 px-3 ms-2 btn-dark"
+                                id="annuncio_share"><a href="${album.share}" target="_blank">Segui</a></button>
+                            <button type="button" style="width: 100px;"
+                                class="btn rounded-pill py-2 btn-dark" id="annuncio_dots">···</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
         })
     } catch (e) {
         console.log("Errore: " + e)
@@ -131,7 +151,7 @@ async function getArtist(id) {
  *  AVVIO FUNZIONI
  */
 cambiaSaluto()
-creaAnnuncio()
+creaAnnuncio(annuncio)
 
 for (let i = 0; i < 2; i++) {
     creaAlbum(perTe)
