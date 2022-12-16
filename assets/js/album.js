@@ -1,6 +1,5 @@
 var requestOptions = { method: 'GET', redirect: 'follow' };
 
-
 let id = localStorage.getItem("id_album")
 
 let banner = {
@@ -20,7 +19,6 @@ function salvaTraccia(traccia) {
     }
     playA()
 }
-
 
 function creaTracce(album) {
     let lista = document.getElementById("corpo_tabella");
@@ -59,27 +57,16 @@ function creaBanner(album) {
     banner.img.src = album.cover_xl
     banner.titolo.innerHTML = album.title
     banner.artist_img.src = album.artist.picture_xl
-    if (album.record_type == "single") {
-        banner.tipo.innerHTML = "Singolo"
-    } else {
-        banner.tipo.innerHTML = "Album"
-    }
-
-    if (album.nb_tracks > 1) {
-        banner.descrizione.innerHTML = `<a href="artist.html" onclick='localStorage.setItem("id_artist", ${album.artist.id})'>${album.artist.name} </a>• ${data.getFullYear()} • ${album.nb_tracks} brani, ${Math.floor(album.duration / 60)} min.`
-    } else {
-        banner.descrizione.innerHTML = `<a href="artist.html" onclick='localStorage.setItem("id_artist", ${album.artist.id})'>${album.artist.name} </a>• ${data.getFullYear()} • ${album.nb_tracks} brano, ${Math.floor(album.duration / 60)} min.`
-    }
+    album.record_type == "single" ? banner.tipo.innerHTML = "Singolo" : banner.tipo.innerHTML = "Album";
+    album.nb_tracks > 1 ? banner.descrizione.innerHTML = `<a href="artist.html" onclick='localStorage.setItem("id_artist", ${album.artist.id})'>${album.artist.name} </a>• ${data.getFullYear()} • ${album.nb_tracks} brani, ${Math.floor(album.duration / 60)} min.` : banner.descrizione.innerHTML = `<a href="artist.html" onclick='localStorage.setItem("id_artist", ${album.artist.id})'>${album.artist.name} </a>• ${data.getFullYear()} • ${album.nb_tracks} brano, ${Math.floor(album.duration / 60)} min.`
 }
 
 try {
     let prom = getAlbum(id)
     prom.then((album) => {
-        // console.log(album)
         creaBanner(album)
         creaTracce(album)
         document.title = `${album.title} - Spotify`
-
     })
 } catch (e) {
     console.log("Errore: " + e)
