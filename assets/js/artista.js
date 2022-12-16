@@ -72,11 +72,9 @@ async function creaBanner(artista) {
 try {
     let prom = getArtist(id)
     prom.then((artista) => {
-        console.log(artista)
         creaBanner(artista)
         topTrack(artista.tracklist)
         document.title = `${artista.name} - Spotify`
-        // creaTracce(album)
     })
     artisti_consigliati(lista_artisti)
 } catch (e) {
@@ -87,7 +85,6 @@ function topTrack(url) {
     try {
         let prom = getTopTrack(url)
         prom.then((tracce) => {
-            console.log(tracce)
             creaTracce(tracce)
         })
     } catch (e) {
@@ -111,7 +108,6 @@ async function getTopTrack(url) {
 }
 
 function artisti_consigliati(lista) {
-   
     for (let i = 0; i < 4; i++) {
         const artista = lista[[random(lista.length)]];
         try {

@@ -11,7 +11,7 @@ function search(key) {
     .then(result => {
         creaTracce(result)
     })
-    .catch(error => console.log('error', error));
+    .catch(error => console.log('Errore: ', error));
 }
 
 function salvaTraccia(traccia) {
@@ -150,7 +150,7 @@ function creaCategorie() {
             </a>
             `
         } catch (e) {
-            console.log("ERRORE: ", e)
+            console.log("Errore: ", e)
         }
     }
 
@@ -159,7 +159,6 @@ function creaCategorie() {
 
 
 barra.addEventListener("keyup", (event) => {    
-    console.log(barra.value)
     if (barra.value === "") {
         creaCategorie()
         document.title = `Ricerca - Spotify`

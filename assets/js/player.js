@@ -11,7 +11,6 @@ function espandi() {
 // funzione per play
 function playA() {
     let song = JSON.parse(window.localStorage.getItem("traccia"))
-    // console.log(song)
 
     let aux = document.querySelector(".player");
     if (aux.paused || aux.currentTime === 0 || aux.ended) {
@@ -51,21 +50,7 @@ function selectedHeart() {
 
     btnHeart.classList.toggle("d-none");
     btnHeartFill.classList.toggle("d-none");
-    
-    // // Al primo click, mi deve apparire il placeholder con la scritta "aggiunto"
-    // modalPlaceholder.classList.toggle("d-none");
-    // // Dopo pochi secondi, mi deve sparí il placeholder
-    // const showPlaceholdet = setTimeout(() => {
-    //     modalPlaceholder.classList.add("d-none");
-    // }, 3000);
 
-    // console.log(replaceTxtRemoved.className);
-
-    // // quando clicco di nuovo sul cuoricino, deve comparire il placeholder
-    // // con la scritta "rimosso"
-
-    // replaceTxtAdded.classList.toggle("d-none");
-    // replaceTxtRemoved.classList.toggle("d-none");
 }
 
 function selectedPlayPause() {
@@ -93,11 +78,7 @@ function selectedBtnMuteAudio() {
 }
 
 function selectedBtnAudioColorizeGreen(event) {
-    console.log(event);
     let btnSelected = event.querySelector(".bi");
-
-    console.log(btnSelected);
-
     btnSelected.classList.toggle("btn_colorize-green");
 }
 
@@ -130,7 +111,6 @@ function setStartFillerBar() {
             clearInterval(changeSeconds);
             seconds = 1;
         }
-        // console.log(typeof progressTimeElement.innerHTML);
     }, 1000);
 
     if (fillerBarElement.className.includes("paused-animation_filler-bar")) {
@@ -163,10 +143,7 @@ let newObj;
 
 // Funzione che recupera l'url dell'audio cliccato
 function getAudioObj(audioPreview) {
-    let audioObj = new Audio(audioPreview);
-    console.log(audioObj);
-
-    newObj = audioObj;
+    newObj = new Audio(audioPreview);
 }
 
 // Funzione che cambia il volume dell'audio cliccato
@@ -183,11 +160,9 @@ function mutedAudio() {
     if (audioState === false) {
         playerElement.muted = true;
         audioState = true;
-        console.log(audioState);
     } else {
         playerElement.muted = false;
         audioState = false;
-        console.log(audioState);
     }
 }
 
