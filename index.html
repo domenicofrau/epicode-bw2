@@ -6,54 +6,55 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/scss/app.css" />
 </head>
 
 <body>
-
     <main>
         <nav class="navbar navbar-light bg-light d-flex justify-content-center">
-            
-                <a class="navbar-brand" href="#">
-                    <img src="assets/img/logo-long.svg" alt="" height="80px" class="login-img" >
-                </a>
-           
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo-long.svg" alt="" height="80px" class="login-img" />
+            </a>
         </nav>
 
+        <div id="login" class="container d-flex flex-column align-items-center col-4">
+            <div class="bottoni d-flex flex-column align-items-center">
+                <p>Per continuare, accedi a Spotify.</p>
+                <button class="bottone blu" disabled>
+                    <i class="bi bi-facebook"></i> continua con facebook
+                </button>
+                <button class="bottone nero" disabled>
+                    <i class="bi bi-apple"></i> continua con apple
+                </button>
+                <button class="bottone mb-5" disabled>
+                    <i class="bi bi-google"></i> continua con google
+                </button>
+            </div>
 
-        <div id="login" class="container d-flex flex-column align-items-center col-4" >
-            
-                <div class="bottoni d-flex  flex-column align-items-center">
-                    <p >Per continuare, accedi a Spotify.</p>
-                    <button class="bottone blu " disabled> <i class="bi bi-facebook"></i> continua con facebook</button>
-                    <button class="bottone nero" disabled> <i class="bi bi-apple"></i> continua con apple</button>
-                    <button class="bottone mb-5" disabled> <i class="bi bi-google"></i> continua con google</button>
+            <form action="home.html" onsubmit='window.localStorage.setItem("nome", this.username.value)'>
+                <div class="mb-3 d-flex flex-column align-items-center">
+                    <label for="exampleInputEmail1">Nome Utente</label>
+                    <input type="text" id="exampleInputEmail1" name="username" aria-describedby="emailHelp"
+                        placeholder="Nome Utente " />
+                    <div id="emailHelp" class="form-text"></div>
                 </div>
-                  
-                <form action="home.html" onsubmit='window.localStorage.setItem("nome", this.username.value)'>
-                    <div class="mb-3 d-flex  flex-column align-items-center">
-                        <label for="exampleInputEmail1" >Nome Utente</label>
-                        <input type="text" id="exampleInputEmail1" name="username" aria-describedby="emailHelp"
-                            placeholder="Nome Utente ">
-                        <div id="emailHelp" class="form-text"></div>
-                    </div>
 
-                    <button type="submit" class="btn btn-primary accedi maiuscolo">accedi</button>
-                </form>
-                <hr>
+                <button type="submit" class="btn btn-primary accedi maiuscolo">
+                    accedi
+                </button>
+            </form>
+            <hr />
 
-                <div class="text-center">
-                    <p class="loginP">Non hai un account?</p>
-                    <button class="bottone maiuscolo" disabled>iscriviti a Spotify</button>
-                </div>
-          
+            <div class="text-center">
+                <p class="loginP">Non hai un account?</p>
+                <button class="bottone maiuscolo" disabled>
+                    iscriviti a Spotify
+                </button>
+            </div>
         </div>
-
-
-
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
