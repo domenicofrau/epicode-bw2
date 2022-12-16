@@ -105,7 +105,6 @@ function creaSidebarSX() {
         <ul class="list-unstyled">
             <li><a href=""></a>&#127764; alle 3 di notte</li>
             <li><a href=""></a>Be The Young</li>
-            <li><a href=""></a>".."cit.Kimono (lug-ago 2022)"</li>
             <li><a href=""></a>trip mood &#127757;</li>
             <li><a href=""></a>main character energy</li>
             <li><a href=""></a>the fucking mood</li>
