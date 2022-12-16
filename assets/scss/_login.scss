@@ -1,0 +1,94 @@
+#login {
+    .navbar {
+        .logo {
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        // border-bottom: 1px solid grey; //dome: ho tolto questo perche va in conflitto con la nav del sito
+    }
+
+    .contenitore {
+        display: flex;
+
+        .navbar {}
+
+        .bottoni {
+            border-bottom: grey 1px solid;
+        }
+
+        .nero {
+            background-color: black;
+            color: white;
+        }
+
+        .blu {
+            background-color: #3b5998;
+            color: white;
+        }
+    }
+
+    form {
+        margin-top: 30px;
+
+        input {
+            width: 450px;
+            padding: 10px;
+        }
+
+        .accedi {
+            border-radius: 25px;
+            padding: 10px;
+            width: 100px;
+            background-color: #1ed760;
+            color: black;
+            border: #1ed760;
+            float: right;
+        }
+    }
+
+    .bottone {
+        border-radius: 20px;
+        width: 450px;
+        margin: 10px;
+        padding: 5px;
+        background-color: white;
+        border-color: grey;
+        font-size: 20px;
+        color: grey;
+    }
+
+    .linea {
+        border: 1 px solid grey;
+    }
+
+    .iscriviti {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loginP {
+        font-weight: 700;
+        text-align: center;
+    }
+    .form-label{
+        font-weight: 700;
+    }
+    .passwordReset{
+        font-weight: 400;
+    }
+    .bottoni {
+        margin:-20px;
+    }
+    .contenitore{
+        padding: 0;
+        border: 0;
+        margin-top: -5px solid black;
+    }
+    .linea{
+        margin: 1px solid black;
+    }
+
+
+}

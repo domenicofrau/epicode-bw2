@@ -7,8 +7,11 @@
 
 @import "_player";
 @import "_dome";
-// @import "_giada";
-// @import "_silvio";
+@import "_login";
+
+body{
+    height: 100%;
+}
 
 a{
     text-decoration: none;
@@ -17,6 +20,10 @@ a{
 a:hover{
     color: white; 
 
+}
+
+.maiuscolo{
+    text-transform: uppercase;
 }
 
 .tessera {
@@ -123,4 +130,3 @@ a:hover{
     object-fit: cover;
     object-position: 0 -100px
 }
-

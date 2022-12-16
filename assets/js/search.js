@@ -43,14 +43,13 @@ function creaTracce(album) {
         var cell6 = riga.insertCell(5);
         var cell7 = riga.insertCell(6);
 
-        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span></i><span
-        class="hide-icon"><a  onclick='salvaTraccia(${tracciaOut})'><i class="bi bi-play-fill"></i></a></span></th>`
+        cell1.innerHTML = `<th class="col-1 text-center" scope="row"><span class="hide-th">${i+1}</span><a class="hide-icon" onclick='salvaTraccia(${tracciaOut})'></a></th>`
         cell2.innerHTML = `<td class="col-1 not"><img src="${traccia.album.cover_xl}"></td>`
         cell3.innerHTML = `<td class="col-6">${traccia.title}</td>`
         cell4.innerHTML = `<td class="col-1 text-center">${traccia.rank}</td>`
-        cell5.innerHTML = `<td class="col-1 text-end"><i class="hide-icon bi bi-heart"></i></td>`
+        cell5.innerHTML = `<td class="col-1 text-end"><i class="bi bi-heart"></i></td>`
         cell6.innerHTML = `<td class="col-1 text-end">${Math.floor(traccia.duration / 60)}</td>`
-        cell7.innerHTML = `<td class="col-1 text-center"><span class="hide-icon dots">···</span> </td>`
+        cell7.innerHTML = `<td class="col-1 text-center"><span class="dots">···</span> </td>`
     };
 
 
@@ -163,6 +162,7 @@ barra.addEventListener("keyup", (event) => {
     console.log(barra.value)
     if (barra.value === "") {
         creaCategorie()
+        document.title = `Ricerca - Spotify`
     } else{
         creaRicerca(barra.value)
         document.title = `${barra.value} - Spotify`
