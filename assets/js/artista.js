@@ -4,6 +4,7 @@ const img = new Image();
 
 let googleProxyURL = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
 let id = localStorage.getItem("id_artist")
+let lista_artisti = [52115362, 13087269, 3239781, 7371074, 73023, 7917, 7979, 3315, 390032,2279, 6168800, 10666535, 1288678, 2276, 8513, 3305, 3164, 390032, 57573792, 1, 11, 847, 848,4050205,416239,384236,10583405,176]
 let banner = {
     background: document.getElementById("banner-img"),
     titolo: document.getElementById("titolo-banner"),
@@ -94,8 +95,6 @@ function topTrack(url) {
     
 }
 
-
-
 async function getArtist(id) {
     const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`, requestOptions)
     return response.json()
@@ -105,3 +104,22 @@ async function getTopTrack(url) {
     const response = await fetch(url, requestOptions)
     return response.json()
 }
+
+function artisti_consigliati(lista) {
+   
+    for (let i = 0; i < 4; i++) {
+        const artista = lista[i];
+        try {
+             let prom = getArtist(artista)
+             prom.then((artista) => {
+                 console.log(artista)
+                 
+             })
+         } catch (e) {
+             console.log("Errore: " + e)
+         }
+        
+    }
+}
+
+artisti_consigliati(lista_artisti)
