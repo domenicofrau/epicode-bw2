@@ -47,9 +47,11 @@
             </nav>
 
             <!----------------------------------------------------banner-->
-            <div class="card rounded-0 border-0">
-                <img id="banner-img" src="" class="card-img-top rounded-0" alt="...">
-                <div class="ms-4 position-absolute top-50 text-white">
+            <div class="card rounded-0 border-0" id="banner_artista">
+                <span class="img_container">
+                    <img id="banner-img" src="" class="card-img-top rounded-0" alt="...">
+                </span>
+                <div class="ms-4 position-absolute top-50 text-white" style="z-index: 3;">
                     <span><img id="badge" src="assets/img/icone/badge.png" alt=""></span><span class="ms-2">Artista
                         verificato</span>
                     <h1 id="titolo-banner" class="mb-4"></h1>
@@ -58,8 +60,8 @@
             </div>
 
             <!----------------------------------------------------controlli-->
-            <div>
-                <img id="artist-play-btn" class="mt-2 ms-4" src="assets/img/play_btn.png" alt="">
+            <div id="artist_control">
+                    <img id="artist-play-btn" class="mt-2 ms-4" src="assets/img/play_btn.png" alt="">
                 <button id="artist-follow-btn" class="ms-3">SEGUI</button>
                 <span id="artist-more-dots" class="ms-4">...</span>
             </div>
@@ -146,7 +148,7 @@
 
     </footer>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <script src="assets/js/player.js"></script>
     <script src="assets/js/dom_creator.js"></script>
     <script src="assets/js/artista.js"></script>

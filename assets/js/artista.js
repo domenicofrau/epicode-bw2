@@ -1,13 +1,16 @@
 var requestOptions = { method: 'GET', redirect: 'follow' };
+const colorThief = new ColorThief();
+const img = new Image();
 
-
+let googleProxyURL = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
 let id = localStorage.getItem("id_artist")
-
 let banner = {
     background: document.getElementById("banner-img"),
     titolo: document.getElementById("titolo-banner"),
-    ascolti: document.getElementById("ascolti")
+    ascolti: document.getElementById("ascolti"),
+    totale: document.getElementById("banner_artista")
 }
+
 
 function salvaTraccia(traccia) {
     traccia = JSON.stringify(traccia)
@@ -17,7 +20,6 @@ function salvaTraccia(traccia) {
     }
     playA()
 }
-
 
 function creaTracce(tracce) {
     let lista = document.getElementById("corpo_tabella");
@@ -52,10 +54,18 @@ function creaTracce(tracce) {
 
 }
 
-function creaBanner(artista) {
+async function creaBanner(artista) {
     banner.background.src = artista.picture_xl
     banner.titolo.innerHTML = artista.name
     banner.ascolti.innerHTML = `${artista.nb_fan} ascoltatori mensili`
+
+    img.crossOrigin = 'Anonymous';
+    img.src = googleProxyURL + encodeURIComponent(artista.picture_xl);
+
+    img.addEventListener('load', () => {
+        let colori = colorThief.getColor(img)
+        banner.totale.style.boxShadow = `0px 100px 60px 0px rgb(${colori[0]}, ${colori[1]}, ${colori[2]}, 0.25)`;
+    });
 }
 
 try {
