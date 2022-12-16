@@ -13,13 +13,6 @@ window.onscroll = function () {
     } else {
         header.classList.remove('active');
     }
-    let header_album = document.querySelector('#scroll');
-    let top_album = window.scrollY;
-    if (top > 325) {
-        header_album.classList.add('attivo');
-    } else {
-        header_album.classList.remove('attivo');
-    }
 }
 
 
